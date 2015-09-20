@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FifteenPuzzleReworked</string>
+    <string name="moves_count">Количество ходов:</string>
+    <string name="restart">Перемешать</string>
+    <string name="cancel">Отмена</string>
+    <string name="result">Ваш результат</string>
+    <string name="no_mix">No mix</string>
+</resources>

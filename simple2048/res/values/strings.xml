@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Simple2048</string>
+    <string name="restart">Начать заново!</string>
+    <string name="Result">Счет</string>
+    <string name="record">Рекорд</string>
+    <string name="reset">Сбросить</string>
+    <string name="lost">Вы проиграли!</string>
+    <string name="zero">0</string>
+    <string name="about_program">О программе</string>
+    <string name="about_program_info">Игра была разработана Алексеем Валякиным\n в 2015 году.</string>
+    <string name="good_luck">Удачи в игре!</string>
+
+    <string-array name="values">
+        <item></item>
+        <item>2</item>
+        <item>4</item>
+        <item>8</item>
+        <item>16</item>
+        <item>32</item>
+        <item>64</item>
+        <item>128</item>
+        <item>256</item>
+        <item>512</item>
+        <item>1024</item>
+        <item>2048</item>
+    </string-array>
+</resources>

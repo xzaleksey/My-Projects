@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextView" parent="android:TextAppearance.Medium">
+        <item name="android:typeface">serif</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+    </style>
+    <style name="Button" parent="TextView">
+        <item name="android:typeface">serif</item>
+        <item name="android:background">@drawable/button</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:text">@android:color/white</item>
+    </style>
+    <style name="Table">
+        <item name="android:background">@drawable/table</item>
+    </style>
+</resources>

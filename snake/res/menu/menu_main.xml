@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context=".MyActivity">
+    <item
+            android:id="@+id/restart"
+            android:icon="@drawable/ic_action_reload"
+            android:title="@string/restart"
+            android:showAsAction="ifRoom"/>
+    <item
+            android:id="@+id/about"
+            android:title="@string/about_program"
+            android:showAsAction="never"/>
+</menu>

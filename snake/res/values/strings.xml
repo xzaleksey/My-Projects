@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">snake</string>
+    <string name="yes">Да</string>
+    <string name="cancel">Отмена</string>
+    <string name="your_count">Ваш счет</string>
+    <string name="restart">Начать заново</string>
+    <string name="about_program">О программе</string>
+    <string name="restart_question">Хотите начать заново?</string>
+    <string name="result_name">Ваш Счет:</string>
+    <string name="zero">0</string>
+</resources>

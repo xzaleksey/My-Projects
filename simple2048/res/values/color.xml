@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="colors">
+        <item name="def">@color/def</item>
+        <item name="c1">@color/c1</item>
+        <item name="c2">@color/c2</item>
+        <item name="c3">@color/c3</item>
+        <item name="c4">@color/c4</item>
+        <item name="c5">@color/c5</item>
+        <item name="c6">@color/c6</item>
+        <item name="c7">@color/c7</item>
+        <item name="c8">@color/c8</item>
+        <item name="c9">@color/c9</item>
+        <item name="c10">@color/c10</item>
+        <item name="c11">@color/c11</item>
+        <item name="c12">@color/c12</item>
+    </array>
+    <color name="def">#e1e7cc</color>
+    <color name="c1">#f1f6f8</color>
+    <color name="c2">#ffe294</color>
+    <color name="c3">#ffd73e</color>
+    <color name="c4">#ffb378</color>
+    <color name="c5">#ff723f</color>
+    <color name="c6">#ff551d</color>
+    <color name="c7">#fff94f</color>
+    <color name="c8">#ffed45</color>
+    <color name="c9">#ffde11</color>
+    <color name="c10">#ffc913</color>
+    <color name="c11">#ff9b0e</color>
+    <color name="c12">#ff720f</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="bg_main">#ce986b</color>
+    <color name="bg_rl">#F6CAA5</color>
+    <color name="rl_stroke">#A96E3E</color>
+    <color name="cell_stroke">#81491B</color>
+</resources>

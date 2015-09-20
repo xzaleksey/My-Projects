@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical"
+              android:layout_height="match_parent" android:layout_width="match_parent"
+              android:padding="@dimen/padding"
+        >
+
+
+    <com.example.FifteenPuzzleReworked.SquareLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+        <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                     android:stretchColumns="*" style="@style/Table" >
+            <TableRow>
+                <com.example.FifteenPuzzleReworked.SquareButton android:id="@+id/b1"
+                        />
+                <com.example.FifteenPuzzleReworked.SquareButton android:id="@+id/b2"
+                        />
+                <com.example.FifteenPuzzleReworked.SquareButton android:id="@+id/b3"
+                        />
+                <com.example.FifteenPuzzleReworked.SquareButton android:id="@+id/b4"
+                        />
+            </TableRow>
+            <TableRow>
+                <com.example.FifteenPuzzleReworked.SquareButton android:id="@+id/b5"
+                        />
+                <com.example.FifteenPuzzleReworked.SquareButton android:id="@+id/b6"
+                        />
+                <com.example.FifteenPuzzleReworked.SquareButton android:id="@+id/b7"
+                        />
+                <com.example.FifteenPuzzleReworked.SquareButton android:id="@+id/b8"
+                        />
+
+            </TableRow>
+            <TableRow>
+                <com.example.FifteenPuzzleReworked.SquareButton android:id="@+id/b9"
+                        />
+                <com.example.FifteenPuzzleReworked.SquareButton android:id="@+id/b10"
+                        />
+                <com.example.FifteenPuzzleReworked.SquareButton android:id="@+id/b11"
+                        />
+                <com.example.FifteenPuzzleReworked.SquareButton android:id="@+id/b12"
+                        />
+            </TableRow>
+            <TableRow>
+                <com.example.FifteenPuzzleReworked.SquareButton android:id="@+id/b13"
+                        />
+                <com.example.FifteenPuzzleReworked.SquareButton android:id="@+id/b14"
+                        />
+                <com.example.FifteenPuzzleReworked.SquareButton android:id="@+id/b15"
+                        />
+                <com.example.FifteenPuzzleReworked.SquareButton android:id="@+id/b16"
+                        />
+            </TableRow>
+        </TableLayout>
+
+    </com.example.FifteenPuzzleReworked.SquareLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <Button android:id="@+id/b_restart"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/restart"
+                style="@style/Button" android:layout_alignParentBottom="true" android:layout_alignParentLeft="true"/>
+        <Button android:id="@+id/b_no_mix"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/no_mix"
+                style="@style/Button"
+                android:layout_alignParentBottom="true" android:layout_alignParentRight="true"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="@string/moves_count" android:id="@+id/tv_count"
+                  style="@style/TextView"
+                  android:layout_above="@+id/b_restart" android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+</LinearLayout>
