@@ -33,27 +33,21 @@ import static com.valyakinaleksey.snake.game.State.*;
 public class MyActivity extends Activity {
 
     public static final int COL_COUNT = 10;
-    private static int ROW_COUNT;
-    public Direction currentDirection = LEFT;
-
     private static final String ROW_COUNT_STR = "ROW_COUNT";
     private static final String CELL_WIDTH = "CELL_WIDTH";
-
     private static final Map<State, Integer> colors = new HashMap<>();
-
+    public static Game game;
+    private static int ROW_COUNT;
+    public Direction currentDirection = LEFT;
+    public View btnPlay;
     private int cellWidth;
     private int currentResult;
-
-    public static Game game;
-
     private SharedPreferences sPref;
-
     private TextView[][] tvCells;
     private TextView tv_Result;
     private EndGameDialog endGameDialog;
     private Handler handler;
     private Animation btn_animation;
-    public View btnPlay;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -308,7 +302,6 @@ public class MyActivity extends Activity {
 
 
     public void setDirection(View view) {
-
         view.startAnimation(btn_animation);
         Direction newDirection = LEFT;
         switch (view.getId()) {
