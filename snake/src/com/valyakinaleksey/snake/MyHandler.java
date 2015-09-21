@@ -23,8 +23,6 @@ class MyHandler extends Handler {
             myActivity.currentDirection = direction;
             myActivity.updateField();
         } else {
-            myActivity.btnPlay.setBackground(myActivity.getResources().getDrawable(R.drawable.ic_action_playback_play));
-            MyActivity.game.setGameLost(true);
             myActivity.gameRestartDialogShow();
         }
     }

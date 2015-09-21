@@ -32,7 +32,19 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.valyakinaleksey.snake" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0beb842d-cbca-4d51-a38a-95cd3acb95c6" name="Default" comment="" />
+    <list default="true" id="0beb842d-cbca-4d51-a38a-95cd3acb95c6" name="Default" comment="btn_play fixed">
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\Projects\snake\out\production\snake\snake.ap" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\Projects\snake\out\production\snake\snake.zip" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/MyActivity$1.class" afterPath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/MyActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/MyActivity$2.class" afterPath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/MyActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/MyActivity$3.class" afterPath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/MyActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/MyActivity$4.class" afterPath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/MyActivity$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/MyActivity.class" afterPath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/MyActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/snake.unaligned.apk" afterPath="$PROJECT_DIR$/out/production/snake/snake.unaligned.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/valyakinaleksey/snake/MyActivity.java" afterPath="$PROJECT_DIR$/src/com/valyakinaleksey/snake/MyActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/valyakinaleksey/snake/MyHandler.java" afterPath="$PROJECT_DIR$/src/com/valyakinaleksey/snake/MyHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="snake.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -57,8 +69,8 @@
       <file leaf-file-name="MyActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/MyActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35619047">
-              <caret line="309" column="41" selection-start-line="309" selection-start-column="41" selection-end-line="309" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.33264887">
+              <caret line="195" column="22" selection-start-line="195" selection-start-column="17" selection-end-line="195" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -86,6 +98,8 @@
                 <element signature="e#2864#2865#0" expanded="false" />
                 <element signature="e#2915#2916#0" expanded="false" />
                 <element signature="e#2959#2960#0" expanded="false" />
+                <element signature="e#3023#3024#0" expanded="false" />
+                <element signature="e#3075#3076#0" expanded="false" />
                 <element signature="e#3132#3133#0" expanded="false" />
                 <element signature="e#3169#3170#0" expanded="false" />
                 <element signature="e#3234#3235#0" expanded="false" />
@@ -213,7 +227,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/MyHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -241,6 +255,7 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="26" column="11" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="11" />
               <folding>
+                <element signature="imports" expanded="false" />
                 <element signature="e#1158#1159#0" expanded="false" />
                 <element signature="e#1206#1207#0" expanded="false" />
                 <element signature="e#3550#3551#0" expanded="false" />
@@ -249,8 +264,16 @@
                 <element signature="e#3647#3648#0" expanded="false" />
                 <element signature="e#3674#3675#0" expanded="false" />
                 <element signature="e#3707#3708#0" expanded="false" />
+                <element signature="e#3790#4500#0" expanded="false" />
+                <element signature="e#4499#4500#0" expanded="false" />
+                <element signature="e#5254#5255#0" expanded="false" />
+                <element signature="e#5289#5290#0" expanded="false" />
                 <element signature="e#6036#6037#0" expanded="false" />
                 <element signature="e#6065#6066#0" expanded="false" />
+                <element signature="e#6101#6102#0" expanded="false" />
+                <element signature="e#6132#6133#0" expanded="false" />
+                <element signature="e#6181#6182#0" expanded="false" />
+                <element signature="e#6221#6222#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -271,7 +294,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#469#470#0" expanded="false" />
+                <element signature="e#523#524#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -378,6 +405,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="xzaleksey" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GradleLocalSettings">
@@ -462,9 +494,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -839,12 +871,20 @@
       <workItem from="1442566539969" duration="15323000" />
       <workItem from="1442583740166" duration="4595000" />
       <workItem from="1442588724661" duration="18230000" />
-      <workItem from="1442739127923" duration="248000" />
+      <workItem from="1442739127923" duration="825000" />
+      <workItem from="1442749748795" duration="1976000" />
     </task>
+    <task id="LOCAL-00001" summary="check">
+      <created>1442739488114</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1442739488114</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72231000" />
+    <option name="totallyTimeSpent" value="74784000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -857,10 +897,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294271" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3294271" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2799479" sideWeight="0.5075" order="7" side_tool="true" content_ui="tabs" />
@@ -869,7 +910,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2799479" sideWeight="0.4925" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2799479" sideWeight="0.4925" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.193125" sideWeight="0.49479166" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -884,7 +925,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294271" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997396" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294271" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -932,12 +972,20 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="check" />
+    <MESSAGE value="btn_play fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="btn_play fixed" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/MyActivity.java</url>
-          <line>310</line>
+          <line>307</line>
           <properties />
           <option name="timeStamp" value="28" />
         </line-breakpoint>
@@ -1021,6 +1069,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="e#1158#1159#0" expanded="false" />
             <element signature="e#1206#1207#0" expanded="false" />
             <element signature="e#3550#3551#0" expanded="false" />
@@ -1029,8 +1078,16 @@
             <element signature="e#3647#3648#0" expanded="false" />
             <element signature="e#3674#3675#0" expanded="false" />
             <element signature="e#3707#3708#0" expanded="false" />
+            <element signature="e#3790#4500#0" expanded="false" />
+            <element signature="e#4499#4500#0" expanded="false" />
+            <element signature="e#5254#5255#0" expanded="false" />
+            <element signature="e#5289#5290#0" expanded="false" />
             <element signature="e#6036#6037#0" expanded="false" />
             <element signature="e#6065#6066#0" expanded="false" />
+            <element signature="e#6101#6102#0" expanded="false" />
+            <element signature="e#6132#6133#0" expanded="false" />
+            <element signature="e#6181#6182#0" expanded="false" />
+            <element signature="e#6221#6222#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1905,6 +1962,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="11" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="11" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="e#1158#1159#0" expanded="false" />
             <element signature="e#1206#1207#0" expanded="false" />
             <element signature="e#3550#3551#0" expanded="false" />
@@ -1913,8 +1971,16 @@
             <element signature="e#3647#3648#0" expanded="false" />
             <element signature="e#3674#3675#0" expanded="false" />
             <element signature="e#3707#3708#0" expanded="false" />
+            <element signature="e#3790#4500#0" expanded="false" />
+            <element signature="e#4499#4500#0" expanded="false" />
+            <element signature="e#5254#5255#0" expanded="false" />
+            <element signature="e#5289#5290#0" expanded="false" />
             <element signature="e#6036#6037#0" expanded="false" />
             <element signature="e#6065#6066#0" expanded="false" />
+            <element signature="e#6101#6102#0" expanded="false" />
+            <element signature="e#6132#6133#0" expanded="false" />
+            <element signature="e#6181#6182#0" expanded="false" />
+            <element signature="e#6221#6222#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1927,21 +1993,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/MyHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/dialogs/EndGameDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#469#470#0" expanded="false" />
+            <element signature="e#523#524#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1973,6 +2033,8 @@
             <element signature="e#2864#2865#0" expanded="false" />
             <element signature="e#2915#2916#0" expanded="false" />
             <element signature="e#2959#2960#0" expanded="false" />
+            <element signature="e#3023#3024#0" expanded="false" />
+            <element signature="e#3075#3076#0" expanded="false" />
             <element signature="e#3132#3133#0" expanded="false" />
             <element signature="e#3169#3170#0" expanded="false" />
             <element signature="e#3234#3235#0" expanded="false" />
@@ -2085,10 +2147,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/MyHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/MyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35619047">
-          <caret line="309" column="41" selection-start-line="309" selection-start-column="41" selection-end-line="309" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.33264887">
+          <caret line="195" column="22" selection-start-line="195" selection-start-column="17" selection-end-line="195" selection-end-column="22" />
           <folding />
         </state>
       </provider>

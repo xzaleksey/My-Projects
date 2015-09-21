@@ -121,10 +121,11 @@ public class MyActivity extends Activity {
         setParams((TextView) findViewById(R.id.tv_result_label));
         btnPlay.setOnClickListener(new View.OnClickListener() {
             boolean pause = false;
+
             @Override
             public void onClick(View v) {
-                if (game.isGameLost()){
-                    pause=true;
+                if (game.isGameLost()) {
+                    pause = true;
                     restartGame();
                 }
                 if (!pause) {
@@ -164,6 +165,8 @@ public class MyActivity extends Activity {
                         restartGame();
                         break;
                     case Dialog.BUTTON_NEGATIVE:
+                        btnPlay.setBackground(getResources().getDrawable(R.drawable.ic_action_playback_play));
+                        game.setGameLost(true);
                         break;
                 }
             }
@@ -284,7 +287,7 @@ public class MyActivity extends Activity {
                 fromY, toY, // Start and end values for the Y axis scaling
                 Animation.RELATIVE_TO_SELF, pivotX, // Pivot point of X scaling
                 Animation.RELATIVE_TO_SELF, pivotY); // Pivot point of Y scaling
-        scaleAnimation.setDuration(550);
+        scaleAnimation.setDuration(500);
         return scaleAnimation;
     }
 
@@ -294,7 +297,7 @@ public class MyActivity extends Activity {
         } else if (current == 0 && next == count - 1) {
             current = count;
         }
-        if (current > next) { //вниз
+        if (current > next) {
             return 0;
         }
         return 1;
@@ -331,7 +334,6 @@ public class MyActivity extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
@@ -343,7 +345,7 @@ public class MyActivity extends Activity {
                 gameRestartDialogShow();
                 break;
             case R.id.about:
-                Toast.makeText(this,"Потоки наше все:)",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Потоки наше все:)", Toast.LENGTH_SHORT).show();
                 break;
         }
         return super.onOptionsItemSelected(item);
