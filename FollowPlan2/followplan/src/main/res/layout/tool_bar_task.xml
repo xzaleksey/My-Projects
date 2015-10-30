@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/ActionBar"
+        android:visibility="gone"
+        >
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:textColor="@color/md_white_1000"
+            >
+        <com.mikepenz.iconics.view.IconicsButton android:layout_width="wrap_content"
+                                                 android:layout_height="wrap_content"
+                                                 android:id="@+id/ib_done"
+                                                 android:text="@string/ib_done"
+                                                 android:layout_centerVertical="true"
+                                                 style="@android:style/Widget.Holo.Button.Borderless"
+                />
+        <com.mikepenz.iconics.view.IconicsButton android:layout_width="wrap_content"
+                                                 android:layout_height="wrap_content"
+                                                 android:id="@+id/ib_edit"
+                                                 android:layout_toRightOf="@+id/ib_done"
+                                                 android:text="@string/faw_edit"
+                                                 android:layout_centerVertical="true"
+                                                 style="@android:style/Widget.Holo.Button.Borderless"
+                />
+    </RelativeLayout>
+
+</android.support.v7.widget.Toolbar>

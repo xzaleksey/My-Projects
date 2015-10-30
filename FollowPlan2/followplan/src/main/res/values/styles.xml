@@ -1,0 +1,34 @@
+<resources>
+    <style name="wrapContent">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+    <style name="ActionBarIcon">
+        <item name="android:layout_height">@dimen/common_icon</item>
+        <item name="android:layout_width">@dimen/common_icon</item>
+    </style>
+    <style name="horizontal_padding">
+        <item name="android:padding">@dimen/activity_horizontal_padding</item>
+    </style>
+
+    <style name="subHeader">
+        <item name="android:textSize">@dimen/sub_header</item>
+        <item name="android:textColor">@color/secondary_text</item>
+
+    </style>
+    <style name="commonElement" parent="wrapContent">
+        <item name="android:layout_marginTop">@dimen/common_margin</item>
+    </style>
+    <style name="TextviewSecondarySmall" parent="wrapContent">
+        <item name="android:textColor">@color/secondary_text</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Small</item>
+    </style>
+    <style name="TextviewSecondaryMedium" parent="wrapContent">
+        <item name="android:textColor">@color/secondary_text</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Medium</item>
+    </style>
+    <style name="mySpinnerStyle" parent="android:Widget.ListView.DropDown">
+        <item name="android:divider">@color/accent</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+</resources>

@@ -1,0 +1,1834 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidConfiguredLogFilters">
+    <filters>
+      <filter>
+        <option name="logLevel" value="verbose" />
+        <option name="logMessagePattern" value="" />
+        <option name="logTagPattern" value="My_Logs" />
+        <option name="name" value="app: com.valyakinaleksey.myapp" />
+        <option name="packageNamePattern" value="com.valyakinaleksey.myapp" />
+        <option name="pid" value="" />
+      </filter>
+    </filters>
+  </component>
+  <component name="AndroidLayouts">
+    <shared>
+      <config>
+        <target>android-22</target>
+      </config>
+    </shared>
+    <layouts>
+      <layout url="file://$PROJECT_DIR$/res/layout/main.xml">
+        <config>
+          <theme>@android:style/Theme.Holo.Light.DarkActionBar</theme>
+        </config>
+      </layout>
+    </layouts>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="DEBUG" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.valyakinaleksey.myapp" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d2d066e3-3d98-420f-9247-5e0085d7a02b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/res/mipmap-hdpi/demon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/res/mipmap-mdpi/demon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/res/mipmap-xhdpi/demon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/res/mipmap-xxhdpi/demon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/res/mipmap-xxxhdpi/demon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/gradle/wrapper/gradle-wrapper.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_action_add_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_action_add_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_action_add_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/ic_action_add_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/ic_action_add_circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_action_arrow_top.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-ldpi/ic_action_arrow_top.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_action_arrow_top.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_action_arrow_top.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/ic_action_arrow_top.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/drawable-hdpi/ic_action_calendar_day.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/drawable-ldpi/ic_action_calendar_day.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/drawable-mdpi/ic_action_calendar_day.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/drawable-xhdpi/ic_action_calendar_day.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/drawable-xxhdpi/ic_action_calendar_day.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/drawable-hdpi/ic_action_cancel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/drawable-ldpi/ic_action_cancel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/drawable-mdpi/ic_action_cancel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/drawable-xhdpi/ic_action_cancel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/drawable-xxhdpi/ic_action_cancel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/res/drawable-hdpi/ic_action_delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/res/drawable-mdpi/ic_action_delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/res/drawable-xhdpi/ic_action_delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/res/drawable-xxhdpi/ic_action_delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/res/drawable-xxxhdpi/ic_action_delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_action_delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_action_delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_action_delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/ic_action_delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/ic_action_delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_action_done.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_action_done.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_action_done.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/ic_action_done.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/ic_action_done.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/drawable-hdpi/ic_action_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/drawable-ldpi/ic_action_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/drawable-mdpi/ic_action_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/drawable-xhdpi/ic_action_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/drawable-xxhdpi/ic_action_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_action_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-ldpi/ic_action_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_action_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_action_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/ic_action_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/res/drawable-hdpi/ic_action_mode_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/res/drawable-mdpi/ic_action_mode_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/res/drawable-xhdpi/ic_action_mode_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/res/drawable-xxhdpi/ic_action_mode_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/res/drawable-xxxhdpi/ic_action_mode_edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../snake/res/drawable-hdpi/ic_action_playback_pause.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../snake/res/drawable-ldpi/ic_action_playback_pause.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../snake/res/drawable-mdpi/ic_action_playback_pause.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../snake/res/drawable-xhdpi/ic_action_playback_pause.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../snake/res/drawable-xxhdpi/ic_action_playback_pause.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../snake/res/drawable-hdpi/ic_action_playback_play.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../snake/res/drawable-ldpi/ic_action_playback_play.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../snake/res/drawable-mdpi/ic_action_playback_play.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../snake/res/drawable-xhdpi/ic_action_playback_play.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../snake/res/drawable-xxhdpi/ic_action_playback_play.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/drawable-hdpi/ic_action_send.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/drawable-ldpi/ic_action_send.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/drawable-mdpi/ic_action_send.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/drawable-xhdpi/ic_action_send.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/drawable-xxhdpi/ic_action_send.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/drawable-hdpi/ic_action_tick.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/drawable-ldpi/ic_action_tick.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/drawable-mdpi/ic_action_tick.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/drawable-xhdpi/ic_action_tick.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/drawable-xxhdpi/ic_action_tick.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/ic_launcher-web.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../snake/ic_launcher-web.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/mipmap-hdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/mipmap-mdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/mipmap-xhdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../snake/res/mipmap-hdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../snake/res/mipmap-mdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../snake/res/mipmap-xhdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../snake/res/mipmap-xxhdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../snake/res/mipmap-xxxhdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/valyakinaleksey/myapp/dialogs/AddDialogFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/AndroidManifest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/androidTest/java/com/valyakinaleksey/followplan/followplan2/followplan/ApplicationTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/src/com/valyakinaleksey/myapp/DatePickerDialogFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/valyakinaleksey/myapp/dialogs/DatePickerDialogFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/valyakinaleksey/myapp/dialogs/DeleteItemDialogFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/valyakinaleksey/myapp/DeleteItemListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/src/com/valyakinaleksey/Dialogs/dialogs/Dialogs.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/valyakinaleksey/myapp/dialogs/EditDialogFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/src/com/valyakinaleksey/myapp/EmailDialogFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/FollowPlan2.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/ListContentFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/MainActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/src/com/valyakinaleksey/myapp/MyEditText.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/src/com/valyakinaleksey/myapp/ProfileActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/task/Task.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/valyakinaleksey/myapp/Task.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/task/TasksAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/valyakinaleksey/myapp/TasksAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/activity_main.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/values/arrays.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/res/drawable/bg_button.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/res/drawable/bg_dialog.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/res/drawable/bg_main.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/build.gradle" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/build.gradle" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/res/drawable/button_normal.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/res/drawable/button_pressed.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/res/values/color.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/color.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/values/colors.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/values/colors.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/context_menu.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/res/layout/custom_dialog_title.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/res/layout/custom_dialog_view.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/res/values/dimens.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/values/dimens.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/values-w820dp/dimens.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/values/dimens.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/dimens.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/drawer_header.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/res/layout/edit_text.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/layout/email.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$APPLICATION_CONFIG_DIR$/options/fileEditorProviderManager.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/followplan.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/gradle/wrapper/gradle-wrapper.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/gradle.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/.idea/gradle.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/gradlew.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/gradlew" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Dialogs/.idea/libraries/libs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/listview.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan/followplan/src/main/res/layout/ll_main.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/menu/menu_main.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/res/layout/profile.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/proguard-rules.pro" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Aboutme/res/layout/relative_layout.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/settings.gradle" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/drawable/spinner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/spinner_textview.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/values/strings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/values-ru/strings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/values/styles.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/task.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/task.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/task_details.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/values/themes.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/tool_bar_main.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ProfileEditor/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../snake/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FollowPlan2/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\.idea\.name" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\.idea\compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\.idea\copyright\profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\.idea\encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\.idea\inspectionProfiles\Project_Default.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\.idea\inspectionProfiles\profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\.idea\misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\.idea\modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\.idea\uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\.idea\vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\.idea\workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\FifteenPuzzleReworked.iml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\ant.properties" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\build.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\gen\com\example\FifteenPuzzleReworked\BuildConfig.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\gen\com\example\FifteenPuzzleReworked\Manifest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\gen\com\example\FifteenPuzzleReworked\R.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\local.properties" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\out\production\FifteenPuzzleReworked\FifteenPuzzleReworked.apk" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\out\production\FifteenPuzzleReworked\FifteenPuzzleReworked.unaligned.apk" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\out\production\FifteenPuzzleReworked\com\example\FifteenPuzzleReworked\BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\out\production\FifteenPuzzleReworked\com\example\FifteenPuzzleReworked\FifteenPuzzle$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\out\production\FifteenPuzzleReworked\com\example\FifteenPuzzleReworked\FifteenPuzzle$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\out\production\FifteenPuzzleReworked\com\example\FifteenPuzzleReworked\FifteenPuzzle$3.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\out\production\FifteenPuzzleReworked\com\example\FifteenPuzzleReworked\FifteenPuzzle$4.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\out\production\FifteenPuzzleReworked\com\example\FifteenPuzzleReworked\FifteenPuzzle.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\out\production\FifteenPuzzleReworked\com\example\FifteenPuzzleReworked\Game$Structure.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\out\production\FifteenPuzzleReworked\com\example\FifteenPuzzleReworked\Game.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\out\production\FifteenPuzzleReworked\com\example\FifteenPuzzleReworked\Point.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\out\production\FifteenPuzzleReworked\com\example\FifteenPuzzleReworked\R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\out\production\FifteenPuzzleReworked\com\example\FifteenPuzzleReworked\R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\out\production\FifteenPuzzleReworked\com\example\FifteenPuzzleReworked\R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\out\production\FifteenPuzzleReworked\com\example\FifteenPuzzleReworked\R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\out\production\FifteenPuzzleReworked\com\example\FifteenPuzzleReworked\R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\out\production\FifteenPuzzleReworked\com\example\FifteenPuzzleReworked\R$mipmap.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\out\production\FifteenPuzzleReworked\com\example\FifteenPuzzleReworked\R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\out\production\FifteenPuzzleReworked\com\example\FifteenPuzzleReworked\R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\out\production\FifteenPuzzleReworked\com\example\FifteenPuzzleReworked\R.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\out\production\FifteenPuzzleReworked\com\example\FifteenPuzzleReworked\SquareButton.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\out\production\FifteenPuzzleReworked\com\example\FifteenPuzzleReworked\SquareLayout.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\proguard-project.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\project.properties" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-hdpi\bg1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-hdpi\bg10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-hdpi\bg11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-hdpi\bg12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-hdpi\bg13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-hdpi\bg14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-hdpi\bg15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-hdpi\bg16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-hdpi\bg2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-hdpi\bg3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-hdpi\bg4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-hdpi\bg5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-hdpi\bg6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-hdpi\bg7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-hdpi\bg8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-hdpi\bg9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-mdpi\bg1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-mdpi\bg10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-mdpi\bg11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-mdpi\bg12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-mdpi\bg13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-mdpi\bg14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-mdpi\bg15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-mdpi\bg16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-mdpi\bg2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-mdpi\bg3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-mdpi\bg4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-mdpi\bg5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-mdpi\bg6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-mdpi\bg7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-mdpi\bg8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-mdpi\bg9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xhdpi\bg1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xhdpi\bg10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xhdpi\bg11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xhdpi\bg12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xhdpi\bg13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xhdpi\bg14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xhdpi\bg15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xhdpi\bg16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xhdpi\bg2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xhdpi\bg3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xhdpi\bg4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xhdpi\bg5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xhdpi\bg6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xhdpi\bg7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xhdpi\bg8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xhdpi\bg9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxhdpi\bg1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxhdpi\bg10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxhdpi\bg11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxhdpi\bg12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxhdpi\bg13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxhdpi\bg14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxhdpi\bg15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxhdpi\bg16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxhdpi\bg2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxhdpi\bg3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxhdpi\bg4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxhdpi\bg5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxhdpi\bg6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxhdpi\bg7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxhdpi\bg8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxhdpi\bg9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxxhdpi\bg1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxxhdpi\bg10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxxhdpi\bg11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxxhdpi\bg12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxxhdpi\bg13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxxhdpi\bg14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxxhdpi\bg15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxxhdpi\bg16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxxhdpi\bg2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxxhdpi\bg3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxxhdpi\bg4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxxhdpi\bg5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxxhdpi\bg6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxxhdpi\bg7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxxhdpi\bg8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable-xxxhdpi\bg9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable\button.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable\button15_normal.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable\button15_pressed.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\drawable\table.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\layout-land\main.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\layout\main.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\mipmap-hdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\mipmap-mdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\mipmap-xhdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\mipmap-xxhdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\mipmap-xxxhdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\values\dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\values\strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\res\values\styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\src\com\example\FifteenPuzzleReworked\FifteenPuzzle.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\src\com\example\FifteenPuzzleReworked\Game.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\src\com\example\FifteenPuzzleReworked\Point.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\src\com\example\FifteenPuzzleReworked\SquareButton.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\FifteenPuzzleReworked\src\com\example\FifteenPuzzleReworked\SquareLayout.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Projects/snake/out/production/snake/com/valyakinaleksey/snake/MyHandler.class" afterPath="$PROJECT_DIR$/../Projects/snake/out/production/snake/com/valyakinaleksey/snake/MyHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Projects/FifteenPuzzleReworked/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Projects/FifteenPuzzleReworked/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Projects/snake/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Projects/snake/.idea/workspace.xml" />
+    </list>
+    <ignored path="TodoList.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="TodoList" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="MyActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/myapp/MyActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="79" column="23" selection-start-line="79" selection-start-column="21" selection-end-line="79" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#1272#1273#0" expanded="false" />
+                <element signature="e#1319#1320#0" expanded="false" />
+                <element signature="e#3719#3720#0" expanded="false" />
+                <element signature="e#3757#3758#0" expanded="false" />
+                <element signature="e#3793#3794#0" expanded="false" />
+                <element signature="e#3821#3822#0" expanded="false" />
+                <element signature="e#3856#3857#0" expanded="false" />
+                <element signature="e#3885#3886#0" expanded="false" />
+                <element signature="e#4207#4208#0" expanded="false" />
+                <element signature="e#4251#4252#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeleteItemListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/myapp/DeleteItemListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-22/android/widget/ListView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="435" column="13" selection-start-line="435" selection-start-column="13" selection-end-line="435" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#153217#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#4690#4691#0" expanded="false" />
+                <element signature="e#4725#4726#0" expanded="false" />
+                <element signature="e#4942#4943#0" expanded="false" />
+                <element signature="e#4995#4996#0" expanded="false" />
+                <element signature="e#6942#6943#0" expanded="false" />
+                <element signature="e#7009#7010#0" expanded="false" />
+                <element signature="e#11036#11037#0" expanded="false" />
+                <element signature="e#11080#11081#0" expanded="false" />
+                <element signature="e#11134#11135#0" expanded="false" />
+                <element signature="e#11180#11181#0" expanded="false" />
+                <element signature="e#14611#14612#0" expanded="false" />
+                <element signature="e#14655#14656#0" expanded="false" />
+                <element signature="e#14709#14710#0" expanded="false" />
+                <element signature="e#14755#14756#0" expanded="false" />
+                <element signature="e#15857#15858#0" expanded="false" />
+                <element signature="e#15888#15889#0" expanded="false" />
+                <element signature="e#16239#16240#0" expanded="false" />
+                <element signature="e#16290#16291#0" expanded="false" />
+                <element signature="e#33437#33438#0" expanded="false" />
+                <element signature="e#33491#33492#0" expanded="false" />
+                <element signature="e#33819#33820#0" expanded="false" />
+                <element signature="e#33869#33870#0" expanded="false" />
+                <element signature="e#41295#41296#0" expanded="false" />
+                <element signature="e#41363#41364#0" expanded="false" />
+                <element signature="e#45372#45373#0" expanded="false" />
+                <element signature="e#45399#45400#0" expanded="false" />
+                <element signature="e#77882#77883#0" expanded="false" />
+                <element signature="e#77941#77942#0" expanded="false" />
+                <element signature="e#78350#78351#0" expanded="false" />
+                <element signature="e#78398#78399#0" expanded="false" />
+                <element signature="e#83466#83467#0" expanded="false" />
+                <element signature="e#83517#83518#0" expanded="false" />
+                <element signature="e#83747#83748#0" expanded="false" />
+                <element signature="e#83798#83799#0" expanded="false" />
+                <element signature="e#110803#110804#0" expanded="false" />
+                <element signature="e#110851#110852#0" expanded="false" />
+                <element signature="e#110893#110894#0" expanded="false" />
+                <element signature="e#110939#110940#0" expanded="false" />
+                <element signature="e#124574#124575#0" expanded="false" />
+                <element signature="e#124611#124612#0" expanded="false" />
+                <element signature="e#136445#136446#0" expanded="false" />
+                <element signature="e#136476#136477#0" expanded="false" />
+                <element signature="e#137247#137248#0" expanded="false" />
+                <element signature="e#137284#137285#0" expanded="false" />
+                <element signature="e#138360#138361#0" expanded="false" />
+                <element signature="e#138405#138406#0" expanded="false" />
+                <element signature="e#139075#139076#0" expanded="false" />
+                <element signature="e#139120#139121#0" expanded="false" />
+                <element signature="e#139633#139634#0" expanded="false" />
+                <element signature="e#139673#139674#0" expanded="false" />
+                <element signature="e#140214#140215#0" expanded="false" />
+                <element signature="e#140254#140255#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TasksAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/myapp/TasksAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#565#566#0" expanded="false" />
+                <element signature="e#600#601#0" expanded="false" />
+                <element signature="e#657#658#0" expanded="false" />
+                <element signature="e#699#700#0" expanded="false" />
+                <element signature="e#756#757#0" expanded="false" />
+                <element signature="e#787#788#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Task.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/myapp/Task.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+              <folding>
+                <element signature="e#438#439#0" expanded="false" />
+                <element signature="e#472#473#0" expanded="false" />
+                <element signature="e#526#527#0" expanded="false" />
+                <element signature="e#572#573#0" expanded="false" />
+                <element signature="e#605#606#0" expanded="false" />
+                <element signature="e#632#633#0" expanded="false" />
+                <element signature="e#674#675#0" expanded="false" />
+                <element signature="e#706#707#0" expanded="false" />
+                <element signature="e#732#733#0" expanded="false" />
+                <element signature="e#757#758#0" expanded="false" />
+                <element signature="e#791#792#0" expanded="false" />
+                <element signature="e#821#822#0" expanded="false" />
+                <element signature="e#868#869#0" expanded="false" />
+                <element signature="e#906#907#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditDialogFragment.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/myapp/dialogs/EditDialogFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.93131316">
+              <caret line="96" column="0" selection-start-line="17" selection-start-column="2" selection-end-line="96" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeleteItemDialogFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/myapp/dialogs/DeleteItemDialogFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatePickerDialogFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/myapp/dialogs/DatePickerDialogFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="124" column="9" selection-start-line="124" selection-start-column="9" selection-end-line="124" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#5159#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#5094#5095#0" expanded="false" />
+                <element signature="e#5155#5156#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="task.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/task.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.61445785">
+              <caret line="3" column="102" selection-start-line="3" selection-start-column="102" selection-end-line="3" selection-end-column="102" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="valueResourceFile" />
+        <option value="layoutResourceFile" />
+        <option value="resourceFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/res/drawable/btn_add.xml" />
+        <option value="$PROJECT_DIR$/res/values/dimens.xml" />
+        <option value="$PROJECT_DIR$/res/drawable/btn_add_selector.xml" />
+        <option value="$PROJECT_DIR$/res/drawable/button15.xml" />
+        <option value="$PROJECT_DIR$/res/drawable/button15_normal.xml" />
+        <option value="$PROJECT_DIR$/res/drawable/button15_pressed.xml" />
+        <option value="$PROJECT_DIR$/res/values/color.xml" />
+        <option value="$PROJECT_DIR$/src/com/valyakinaleksey/myapp/AddDialog.java" />
+        <option value="$PROJECT_DIR$/res/layout/et_description.xml" />
+        <option value="$PROJECT_DIR$/src/com/valyakinaleksey/myapp/DatePickerDialogFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/valyakinaleksey/myapp/AddFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/valyakinaleksey/myapp/AddDialogFragment.java" />
+        <option value="$PROJECT_DIR$/res/menu/context_menu.xml" />
+        <option value="$PROJECT_DIR$/src/com/valyakinaleksey/myapp/DatePickerFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/valyakinaleksey/myapp/DeleteItemDialogFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/valyakinaleksey/myapp/EditItemListener.java" />
+        <option value="$PROJECT_DIR$/src/org/joda/time/DateTime.java" />
+        <option value="$PROJECT_DIR$/src/com/valyakinaleksey/myapp/dialogs/DatePickerDialogFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/valyakinaleksey/myapp/dialogs/EditDialogFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/valyakinaleksey/myapp/Task.java" />
+        <option value="$PROJECT_DIR$/src/com/valyakinaleksey/myapp/TasksAdapter.java" />
+        <option value="$PROJECT_DIR$/res/layout/task_details.xml" />
+        <option value="$PROJECT_DIR$/res/drawable/btn_add_normal.xml" />
+        <option value="$PROJECT_DIR$/res/drawable/btn_add_pressed.xml" />
+        <option value="$PROJECT_DIR$/src/com/valyakinaleksey/myapp/MyOnClickListener.java" />
+        <option value="$PROJECT_DIR$/res/layout/task.xml" />
+        <option value="$PROJECT_DIR$/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/res/layout/main.xml" />
+        <option value="$PROJECT_DIR$/src/com/valyakinaleksey/myapp/dialogs/AddDialogFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/valyakinaleksey/myapp/dialogs/DeleteItemDialogFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/valyakinaleksey/myapp/MyActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/valyakinaleksey/myapp/DeleteItemListener.java" />
+        <option value="$PROJECT_DIR$/src/com/valyakinaleksey/myapp/dialogs/EmailDialogFragment.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TodoList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TodoList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TodoList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TodoList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TodoList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TodoList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TodoList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TodoList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TodoList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dialogs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TodoList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TodoList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TodoList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TodoList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TodoList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TodoList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TodoList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TodoList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Projects/FifteenPuzzleReworked" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.14746094" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="resourcesRoot" value="file://$PROJECT_DIR$/res" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="SWDQ75PZSKNJKBBQ" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="AVD_501" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="FullScreen" value="false" />
+    <property name="SearchEverywhereHistoryKey" value="SimpleDate&#9;PSI&#9;JAVA://java.text.SimpleDateFormat" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ruaval\IdeaProjects\TodoList\src\com\valyakinaleksey\myapp" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ruaval\IdeaProjects\TodoList\res\drawable" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.valyakinaleksey.myapp.dialogs" />
+      <recent name="com.valyakinaleksey.myapp" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Android Application.TodoList">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="false" name="TodoList" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="TodoList" />
+      <option name="ACTIVITY_CLASS" value="com.valyakinaleksey.myapp.MyActivity" />
+      <option name="MODE" value="specific_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="true" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Android Application.TodoList" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d2d066e3-3d98-420f-9247-5e0085d7a02b" name="Default" comment="" />
+      <created>1442818369439</created>
+      <option name="number" value="Default" />
+      <updated>1442818369439</updated>
+      <workItem from="1442818376526" duration="8113000" />
+      <workItem from="1442834386352" duration="7341000" />
+      <workItem from="1442842766976" duration="1032000" />
+      <workItem from="1442844966738" duration="14679000" />
+      <workItem from="1442922995241" duration="1879000" />
+      <workItem from="1442926610231" duration="6214000" />
+      <workItem from="1442934621326" duration="35000" />
+      <workItem from="1442935433330" duration="7628000" />
+      <workItem from="1443020057210" duration="108000" />
+      <workItem from="1443124988497" duration="178000" />
+      <workItem from="1443185772552" duration="584000" />
+      <workItem from="1443244484991" duration="446000" />
+      <workItem from="1443350192090" duration="84000" />
+      <workItem from="1443427090372" duration="151000" />
+      <workItem from="1443442839369" duration="885000" />
+      <workItem from="1443444560355" duration="673000" />
+      <workItem from="1443535965723" duration="109000" />
+      <workItem from="1443537226168" duration="716000" />
+      <workItem from="1443538070495" duration="477000" />
+      <workItem from="1443681143626" duration="1082000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="52414000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3190104" sideWeight="0.5025" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36328125" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3190104" sideWeight="0.4975" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3984375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Log4jMonitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294271" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294271" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="21" />
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="TodoList">
+        <watch expression="addFragment.getView()" language="JAVA" custom="" />
+        <watch expression="calendar.get(Calendar.YEAR)" language="JAVA" custom="" />
+        <watch expression="calendar.get(Calendar.MONTH)" language="JAVA" custom="" />
+        <watch expression="calendar.getTime()" language="JAVA" custom="" />
+        <watch expression="Calendar.DAY_OF_MONTH" language="JAVA" custom="" />
+        <watch expression="myActivity.getChosenDate().toDate()" language="JAVA" custom="" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/res/drawable/btn_add_pressed.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/myapp/MyActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1272#1273#0" expanded="false" />
+            <element signature="e#1319#1320#0" expanded="false" />
+            <element signature="e#3719#3720#0" expanded="false" />
+            <element signature="e#3757#3758#0" expanded="false" />
+            <element signature="e#3793#3794#0" expanded="false" />
+            <element signature="e#3821#3822#0" expanded="false" />
+            <element signature="e#3856#3857#0" expanded="false" />
+            <element signature="e#3885#3886#0" expanded="false" />
+            <element signature="e#4207#4208#0" expanded="false" />
+            <element signature="e#4251#4252#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/color.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/myapp/TasksAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="64" selection-start-line="43" selection-start-column="64" selection-end-line="43" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#565#566#0" expanded="false" />
+            <element signature="e#600#601#0" expanded="false" />
+            <element signature="e#657#658#0" expanded="false" />
+            <element signature="e#699#700#0" expanded="false" />
+            <element signature="e#756#757#0" expanded="false" />
+            <element signature="e#787#788#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/task.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="74" selection-start-line="9" selection-start-column="74" selection-end-line="9" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/myapp/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+          <folding>
+            <element signature="e#438#439#0" expanded="false" />
+            <element signature="e#472#473#0" expanded="false" />
+            <element signature="e#526#527#0" expanded="false" />
+            <element signature="e#572#573#0" expanded="false" />
+            <element signature="e#605#606#0" expanded="false" />
+            <element signature="e#632#633#0" expanded="false" />
+            <element signature="e#674#675#0" expanded="false" />
+            <element signature="e#706#707#0" expanded="false" />
+            <element signature="e#732#733#0" expanded="false" />
+            <element signature="e#757#758#0" expanded="false" />
+            <element signature="e#791#792#0" expanded="false" />
+            <element signature="e#821#822#0" expanded="false" />
+            <element signature="e#868#869#0" expanded="false" />
+            <element signature="e#906#907#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="117" selection-start-line="6" selection-start-column="117" selection-end-line="6" selection-end-column="117" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/color.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-22/android/widget/DatePicker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-32.30185">
+          <caret line="151" column="5" selection-start-line="151" selection-start-column="5" selection-end-line="151" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-22/android/app/DatePickerDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38398358">
+          <caret line="55" column="51" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-22/com/android/internal/app/AlertController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33264887">
+          <caret line="896" column="47" selection-start-line="896" selection-start-column="47" selection-end-line="896" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-22/android/app/AlertDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="511" column="75" selection-start-line="511" selection-start-column="75" selection-end-line="511" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-22/android/app/FragmentManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42432433">
+          <caret line="145" column="42" selection-start-line="145" selection-start-column="42" selection-end-line="145" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-22/android/app/ActivityThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4744" column="0" selection-start-line="4744" selection-start-column="0" selection-end-line="4744" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/menu/context_menu.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5185184">
+          <caret line="4" column="67" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21841542">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-22/android/app/Fragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="1588" column="43" selection-start-line="1588" selection-start-column="35" selection-end-line="1588" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/joda/time/base/AbstractDateTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/joda/time/convert/ConverterManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36755648">
+          <caret line="109" column="12" selection-start-line="109" selection-start-column="12" selection-end-line="109" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/joda/time/DateTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24435319">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-22/android/app/DialogFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.8545455">
+          <caret line="382" column="56" selection-start-line="382" selection-start-column="56" selection-end-line="382" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-22/android/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16976" column="25" selection-start-line="16976" selection-start-column="25" selection-end-line="16976" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-22/android/database/DataSetObservable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-22/android/widget/BaseAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-22/com/android/internal/policy/impl/PhoneWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3600" column="0" selection-start-line="3600" selection-start-column="0" selection-end-line="3600" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-22/com/android/internal/view/menu/MenuBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="734" column="0" selection-start-line="734" selection-start-column="0" selection-end-line="734" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-22/android/app/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33179724">
+          <caret line="2551" column="0" selection-start-line="2551" selection-start-column="0" selection-end-line="2551" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/btn_add.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/btn_add_normal.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/btn_add_pressed.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/task_details.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="74" selection-start-line="9" selection-start-column="74" selection-end-line="9" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="96" selection-start-line="12" selection-start-column="96" selection-end-line="12" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/myapp/dialogs/AddDialogFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="69" column="76" selection-start-line="69" selection-start-column="76" selection-end-line="69" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-22/android/widget/Adapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-22/android/widget/ListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37777779">
+          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-22/android/widget/ListView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="435" column="13" selection-start-line="435" selection-start-column="13" selection-end-line="435" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#153217#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#4690#4691#0" expanded="false" />
+            <element signature="e#4725#4726#0" expanded="false" />
+            <element signature="e#4942#4943#0" expanded="false" />
+            <element signature="e#4995#4996#0" expanded="false" />
+            <element signature="e#6942#6943#0" expanded="false" />
+            <element signature="e#7009#7010#0" expanded="false" />
+            <element signature="e#11036#11037#0" expanded="false" />
+            <element signature="e#11080#11081#0" expanded="false" />
+            <element signature="e#11134#11135#0" expanded="false" />
+            <element signature="e#11180#11181#0" expanded="false" />
+            <element signature="e#14611#14612#0" expanded="false" />
+            <element signature="e#14655#14656#0" expanded="false" />
+            <element signature="e#14709#14710#0" expanded="false" />
+            <element signature="e#14755#14756#0" expanded="false" />
+            <element signature="e#15857#15858#0" expanded="false" />
+            <element signature="e#15888#15889#0" expanded="false" />
+            <element signature="e#16239#16240#0" expanded="false" />
+            <element signature="e#16290#16291#0" expanded="false" />
+            <element signature="e#33437#33438#0" expanded="false" />
+            <element signature="e#33491#33492#0" expanded="false" />
+            <element signature="e#33819#33820#0" expanded="false" />
+            <element signature="e#33869#33870#0" expanded="false" />
+            <element signature="e#41295#41296#0" expanded="false" />
+            <element signature="e#41363#41364#0" expanded="false" />
+            <element signature="e#45372#45373#0" expanded="false" />
+            <element signature="e#45399#45400#0" expanded="false" />
+            <element signature="e#77882#77883#0" expanded="false" />
+            <element signature="e#77941#77942#0" expanded="false" />
+            <element signature="e#78350#78351#0" expanded="false" />
+            <element signature="e#78398#78399#0" expanded="false" />
+            <element signature="e#83466#83467#0" expanded="false" />
+            <element signature="e#83517#83518#0" expanded="false" />
+            <element signature="e#83747#83748#0" expanded="false" />
+            <element signature="e#83798#83799#0" expanded="false" />
+            <element signature="e#110803#110804#0" expanded="false" />
+            <element signature="e#110851#110852#0" expanded="false" />
+            <element signature="e#110893#110894#0" expanded="false" />
+            <element signature="e#110939#110940#0" expanded="false" />
+            <element signature="e#124574#124575#0" expanded="false" />
+            <element signature="e#124611#124612#0" expanded="false" />
+            <element signature="e#136445#136446#0" expanded="false" />
+            <element signature="e#136476#136477#0" expanded="false" />
+            <element signature="e#137247#137248#0" expanded="false" />
+            <element signature="e#137284#137285#0" expanded="false" />
+            <element signature="e#138360#138361#0" expanded="false" />
+            <element signature="e#138405#138406#0" expanded="false" />
+            <element signature="e#139075#139076#0" expanded="false" />
+            <element signature="e#139120#139121#0" expanded="false" />
+            <element signature="e#139633#139634#0" expanded="false" />
+            <element signature="e#139673#139674#0" expanded="false" />
+            <element signature="e#140214#140215#0" expanded="false" />
+            <element signature="e#140254#140255#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/myapp/TasksAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#565#566#0" expanded="false" />
+            <element signature="e#600#601#0" expanded="false" />
+            <element signature="e#657#658#0" expanded="false" />
+            <element signature="e#699#700#0" expanded="false" />
+            <element signature="e#756#757#0" expanded="false" />
+            <element signature="e#787#788#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/myapp/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding>
+            <element signature="e#438#439#0" expanded="false" />
+            <element signature="e#472#473#0" expanded="false" />
+            <element signature="e#526#527#0" expanded="false" />
+            <element signature="e#572#573#0" expanded="false" />
+            <element signature="e#605#606#0" expanded="false" />
+            <element signature="e#632#633#0" expanded="false" />
+            <element signature="e#674#675#0" expanded="false" />
+            <element signature="e#706#707#0" expanded="false" />
+            <element signature="e#732#733#0" expanded="false" />
+            <element signature="e#757#758#0" expanded="false" />
+            <element signature="e#791#792#0" expanded="false" />
+            <element signature="e#821#822#0" expanded="false" />
+            <element signature="e#868#869#0" expanded="false" />
+            <element signature="e#906#907#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/myapp/DeleteItemListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/myapp/dialogs/DeleteItemDialogFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/myapp/dialogs/DatePickerDialogFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="124" column="9" selection-start-line="124" selection-start-column="9" selection-end-line="124" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#5159#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#5094#5095#0" expanded="false" />
+            <element signature="e#5155#5156#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/myapp/MyActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="79" column="23" selection-start-line="79" selection-start-column="21" selection-end-line="79" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1272#1273#0" expanded="false" />
+            <element signature="e#1319#1320#0" expanded="false" />
+            <element signature="e#3719#3720#0" expanded="false" />
+            <element signature="e#3757#3758#0" expanded="false" />
+            <element signature="e#3793#3794#0" expanded="false" />
+            <element signature="e#3821#3822#0" expanded="false" />
+            <element signature="e#3856#3857#0" expanded="false" />
+            <element signature="e#3885#3886#0" expanded="false" />
+            <element signature="e#4207#4208#0" expanded="false" />
+            <element signature="e#4251#4252#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_40/src.zip!/java/text/SimpleDateFormat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33286715">
+          <caret line="420" column="13" selection-start-line="420" selection-start-column="13" selection-end-line="420" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/task.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.61445785">
+          <caret line="3" column="102" selection-start-line="3" selection-start-column="102" selection-end-line="3" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/myapp/dialogs/EditDialogFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.93131316">
+          <caret line="96" column="0" selection-start-line="17" selection-start-column="2" selection-end-line="96" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Android</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>TodoList</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

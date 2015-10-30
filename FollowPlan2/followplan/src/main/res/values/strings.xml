@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">FollowPlan</string>
+    <string name="action_settings">Settings</string>
+    <string name="all_tasks">Uncompleted tasks</string>
+    <string name="plans">Plans</string>
+    <string name="filters">Filters</string>
+    <string name="settings">Settings</string>
+    <string name="notifications">Notifications</string>
+    <string name="today">Today</string>
+    <string name="every_day">Every day</string>
+    <string name="every_week">Every week</string>
+    <string name="every_month">Every month</string>
+    <string name="create_period">Create interval</string>
+    <string name="customize_plans">Customize plans</string>
+    <string name="cancel">Cancel</string>
+    <string name="edit_plan">Edit plan</string>
+    <string name="input_plan_name">Input plan name</string>
+    <string name="name">Name</string>
+    <string name="delete_plan_question">Delete plan?</string>
+    <string name="delete">Delete</string>
+    <string name="plan_delete_success">Plan deleted</string>
+    <string name="plan_name">Kill Bill</string>
+    <string name="create_plan">Create plan</string>
+    <string name="search_hint">Search</string>
+    <string name="checkbox_unchecked">{faw-square-o}</string>
+    <string name="create_task">Create task</string>
+    <string name="task_name">Name</string>
+    <string name="repetetive">Repetetive</string>
+    <string name="edit">Edit</string>
+    <string name="plan_list">Plan list</string>
+    <string name="period_list">Period list</string>
+    <string name="edit_task">Edit task</string>
+    <string name="input_task_name">Input task name</string>
+    <string name="date_not_set">Date not set</string>
+    <string name="ib_done">{faw-check}</string>
+    <string name="ib_undo">{faw-undo}</string>
+    <string name="faw_edit">{faw-pencil}</string>
+    <string name="faw_trash">{faw-trash}</string>
+
+</resources>

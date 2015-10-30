@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+
+    </style>
+    <style name="rl_main">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <style name="btn_add">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:text">@string/plus</item>
+        <item name="android:background">@drawable/btn_add</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/h1</item>
+        <item name="android:layout_marginRight">@dimen/padding</item>
+        <item name="android:layout_marginBottom">@dimen/padding</item>
+    </style>
+</resources>

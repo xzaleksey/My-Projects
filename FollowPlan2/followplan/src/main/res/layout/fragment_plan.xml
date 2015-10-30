@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <include layout="@layout/spinner_period" android:id="@+id/spinner_period"
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_marginLeft="@dimen/activity_horizontal_padding"
+             android:layout_marginStart="@dimen/activity_horizontal_padding">
+    </include>
+
+    <com.mikepenz.iconics.view.IconicsButton
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_create_periods"
+            android:textColor="@color/accent"
+            android:text="{faw-plus}"
+            style="@android:style/Widget.Holo.Button.Borderless"
+            android:layout_toRightOf="@+id/spinner_period"
+            android:layout_toEndOf="@+id/spinner_period"/>
+    <com.mikepenz.iconics.view.IconicsButton
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_periods"
+            android:textColor="@color/accent"
+            android:text="{faw-edit}"
+            style="@android:style/Widget.Holo.Button.Borderless"
+            android:layout_toRightOf="@+id/iv_create_periods"
+            android:layout_toEndOf="@+id/iv_create_periods"/>
+    <!--<com.mikepenz.iconics.view.IconicsButton-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/filter_checked"-->
+    <!--android:textColor="@color/accent"-->
+    <!--android:text="{faw-check_square_o}"-->
+    <!--style="@android:style/Widget.Holo.Button.Borderless"-->
+    <!--android:layout_toRightOf="@+id/edit_periods"-->
+    <!--android:layout_toEndOf="@+id/edit_periods"-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"/>-->
+    <ListView
+            android:id="@id/android:list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/spinner_period"
+            android:cacheColorHint="@android:color/transparent"
+            android:descendantFocusability="blocksDescendants"
+            >
+    </ListView>
+    <include layout="@layout/tool_bar_task"
+             android:id="@+id/tool_bar_bottom"
+             android:layout_height="?attr/actionBarSize"
+             android:layout_width="match_parent"
+             android:layout_alignParentBottom="true">
+    </include>
+
+</RelativeLayout>

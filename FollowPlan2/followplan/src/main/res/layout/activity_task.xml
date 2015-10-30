@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+    <include
+            android:id="@+id/tool_bar"
+            layout="@layout/tool_bar_create_plan"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            />
+    <RelativeLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/tool_bar"
+            android:padding="@dimen/activity_horizontal_padding">
+        <android.support.v7.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_task_name"
+                android:clickable="true"
+                android:hint="@string/task_name"
+                android:inputType="textCapSentences"
+                />
+        <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_plan_list"
+                android:text="@string/plan_list"
+                android:layout_below="@id/et_task_name"
+                android:layout_marginTop="@dimen/common_margin"
+                style="@style/TextviewSecondaryMedium"
+                android:textColor="@color/accent">
+        </android.support.v7.widget.AppCompatTextView>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/tv_plan_list"
+                android:background="@color/accent"
+                />
+        <android.support.v7.widget.AppCompatSpinner android:layout_height="wrap_content"
+                                                    android:layout_width="match_parent"
+                                                    android:id="@+id/spinner_plan"
+                                                    android:layout_below="@+id/tv_plan_list"
+                                                    android:layout_marginTop="@dimen/common_margin">
+        </android.support.v7.widget.AppCompatSpinner>
+
+        <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_period_list"
+                android:text="@string/period_list"
+                android:layout_below="@id/spinner_plan"
+                android:layout_marginTop="@dimen/common_margin"
+                style="@style/TextviewSecondaryMedium"
+                android:textColor="@color/accent">
+        </android.support.v7.widget.AppCompatTextView>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/accent"
+                android:layout_below="@id/tv_period_list"
+                />
+        <android.support.v7.widget.AppCompatSpinner android:layout_height="wrap_content"
+                                                    android:layout_width="match_parent"
+                                                    android:id="@+id/spinner_period"
+                                                    android:layout_below="@+id/tv_period_list"
+                                                    android:layout_marginTop="@dimen/common_margin">
+        </android.support.v7.widget.AppCompatSpinner>
+        <android.support.v7.widget.AppCompatCheckBox android:layout_width="wrap_content"
+                                                     android:layout_height="wrap_content"
+                                                     android:id="@+id/cb_disposable"
+                                                     android:checked="true"
+                                                     android:layout_marginTop="@dimen/common_margin"
+                                                     android:layout_below="@+id/spinner_period">
+        </android.support.v7.widget.AppCompatCheckBox>
+        <android.support.v7.widget.AppCompatTextView android:layout_width="wrap_content"
+                                                     android:layout_height="wrap_content"
+                                                     android:id="@+id/tv_disposable"
+                                                     android:layout_below="@id/spinner_period"
+                                                     android:text="@string/repetetive"
+                                                     android:layout_toRightOf="@id/cb_disposable"
+                                                     android:layout_toEndOf="@id/cb_disposable"
+                                                     android:layout_alignBaseline="@+id/cb_disposable"
+                />
+    </RelativeLayout>
+</RelativeLayout>

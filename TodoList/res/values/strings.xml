@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TodoList</string>
+    <string name="plus">+</string>
+    <string name="cancel">Отмена</string>
+    <string name="choose_date">Выберите дату</string>
+    <string name="description_title">Описание задачи</string>
+    <string name="edit">Редактировать</string>
+    <string name="delete">Удалить</string>
+    <string name="done">Выполнено</string>
+    <string name="choose_action">Выберите действие</string>
+    <string name="delete_question">Удалить элемент?</string>
+    <string name="ok">Подтвердить</string>
+    <string name="change_task">Редактировать задачу</string>
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#4CAF50</color>
+    <color name="primary_dark">#388E3C</color>
+    <color name="primary_light">#C8E6C9</color>
+    <color name="accent">#448AFF</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+
+    <!--<item name="material_drawer_background">@color/material_drawer_background</item>-->
+    <color name="material_drawer_primary_text">@color/accent</color>
+    <color name="material_drawer_primary_icon">@color/primary_light</color>
+    <color name="material_drawer_secondary_text">@color/secondary_text</color>
+    <color name="material_drawer_hint_text">@color/secondary_text</color>
+    <color name="material_drawer_divider">@color/divider</color>
+    <!-- Material DEFAULT drawer colors -->
+    <color name="material_drawer_selected">@color/primary</color>
+    <color name="material_drawer_selected_text">@color/md_white_1000</color>
+    <color name="material_drawer_header_selection_text">@color/md_white_1000</color>
+
+
+    <color name="bright_pink">#FF007F</color>
+    <color name="red">#FF0000</color>
+    <color name="orange">#FF7F00</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="chartreuse">#7FFF00</color>
+    <color name="green">#00FF00</color>
+    <color name="spring_green">#00FF7F</color>
+    <color name="cyan">#00FFFF</color>
+    <color name="azure">#007FFF</color>
+    <color name="blue">#0000FF</color>
+    <color name="violet">#7F00FF</color>
+    <color name="magenta">#FF00FF</color>
+
+    <array name="plan_colors">
+        <item>@color/md_grey_500</item>
+        <item>@color/md_cyan_500</item>
+        <item>@color/md_blue_500</item>
+        <item>@color/md_indigo_500</item>
+        <item>@color/md_deep_purple_500</item>
+        <item>@color/md_lime_500</item>
+        <item>@color/md_light_green_500</item>
+        <item>@color/primary</item>
+        <item>@color/md_yellow_500</item>
+        <item>@color/md_amber_500</item>
+        <item>@color/md_red_500</item>
+        <item>@color/md_pink_500</item>
+    </array>
+</resources>
