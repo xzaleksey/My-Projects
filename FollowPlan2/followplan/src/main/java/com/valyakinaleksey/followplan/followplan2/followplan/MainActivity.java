@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,6 +16,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 import com.melnykov.fab.FloatingActionButton;
 import com.mikepenz.fontawesome_typeface_library.FontAwesome;
 import com.mikepenz.iconics.Iconics;
@@ -180,6 +182,27 @@ public class MainActivity extends AppCompatActivity {
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         ft.commit();
         currentFragment = fragment;
+//        if (currentFragment instanceof PlanFragment){
+//            final View currentFragmentView = currentFragment.getView();
+//            if (currentFragmentView != null) {
+//                final PlanFragment planFragment= (PlanFragment) currentFragment;
+//                currentFragmentView.setFocusableInTouchMode(true);
+//                currentFragmentView.requestFocus();
+//                currentFragmentView.setOnKeyListener(new View.OnKeyListener() {
+//                    @Override
+//                    public boolean onKey(View view, int i, KeyEvent keyEvent) {
+//                        if (i == KeyEvent.KEYCODE_BACK) {
+//                            if (planFragment.isToolBarShown()) {
+//                                planFragment.hideToolbar();
+//                            }
+//                            return true;
+//                        }
+//                        return false;
+//                    }
+//                });
+//            }
+//
+//        }
         mainToolbarTitle.setText(fragmentName);
     }
 
@@ -255,5 +278,20 @@ public class MainActivity extends AppCompatActivity {
 
     public InputMethodManager getImm() {
         return imm;
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event)  {
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
+            // do something on back pressed.
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this,"Back",Toast.LENGTH_SHORT).show();
+        super.onBackPressed();
     }
 }

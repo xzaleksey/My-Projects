@@ -33,4 +33,12 @@
     <string name="edit_task">Редактировать задачу</string>
     <string name="input_task_name">Введите название задачи</string>
     <string name="date_not_set">Дата не установлена</string>
+    <string name="delete_task_question">Удалить задачу?</string>
+    <string name="no_notification">Без времени</string>
+    <string name="no_time_notification">Время для напоминаний отуствует</string>
+    <string name="off">Выкл</string>
+    <string name="on">Вкл</string>
+    <string name="time_notification">Время напоминаний по умолчанию</string>
+    <string name="set">Установить</string>
+    <string name="notification_date_time">Дата и время напоминания</string>
 </resources>

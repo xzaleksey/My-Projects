@@ -6,49 +6,41 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import com.mikepenz.fontawesome_typeface_library.FontAwesome;
+import com.mikepenz.iconics.IconicsDrawable;
+import com.mikepenz.iconics.view.IconicsImageView;
 import com.valyakinaleksey.followplan.followplan2.followplan.R;
-import com.valyakinaleksey.followplan.followplan2.followplan.task.Plan;
+import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Plan;
 
 import java.util.List;
 
 public class SpinnerPlanArrayAdapter extends ArrayAdapter<Plan> {
     private final LayoutInflater inflater;
-    private List<Plan> plans;
     private Context context;
     private boolean done = false;
 
-    public SpinnerPlanArrayAdapter(Context context, int resource, List<Plan> objects) {
-        super(context, resource, objects);
+    public SpinnerPlanArrayAdapter(Context context, List<Plan> objects) {
+        super(context, R.layout.spinner_textview, objects);
         this.context = context;
-        plans = objects;
         inflater = LayoutInflater.from(this.context);
     }
 
-
-    @Override
-    public int getCount() {
-        return plans.size();
-    }
-
-    @Override
-    public Plan getItem(int i) {
-        return plans.get(i);
-    }
-
-    @Override
-    public long getItemId(int i) {
-        return i;
-    }
-
-
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
+        Plan plan = getItem(i);
+        ViewHolder viewHolder;
         if (view == null) {
             view = inflater
-                    .inflate(R.layout.spinner_textview, viewGroup, false);
+                    .inflate(R.layout.spinner_plan, viewGroup, false);
+            viewHolder = new ViewHolder();
+            viewHolder.planName = (TextView) view.findViewById(R.id.tv_plan_name);
+            viewHolder.color = (IconicsImageView) view.findViewById(R.id.iv_color);
+            view.setTag(viewHolder);
+        } else {
+            viewHolder = (ViewHolder) view.getTag();
         }
-        Plan plan = getItem(i);
-        ((TextView) view).setText(plan.getName());
+        viewHolder.planName.setText(plan.getName());
+        viewHolder.color.setIcon(new IconicsDrawable(context, FontAwesome.Icon.faw_circle).color(plan.getColor()).sizeDp(10));
         return view;
     }
 
@@ -58,5 +50,10 @@ public class SpinnerPlanArrayAdapter extends ArrayAdapter<Plan> {
 
     public void setDone(boolean done) {
         this.done = done;
+    }
+
+    public class ViewHolder {
+        TextView planName;
+        IconicsImageView color;
     }
 }

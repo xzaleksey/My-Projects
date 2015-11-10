@@ -32,9 +32,23 @@
     <string name="edit_task">Edit task</string>
     <string name="input_task_name">Input task name</string>
     <string name="date_not_set">Date not set</string>
-    <string name="ib_done">{faw-check}</string>
-    <string name="ib_undo">{faw-undo}</string>
+    <string name="faw_check">{faw-check}</string>
+    <string name="faw_undo">{faw-undo}</string>
     <string name="faw_edit">{faw-pencil}</string>
     <string name="faw_trash">{faw-trash}</string>
+    <string name="faw_clock">{faw-clock_o}</string>
+    <string name="delete_task_question">Delete task?</string>
+    <string name="no_notification">Without time</string>
+    <string name="faw_gear">{faw-gear}</string>
+    <string name="faw_plus">{faw-plus}</string>
+    <string name="no_time_notification">No time for notification</string>
+    <string name="on">On</string>
+    <string name="off">Off</string>
+    <string name="time_notification">Default notification time</string>
+    <string name="settings_category">category</string>
+    <string name="set">Set</string>
+    <string name="notification_date_time">Notification Date and Time</string>
+    <string name="faw_close">{faw-close}</string>
+    <string name="faw_calendar_check">{faw-calendar_check_o}</string>
 
 </resources>

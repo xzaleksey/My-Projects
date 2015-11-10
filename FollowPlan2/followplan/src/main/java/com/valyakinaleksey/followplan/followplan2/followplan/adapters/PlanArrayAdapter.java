@@ -11,7 +11,7 @@ import com.mikepenz.iconics.IconicsDrawable;
 import com.mikepenz.iconics.view.IconicsImageView;
 import com.valyakinaleksey.followplan.followplan2.followplan.R;
 import com.valyakinaleksey.followplan.followplan2.followplan.dialogs.PlansDialogFragment;
-import com.valyakinaleksey.followplan.followplan2.followplan.task.Plan;
+import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Plan;
 
 import java.util.ArrayList;
 import java.util.List;

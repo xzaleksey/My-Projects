@@ -42,5 +42,6 @@ dependencies {
     compile 'com.mikepenz:iconics-core:1.6.2@aar'
     compile 'com.mikepenz:fontawesome-typeface:4.4.0.1@aar'
     compile 'com.avast:android-styled-dialogs:2.2.0'
+    compile 'com.wdullaer:materialdatetimepicker:1.5.4'
     compile 'net.danlew:android.joda:2.8.2'
 }

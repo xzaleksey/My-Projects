@@ -13,13 +13,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.avast.android.dialogs.fragment.SimpleDialogFragment;
 import com.avast.android.dialogs.iface.ISimpleDialogListener;
-import com.valyakinaleksey.followplan.followplan2.followplan.Colors;
 import com.valyakinaleksey.followplan.followplan2.followplan.DatabaseHelper;
 import com.valyakinaleksey.followplan.followplan2.followplan.R;
 import com.valyakinaleksey.followplan.followplan2.followplan.adapters.ColorArrayAdapter;
-import com.valyakinaleksey.followplan.followplan2.followplan.dialogs.PlansDialogFragment;
-import com.valyakinaleksey.followplan.followplan2.followplan.task.Period;
-import com.valyakinaleksey.followplan.followplan2.followplan.task.Plan;
+import com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Colors;
+import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Period;
+import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Plan;
+
+import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.*;
 
 public class PlanActivity extends AppCompatActivity implements ISimpleDialogListener {
     public static final int CREATE_PLAN = -1;
@@ -86,7 +87,7 @@ public class PlanActivity extends AppCompatActivity implements ISimpleDialogList
                         Plan plan = new Plan(id, planName, orderNum, color);
                         Plan.addPlan(plan);
                         Period.createBasePeriods(getBaseContext(), plan);
-                        setResult(PlansDialogFragment.RESULT_CREATE);
+                        setResult(RESULT_CREATE);
                     } else {
                         currentPlan.setName(planName);
                         currentPlan.setColor(color);
@@ -94,7 +95,7 @@ public class PlanActivity extends AppCompatActivity implements ISimpleDialogList
                         contentValues.put(Plan.NAME, planName);
                         contentValues.put(Plan.COLOR, color);
                         databaseHelper.updatePlan(currentPlan.getId(), contentValues);
-                        setResult(PlansDialogFragment.RESULT_EDIT);
+                        setResult(RESULT_EDIT);
                     }
                     databaseHelper.close();
                     finish();
@@ -139,7 +140,7 @@ public class PlanActivity extends AppCompatActivity implements ISimpleDialogList
 
     @Override
     public void onPositiveButtonClicked(int i) {
-        setResult(PlansDialogFragment.RESULT_DELETE);
+        setResult(RESULT_DELETE);
         finish();
     }
 }

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    style="@style/ActionBar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/activity_horizontal_padding"
+        android:weightSum="3">
+
+        <com.mikepenz.iconics.view.IconicsButton
+            android:id="@+id/ib_done"
+            style="@android:style/Widget.Holo.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/faw_check"/>
+
+        <com.mikepenz.iconics.view.IconicsButton
+            android:id="@+id/ib_edit"
+            style="@android:style/Widget.Holo.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/faw_edit"/>
+
+        <com.mikepenz.iconics.view.IconicsButton
+            android:id="@+id/ib_notification_date"
+            style="@android:style/Widget.Holo.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/faw_clock"/>
+    </LinearLayout>
+
+</android.support.v7.widget.Toolbar>

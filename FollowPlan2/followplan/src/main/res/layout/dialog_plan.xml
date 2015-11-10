@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
 
     <ListView
-            android:id="@+id/project_listview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-    </ListView>
-    <com.mikepenz.iconics.view.IconicsButton
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/iv_customize_plans"
-            android:textColor="@color/accent"
-            android:text="{faw-gear}"
-            style="@android:style/Widget.Holo.Button.Borderless"
-            android:layout_below="@+id/project_listview"
-            android:visibility="gone"/>
+        android:id="@+id/plan_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.mikepenz.iconics.view.IconicsButton android:id="@+id/iv_customize_plans"
+        style="@android:style/Widget.Holo.Button.Borderless"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/plan_listview"
+        android:text="@string/faw_gear"
+        android:textColor="@color/accent"
+        android:visibility="gone" />
 
 </RelativeLayout>

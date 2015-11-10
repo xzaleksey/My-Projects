@@ -43,7 +43,7 @@ public class ColorArrayAdapter extends BaseAdapter {
         final int color = (int) getItem(position);
         if (convertView == null) {
             convertView = inflater
-                    .inflate(R.layout.color_choose, null);
+                    .inflate(R.layout.plan_color, null);
         }
         IconicsImageView convertView1 = (IconicsImageView) convertView;
         convertView1.setIcon(new IconicsDrawable(context, FontAwesome.Icon.faw_circle).color(color).sizeDp(10));

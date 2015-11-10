@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="notification_switch"
+        android:summaryOff="@string/off"
+        android:summaryOn="@string/on"
+        />
+
+    <!--<EditTextPreference-->
+    <!--android:key="@string/time_notification"-->
+    <!--android:summary="@string/no_time_notification"-->
+    <!--android:title="@string/time_notification"-->
+    <!--android:dependency="notification_switch"-->
+    <!--/>-->
+    <com.valyakinaleksey.followplan.followplan2.followplan.preferences.TimePreference
+        android:defaultValue="09:00"
+        android:dependency="notification_switch"
+        android:key="@string/time_notification"
+        android:title="@string/time_notification"
+        />
+</PreferenceScreen>

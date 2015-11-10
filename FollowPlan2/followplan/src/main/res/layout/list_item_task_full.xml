@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_horizontal_padding">
+
+    <TextView
+        android:id="@+id/tv_plan_name"
+        style="@style/subHeader"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"/>
+
+    <com.mikepenz.iconics.view.IconicsImageView
+        android:id="@+id/iv_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_plan_name"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:padding="6dp"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_task_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@id/tv_plan_name"
+        android:layout_toStartOf="@id/tv_plan_name"
+        android:textAppearance="?android:attr/textAppearanceListItem"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_period_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_task_name"
+        android:layout_marginTop="@dimen/common_margin"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+    <com.mikepenz.iconics.view.IconicsTextView
+        android:id="@+id/tv_date_notification_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_period_name"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:focusable="false"
+        android:padding="@dimen/zero"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/secondary_text"/>
+</RelativeLayout>

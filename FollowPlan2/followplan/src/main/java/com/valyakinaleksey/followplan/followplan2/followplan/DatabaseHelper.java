@@ -8,9 +8,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.BaseColumns;
 import android.util.Log;
-import com.valyakinaleksey.followplan.followplan2.followplan.task.Period;
-import com.valyakinaleksey.followplan.followplan2.followplan.task.Plan;
-import com.valyakinaleksey.followplan.followplan2.followplan.task.Task;
+import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Period;
+import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Plan;
+import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Task;
 import org.joda.time.DateTime;
 
 public class DatabaseHelper extends SQLiteOpenHelper implements BaseColumns {

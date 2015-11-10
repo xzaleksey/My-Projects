@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import com.valyakinaleksey.followplan.followplan2.followplan.R;
-import com.valyakinaleksey.followplan.followplan2.followplan.task.Period;
+import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Period;
 
 import java.util.List;
 

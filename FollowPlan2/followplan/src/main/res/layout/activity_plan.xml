@@ -1,36 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-        >
-    <include
-            android:id="@+id/tool_bar"
-            layout="@layout/tool_bar_create_plan"
-            />
-    <RelativeLayout android:layout_height="match_parent" android:layout_width="match_parent"
-                    android:padding="@dimen/activity_horizontal_padding" android:layout_below="@id/tool_bar"
-                    android:paddingTop="@dimen/activity_horizontal_padding">
-        <android.support.v7.widget.AppCompatTextView android:layout_width="wrap_content"
-                                                     android:layout_height="wrap_content"
-                                                     android:id="@+id/tv_plan_name"
-                                                     android:text="@string/name"
-                                                     android:layout_marginLeft="50dp"
-                                                     android:layout_marginStart="50dp"
-                />
-        <android.support.v7.widget.AppCompatSpinner android:layout_width="wrap_content"
-                                                    android:layout_height="wrap_content" android:id="@+id/color_picker"
-                                                    android:layout_below="@id/tv_plan_name">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-        </android.support.v7.widget.AppCompatSpinner>
-        <android.support.v7.widget.AppCompatEditText android:layout_width="match_parent"
-                                                     android:layout_height="wrap_content"
-                                                     android:id="@+id/et_project_name"
-                                                     android:layout_alignBottom="@id/color_picker"
-                                                     android:layout_toRightOf="@id/color_picker"
-                                                     android:layout_toEndOf="@id/color_picker"
-                                                     android:hint="@string/plan_name"
-                                                     android:inputType="textCapSentences"
-                />
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar_create" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tool_bar"
+        android:padding="@dimen/activity_horizontal_padding"
+        android:paddingTop="@dimen/activity_horizontal_padding">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_plan_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
+            android:text="@string/name" />
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/color_picker"
+            style="@android:style/Widget.Material.Light.Spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_plan_name"/>
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/et_project_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/color_picker"
+            android:layout_toEndOf="@id/color_picker"
+            android:layout_toRightOf="@id/color_picker"
+            android:hint="@string/plan_name"
+            android:inputType="textCapSentences" />
     </RelativeLayout>
 
 </RelativeLayout>

@@ -15,21 +15,17 @@ import com.avast.android.dialogs.core.BaseDialogFragment;
 import com.avast.android.dialogs.fragment.SimpleDialogFragment;
 import com.avast.android.dialogs.iface.ISimpleDialogListener;
 import com.valyakinaleksey.followplan.followplan2.followplan.DatabaseHelper;
-import com.valyakinaleksey.followplan.followplan2.followplan.MainActivity;
 import com.valyakinaleksey.followplan.followplan2.followplan.R;
+import com.valyakinaleksey.followplan.followplan2.followplan.activities.MainActivity;
 import com.valyakinaleksey.followplan.followplan2.followplan.activities.PlanActivity;
 import com.valyakinaleksey.followplan.followplan2.followplan.adapters.PlanArrayAdapter;
 import com.valyakinaleksey.followplan.followplan2.followplan.fragments.PlanFragment;
-import com.valyakinaleksey.followplan.followplan2.followplan.task.Plan;
+import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Plan;
+
+import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.*;
 
 public class PlansDialogFragment extends SimpleDialogFragment implements ISimpleDialogListener {
-    public static final int REQUEST_CODE_CREATE_PROJECT = 1;
-    public static final int REQUEST_CODE_EDIT_PROJECT_DELETE = 2;
 
-    public static final int RESULT_CANCELED = 0;
-    public static final int RESULT_CREATE = 4;
-    public static final int RESULT_EDIT = 5;
-    public static final int RESULT_DELETE = 6;
     public static final String EDITABLE = "Editable";
 
     public static String TAG = "PlansDialogFragment";
@@ -76,7 +72,7 @@ public class PlansDialogFragment extends SimpleDialogFragment implements ISimple
                     public void onClick(View v) {
                         Toast.makeText(getActivity(), "Успех", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getContext(), PlanActivity.class);
-                        startActivityForResult(intent, REQUEST_CODE_CREATE_PROJECT);
+                        startActivityForResult(intent, REQUEST_CODE_CREATE);
 //                for (IPositiveButtonDialogListener listener : getPositiveButtonDialogListeners()) {
 //                    listener.onPositiveButtonClicked(mRequestCode);
 //                }
@@ -90,7 +86,7 @@ public class PlansDialogFragment extends SimpleDialogFragment implements ISimple
     }
 
     private void initFields(ViewGroup viewGroup) {
-        listViewProjects = (ListView) viewGroup.findViewById(R.id.project_listview);
+        listViewProjects = (ListView) viewGroup.findViewById(R.id.plan_listview);
         ib_customize = (Button) viewGroup.findViewById(R.id.iv_customize_plans);
         ib_customize.setText(getResources().getString(R.string.customize_plans) + " {faw-gear}");
         planArrayAdapter = PlanArrayAdapter.getInstance(getActivity(), R.layout.list_item_plan, this);
@@ -122,7 +118,7 @@ public class PlansDialogFragment extends SimpleDialogFragment implements ISimple
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode != RESULT_CANCELED) {
-            if (requestCode == REQUEST_CODE_CREATE_PROJECT) {
+            if (requestCode == REQUEST_CODE_CREATE) {
                 if (resultCode == RESULT_CREATE) {
                     planArrayAdapter.add(Plan.getLastPlan());
                     if (!customizePlansVisible) {
@@ -131,11 +127,11 @@ public class PlansDialogFragment extends SimpleDialogFragment implements ISimple
                     }
                 }
             }
-            if (requestCode == REQUEST_CODE_EDIT_PROJECT_DELETE) {
+            if (requestCode == REQUEST_CODE_EDIT_DELETE) {
                 if (resultCode == RESULT_DELETE) {
                     if (currentPlan != null) {
-                        Plan.deletePlan(currentPlan.getId(), new DatabaseHelper(getContext()));
                         planArrayAdapter.remove(Plan.getLastPlan());
+                        Plan.deletePlan(currentPlan.getId(), new DatabaseHelper(getContext()));
                         Toast.makeText(getContext(), getResources().getString(R.string.plan_delete_success), Toast.LENGTH_SHORT).show();
                         if (planArrayAdapter.getCount() == 0) {
                             customizePlansVisible = false;
@@ -152,8 +148,8 @@ public class PlansDialogFragment extends SimpleDialogFragment implements ISimple
     @Override
     public void onPositiveButtonClicked(int i) {
         if (currentPlan != null) {
-            if (i == REQUEST_CODE_EDIT_PROJECT_DELETE) {
-                onActivityResult(REQUEST_CODE_EDIT_PROJECT_DELETE, RESULT_DELETE, null);
+            if (i == REQUEST_CODE_EDIT_DELETE) {
+                onActivityResult(REQUEST_CODE_EDIT_DELETE, RESULT_DELETE, null);
             }
         }
     }
@@ -183,7 +179,7 @@ public class PlansDialogFragment extends SimpleDialogFragment implements ISimple
         SimpleDialogFragment.createBuilder(getContext(), getActivity().getSupportFragmentManager())
                 .setTitle(R.string.delete_plan_question)
                 .setPositiveButtonText(R.string.delete)
-                .setNegativeButtonText(R.string.cancel).show().setTargetFragment(this, REQUEST_CODE_EDIT_PROJECT_DELETE);
+                .setNegativeButtonText(R.string.cancel).show().setTargetFragment(this, REQUEST_CODE_EDIT_DELETE);
     }
 
     public void editPlan(Plan plan) {
@@ -191,13 +187,13 @@ public class PlansDialogFragment extends SimpleDialogFragment implements ISimple
         if (plan != null) {
             Intent intent = new Intent(getContext(), PlanActivity.class);
             intent.putExtra("listPlanId", plan.getId());
-            startActivityForResult(intent, REQUEST_CODE_EDIT_PROJECT_DELETE);
+            startActivityForResult(intent, REQUEST_CODE_EDIT_DELETE);
         }
     }
 
     @Override
     public void onDismiss(DialogInterface dialog) {
-        super.onDismiss(dialog);
         planArrayAdapter.setEditable(false);
+        super.onDismiss(dialog);
     }
 }
