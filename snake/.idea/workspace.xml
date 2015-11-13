@@ -15,12 +15,12 @@
       </config>
     </shared>
     <layouts>
-      <layout url="file://$PROJECT_DIR$/res/layout/cell.xml">
+      <layout url="file://$PROJECT_DIR$/res/layout/activity_main.xml">
         <config>
           <theme>@android:style/Theme.Holo</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/res/layout/main.xml">
+      <layout url="file://$PROJECT_DIR$/res/layout/cell.xml">
         <config>
           <theme>@android:style/Theme.Holo</theme>
         </config>
@@ -28,13 +28,91 @@
     </layouts>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="TAGbtn" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="DEBUG" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.valyakinaleksey.snake" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0beb842d-cbca-4d51-a38a-95cd3acb95c6" name="Default" comment="btn_play fixed">
+    <list default="true" id="0beb842d-cbca-4d51-a38a-95cd3acb95c6" name="Default" comment="update Snake">
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\Projects\My-Projects\snake\out\production\snake\com\valyakinaleksey\snake\MyActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\Projects\My-Projects\snake\out\production\snake\com\valyakinaleksey\snake\MyActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\Projects\My-Projects\snake\out\production\snake\com\valyakinaleksey\snake\MyActivity$3.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\Projects\My-Projects\snake\out\production\snake\com\valyakinaleksey\snake\MyActivity$4.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\Projects\My-Projects\snake\out\production\snake\com\valyakinaleksey\snake\MyActivity.class" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\ruaval\IdeaProjects\Projects\My-Projects\snake\res\layout\main.xml" afterPath="$PROJECT_DIR$/res/layout/activity_main.xml" />
+      <change type="MOVED" beforePath="C:\Users\ruaval\IdeaProjects\Projects\My-Projects\snake\src\com\valyakinaleksey\snake\MyActivity.java" afterPath="$PROJECT_DIR$/src/com/valyakinaleksey/snake/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/game/Game$1.class" afterPath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/game/Game$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/game/Game$2.class" afterPath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/game/Game$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/game/Game.class" afterPath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/game/Game.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../simple2048/out/production/simple2048/com/valyakinaleksey/simple2048/MyActivity$3.class" afterPath="$PROJECT_DIR$/../simple2048/out/production/simple2048/com/valyakinaleksey/simple2048/MyActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../simple2048/out/production/simple2048/com/valyakinaleksey/simple2048/MyActivity$4.class" afterPath="$PROJECT_DIR$/../simple2048/out/production/simple2048/com/valyakinaleksey/simple2048/MyActivity$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../simple2048/out/production/simple2048/com/valyakinaleksey/simple2048/MyActivity$MyGestureListener$1.class" afterPath="$PROJECT_DIR$/../simple2048/out/production/simple2048/com/valyakinaleksey/simple2048/MyActivity$MyGestureListener$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../simple2048/out/production/simple2048/com/valyakinaleksey/simple2048/MyActivity$MyGestureListener.class" afterPath="$PROJECT_DIR$/../simple2048/out/production/simple2048/com/valyakinaleksey/simple2048/MyActivity$MyGestureListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../simple2048/out/production/simple2048/com/valyakinaleksey/simple2048/MyActivity$Updater$1.class" afterPath="$PROJECT_DIR$/../simple2048/out/production/simple2048/com/valyakinaleksey/simple2048/MyActivity$Updater$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../simple2048/out/production/simple2048/com/valyakinaleksey/simple2048/MyActivity$Updater.class" afterPath="$PROJECT_DIR$/../simple2048/out/production/simple2048/com/valyakinaleksey/simple2048/MyActivity$Updater.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../simple2048/out/production/simple2048/com/valyakinaleksey/simple2048/MyActivity.class" afterPath="$PROJECT_DIR$/../simple2048/out/production/simple2048/com/valyakinaleksey/simple2048/MyActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/MyHandler.class" afterPath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/MyHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FifteenPuzzleReworked/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../FifteenPuzzleReworked/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/R$layout.class" afterPath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../simple2048/out/production/simple2048/simple2048.apk" afterPath="$PROJECT_DIR$/../simple2048/out/production/simple2048/simple2048.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../simple2048/out/production/simple2048/simple2048.unaligned.apk" afterPath="$PROJECT_DIR$/../simple2048/out/production/simple2048/simple2048.unaligned.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/snake.apk" afterPath="$PROJECT_DIR$/out/production/snake/snake.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/snake.unaligned.apk" afterPath="$PROJECT_DIR$/out/production/snake/snake.unaligned.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../appcompat/gen/android/support/v7/appcompat/BuildConfig.java" afterPath="$PROJECT_DIR$/../appcompat/gen/android/support/v7/appcompat/BuildConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../simple2048/gen/com/valyakinaleksey/simple2048/BuildConfig.java" afterPath="$PROJECT_DIR$/../simple2048/gen/com/valyakinaleksey/simple2048/BuildConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/valyakinaleksey/snake/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/com/valyakinaleksey/snake/BuildConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/help_classes/Constants.java" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/help_classes/Constants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/DatabaseHelper.java" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/DatabaseHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/FollowPlan2.iml" afterPath="$PROJECT_DIR$/../FollowPlan2/FollowPlan2.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/valyakinaleksey/snake/game/Game.java" afterPath="$PROJECT_DIR$/src/com/valyakinaleksey/snake/game/Game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/activities/MainActivity.java" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/activities/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/valyakinaleksey/snake/MyHandler.java" afterPath="$PROJECT_DIR$/src/com/valyakinaleksey/snake/MyHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/activities/MyPreferenceActivity.java" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/activities/MyPreferenceActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/dialogs/NotificationDialogFragment.java" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/dialogs/NotificationDialogFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/main_classes/Period.java" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/main_classes/Period.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/main_classes/Plan.java" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/main_classes/Plan.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/fragments/PlanFragment.java" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/fragments/PlanFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/adapters/SpinnerPlanArrayAdapter.java" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/adapters/SpinnerPlanArrayAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/main_classes/Task.java" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/main_classes/Task.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/activities/TaskActivity.java" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/activities/TaskActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/preferences/TimePreference.java" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/preferences/TimePreference.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/activity_plan.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/activity_plan.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/activity_prefs.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/activity_prefs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/activity_settings.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/activity_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/activity_task.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/activity_task.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/values/arrays.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/values/arrays.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/.idea/codeStyleSettings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/.idea/compiler.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/dialog_plan.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/dialog_plan.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/dialog_task_notification.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/dialog_task_notification.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/.idea/encodings.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/followplan.iml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/followplan.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/fragment_plan.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/fragment_plan.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/../FollowPlan2/gradle/wrapper/gradle-wrapper.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/.idea/gradle.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/.idea/gradle.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/gradlew" afterPath="$PROJECT_DIR$/../FollowPlan2/gradlew" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/list_item_plan.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/list_item_plan.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/list_item_task.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/list_item_task.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/list_item_task_full.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/list_item_task_full.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/menu/menu_selected_item.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/menu/menu_selected_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/.idea/misc.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/.idea/modules.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/xml/notifications.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/xml/notifications.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/plan_color.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/plan_color.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/spinner_plan.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/spinner_plan.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/spinner_textview.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/spinner_textview.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/values-ru/strings.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/values-ru/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/styles.xml" afterPath="$PROJECT_DIR$/res/values/styles.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/tool_bar_choose_task.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/tool_bar_choose_task.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/tool_bar_create.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/tool_bar_create.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/tool_bar_main.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/tool_bar_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/.idea/uiDesigner.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/.idea/vcs.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../simple2048/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../simple2048/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="snake.iws" />
@@ -58,186 +136,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MyActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/MyActivity.java">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="97" column="51" selection-start-line="97" selection-start-column="51" selection-end-line="97" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContextWrapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-22/android/content/ContextWrapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="105" column="22" selection-start-line="105" selection-start-column="22" selection-end-line="105" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.40078586">
+              <caret line="142" column="8" selection-start-line="142" selection-start-column="8" selection-end-line="142" selection-end-column="8" />
               <folding>
-                <element signature="e#0#20584#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#1787#1788#0" expanded="false" />
-                <element signature="e#1815#1816#0" expanded="false" />
-                <element signature="e#2418#2419#0" expanded="false" />
-                <element signature="e#2446#2447#0" expanded="false" />
-                <element signature="e#2499#2500#0" expanded="false" />
-                <element signature="e#2539#2540#0" expanded="false" />
-                <element signature="e#2596#2597#0" expanded="false" />
-                <element signature="e#2639#2640#0" expanded="false" />
-                <element signature="e#2702#2703#0" expanded="false" />
-                <element signature="e#2750#2751#0" expanded="false" />
-                <element signature="e#2815#2816#0" expanded="false" />
-                <element signature="e#2864#2865#0" expanded="false" />
-                <element signature="e#2915#2916#0" expanded="false" />
-                <element signature="e#2959#2960#0" expanded="false" />
-                <element signature="e#3023#3024#0" expanded="false" />
-                <element signature="e#3075#3076#0" expanded="false" />
-                <element signature="e#3132#3133#0" expanded="false" />
-                <element signature="e#3169#3170#0" expanded="false" />
-                <element signature="e#3234#3235#0" expanded="false" />
-                <element signature="e#3278#3279#0" expanded="false" />
-                <element signature="e#3333#3334#0" expanded="false" />
-                <element signature="e#3372#3373#0" expanded="false" />
-                <element signature="e#3429#3430#0" expanded="false" />
-                <element signature="e#3474#3475#0" expanded="false" />
-                <element signature="e#3526#3527#0" expanded="false" />
-                <element signature="e#3571#3572#0" expanded="false" />
-                <element signature="e#3644#3645#0" expanded="false" />
-                <element signature="e#3693#3694#0" expanded="false" />
-                <element signature="e#3764#3765#0" expanded="false" />
-                <element signature="e#3811#3812#0" expanded="false" />
-                <element signature="e#3876#3877#0" expanded="false" />
-                <element signature="e#3925#3926#0" expanded="false" />
-                <element signature="e#3989#3990#0" expanded="false" />
-                <element signature="e#4042#4043#0" expanded="false" />
-                <element signature="e#4098#4099#0" expanded="false" />
-                <element signature="e#4147#4148#0" expanded="false" />
-                <element signature="e#4229#4230#0" expanded="false" />
-                <element signature="e#4282#4283#0" expanded="false" />
-                <element signature="e#4824#4825#0" expanded="false" />
-                <element signature="e#4869#4870#0" expanded="false" />
-                <element signature="e#4933#4934#0" expanded="false" />
-                <element signature="e#4985#4986#0" expanded="false" />
-                <element signature="e#5033#5034#0" expanded="false" />
-                <element signature="e#5072#5073#0" expanded="false" />
-                <element signature="e#5119#5120#0" expanded="false" />
-                <element signature="e#5161#5162#0" expanded="false" />
-                <element signature="e#5216#5217#0" expanded="false" />
-                <element signature="e#5266#5267#0" expanded="false" />
-                <element signature="e#5332#5333#0" expanded="false" />
-                <element signature="e#5386#5387#0" expanded="false" />
-                <element signature="e#5455#5456#0" expanded="false" />
-                <element signature="e#5510#5511#0" expanded="false" />
-                <element signature="e#5555#5556#0" expanded="false" />
-                <element signature="e#5595#5596#0" expanded="false" />
-                <element signature="e#5643#5644#0" expanded="false" />
-                <element signature="e#5684#5685#0" expanded="false" />
-                <element signature="e#5731#5732#0" expanded="false" />
-                <element signature="e#5773#5774#0" expanded="false" />
-                <element signature="e#5824#5825#0" expanded="false" />
-                <element signature="e#5870#5871#0" expanded="false" />
-                <element signature="e#5925#5926#0" expanded="false" />
-                <element signature="e#5975#5976#0" expanded="false" />
-                <element signature="e#6033#6034#0" expanded="false" />
-                <element signature="e#6084#6085#0" expanded="false" />
-                <element signature="e#6142#6143#0" expanded="false" />
-                <element signature="e#6193#6194#0" expanded="false" />
-                <element signature="e#6256#6257#0" expanded="false" />
-                <element signature="e#6303#6304#0" expanded="false" />
-                <element signature="e#6788#6789#0" expanded="false" />
-                <element signature="e#6837#6838#0" expanded="false" />
-                <element signature="e#6899#6900#0" expanded="false" />
-                <element signature="e#6949#6950#0" expanded="false" />
-                <element signature="e#7001#7002#0" expanded="false" />
-                <element signature="e#7044#7045#0" expanded="false" />
-                <element signature="e#7096#7097#0" expanded="false" />
-                <element signature="e#7139#7140#0" expanded="false" />
-                <element signature="e#7192#7193#0" expanded="false" />
-                <element signature="e#7236#7237#0" expanded="false" />
-                <element signature="e#7302#7303#0" expanded="false" />
-                <element signature="e#7364#7365#0" expanded="false" />
-                <element signature="e#7431#7432#0" expanded="false" />
-                <element signature="e#7494#7495#0" expanded="false" />
-                <element signature="e#7908#7909#0" expanded="false" />
-                <element signature="e#7951#7952#0" expanded="false" />
-                <element signature="e#8053#8054#0" expanded="false" />
-                <element signature="e#8108#8109#0" expanded="false" />
-                <element signature="e#8186#8187#0" expanded="false" />
-                <element signature="e#8238#8239#0" expanded="false" />
-                <element signature="e#8487#8488#0" expanded="false" />
-                <element signature="e#8533#8534#0" expanded="false" />
-                <element signature="e#8616#8617#0" expanded="false" />
-                <element signature="e#8671#8672#0" expanded="false" />
-                <element signature="e#9600#9601#0" expanded="false" />
-                <element signature="e#9643#9644#0" expanded="false" />
-                <element signature="e#11086#11087#0" expanded="false" />
-                <element signature="e#11141#11142#0" expanded="false" />
-                <element signature="e#12297#12298#0" expanded="false" />
-                <element signature="e#12346#12347#0" expanded="false" />
-                <element signature="e#12784#12785#0" expanded="false" />
-                <element signature="e#12835#12836#0" expanded="false" />
-                <element signature="e#14398#14399#0" expanded="false" />
-                <element signature="e#14448#14449#0" expanded="false" />
-                <element signature="e#14519#14520#0" expanded="false" />
-                <element signature="e#14569#14570#0" expanded="false" />
-                <element signature="e#14630#14631#0" expanded="false" />
-                <element signature="e#14676#14677#0" expanded="false" />
-                <element signature="e#14950#14951#0" expanded="false" />
-                <element signature="e#15008#15009#0" expanded="false" />
-                <element signature="e#15477#15478#0" expanded="false" />
-                <element signature="e#15518#15519#0" expanded="false" />
-                <element signature="e#15799#15800#0" expanded="false" />
-                <element signature="e#15850#15851#0" expanded="false" />
-                <element signature="e#16277#16278#0" expanded="false" />
-                <element signature="e#16340#16341#0" expanded="false" />
-                <element signature="e#17259#17260#0" expanded="false" />
-                <element signature="e#17316#17317#0" expanded="false" />
-                <element signature="e#19974#19975#0" expanded="false" />
-                <element signature="e#20014#20015#0" expanded="false" />
-                <element signature="e#20266#20267#0" expanded="false" />
-                <element signature="e#20324#20325#0" expanded="false" />
-                <element signature="e#20375#20376#0" expanded="false" />
-                <element signature="e#20418#20419#0" expanded="false" />
-                <element signature="e#20519#20520#0" expanded="false" />
-                <element signature="e#20580#20581#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="State.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/game/State.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/MyHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#336#337#0" expanded="false" />
-                <element signature="e#399#400#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Snake.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/game/Snake.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#820#821#0" expanded="false" />
-                <element signature="e#847#848#0" expanded="false" />
+                <element signature="e#11841#11842#0" expanded="true" />
+                <element signature="e#11914#11915#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -247,38 +153,13 @@
         <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/game/Game.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="11" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="11" />
+              <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1158#1159#0" expanded="false" />
-                <element signature="e#1206#1207#0" expanded="false" />
-                <element signature="e#3550#3551#0" expanded="false" />
-                <element signature="e#3588#3589#0" expanded="false" />
-                <element signature="e#3619#3620#0" expanded="false" />
-                <element signature="e#3647#3648#0" expanded="false" />
-                <element signature="e#3674#3675#0" expanded="false" />
-                <element signature="e#3707#3708#0" expanded="false" />
-                <element signature="e#3790#4500#0" expanded="false" />
-                <element signature="e#4499#4500#0" expanded="false" />
-                <element signature="e#5254#5255#0" expanded="false" />
-                <element signature="e#5289#5290#0" expanded="false" />
-                <element signature="e#6036#6037#0" expanded="false" />
-                <element signature="e#6065#6066#0" expanded="false" />
-                <element signature="e#6101#6102#0" expanded="false" />
-                <element signature="e#6132#6133#0" expanded="false" />
-                <element signature="e#6181#6182#0" expanded="false" />
-                <element signature="e#6221#6222#0" expanded="false" />
+                <element signature="e#3708#3709#0" expanded="true" />
+                <element signature="e#3736#3737#0" expanded="true" />
+                <marker date="1447426416518" expanded="false" signature="3877:3947" placeholder="run() → {" />
+                <marker date="1447426416518" expanded="false" signature="4572:4587" placeholder="}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Direction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/game/Direction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -287,87 +168,27 @@
         <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/dialogs/EndGameDialog.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="25" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#469#470#0" expanded="false" />
-                <element signature="e#523#524#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Food.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/game/Food.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-              <folding>
-                <element signature="e#105#106#0" expanded="false" />
-                <element signature="e#137#138#0" expanded="false" />
-                <element signature="e#166#167#0" expanded="false" />
-                <element signature="e#193#194#0" expanded="false" />
-                <element signature="e#231#232#0" expanded="false" />
-                <element signature="e#263#264#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Cell.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/game/Cell.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-              <folding>
-                <element signature="e#244#245#0" expanded="false" />
-                <element signature="e#270#271#0" expanded="false" />
-                <element signature="e#297#298#0" expanded="false" />
-                <element signature="e#323#324#0" expanded="false" />
-                <element signature="e#354#355#0" expanded="false" />
-                <element signature="e#382#383#0" expanded="false" />
-                <element signature="e#423#424#0" expanded="false" />
-                <element signature="e#457#458#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu_main.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/menu/menu_main.xml">
+      <file leaf-file-name="MyHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/MyHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+              <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="alpha.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/anim/alpha.xml">
+      <file leaf-file-name="cell.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/cell.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="39" column="38" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="38" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -376,11 +197,34 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="styles.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+              <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -428,20 +272,22 @@
         <option value="$PROJECT_DIR$/src/com/valyakinaleksey/snake/Myhandler.java" />
         <option value="$PROJECT_DIR$/res/anim/alpha.xml" />
         <option value="$PROJECT_DIR$/res/menu/menu_main.xml" />
-        <option value="$PROJECT_DIR$/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/local.properties" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/valyakinaleksey/snake/game/Cell.java" />
         <option value="$PROJECT_DIR$/src/com/valyakinaleksey/snake/game/Food.java" />
         <option value="$PROJECT_DIR$/src/com/valyakinaleksey/snake/game/Snake.java" />
-        <option value="$PROJECT_DIR$/src/com/valyakinaleksey/snake/dialogs/EndGameDialog.java" />
         <option value="$PROJECT_DIR$/project.properties" />
         <option value="$PROJECT_DIR$/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/src/com/valyakinaleksey/snake/game/State.java" />
         <option value="$PROJECT_DIR$/src/com/valyakinaleksey/snake/game/Game.java" />
-        <option value="$PROJECT_DIR$/src/com/valyakinaleksey/snake/MyHandler.java" />
         <option value="$PROJECT_DIR$/src/com/valyakinaleksey/snake/MyActivity.java" />
+        <option value="$PROJECT_DIR$/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/src/com/valyakinaleksey/snake/dialogs/EndGameDialog.java" />
+        <option value="$PROJECT_DIR$/src/com/valyakinaleksey/snake/MyHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/valyakinaleksey/snake/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -460,8 +306,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1799" />
-    <option name="y" value="-83" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1616" />
     <option name="height" value="876" />
   </component>
@@ -488,9 +334,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -571,16 +414,51 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="snake" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="snake" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="snake" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="snake" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../simple2048" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.49.101:5555" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="SWDQ75PZSKNJKBBQ" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="AVD_501" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="OverrideImplement.combined" value="true" />
@@ -589,7 +467,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.XML" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="resourcesRoot" value="file://$PROJECT_DIR$/res" />
   </component>
@@ -850,7 +728,7 @@
     </configuration>
     <configuration default="false" name="snake" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="snake" />
-      <option name="ACTIVITY_CLASS" value="com.valyakinaleksey.snake.MyActivity" />
+      <option name="ACTIVITY_CLASS" value="com.valyakinaleksey.snake.MainActivity" />
       <option name="MODE" value="specific_activity" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
@@ -893,6 +771,9 @@
       <workItem from="1442834369068" duration="2165000" />
       <workItem from="1442844817979" duration="717000" />
       <workItem from="1443699668499" duration="589000" />
+      <workItem from="1447421138171" duration="1685000" />
+      <workItem from="1447423813509" duration="2443000" />
+      <workItem from="1447426388825" duration="71000" />
     </task>
     <task id="LOCAL-00001" summary="check">
       <created>1442739488114</created>
@@ -910,7 +791,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78707000" />
+    <option name="totallyTimeSpent" value="82906000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -922,8 +803,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1799" y="-83" width="1616" height="876" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294271" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -933,8 +814,9 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2799479" sideWeight="0.4925" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30078125" sideWeight="0.4925" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23125" sideWeight="0.49479166" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -943,16 +825,15 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.193125" sideWeight="0.5052083" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3984375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Log4jMonitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294271" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3984375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3294271" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294271" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997396" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294271" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1001,7 +882,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="check" />
     <MESSAGE value="btn_play fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="btn_play fixed" />
+    <MESSAGE value="update Snake" />
+    <option name="LAST_COMMIT_MESSAGE" value="update Snake" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1010,19 +892,25 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/MyActivity.java</url>
-          <line>307</line>
+          <url>file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/MainActivity.java</url>
+          <line>131</line>
           <properties />
-          <option name="timeStamp" value="28" />
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/game/Game.java</url>
-          <line>135</line>
+          <url>file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/MainActivity.java</url>
+          <line>128</line>
           <properties />
-          <option name="timeStamp" value="29" />
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/MainActivity.java</url>
+          <line>124</line>
+          <properties />
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="31" />
+      <option name="time" value="35" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="snake">
@@ -1039,35 +927,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/values/color.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/cell.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="48" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1095,25 +954,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1158#1159#0" expanded="false" />
-            <element signature="e#1206#1207#0" expanded="false" />
-            <element signature="e#3550#3551#0" expanded="false" />
-            <element signature="e#3588#3589#0" expanded="false" />
-            <element signature="e#3619#3620#0" expanded="false" />
-            <element signature="e#3647#3648#0" expanded="false" />
-            <element signature="e#3674#3675#0" expanded="false" />
-            <element signature="e#3707#3708#0" expanded="false" />
-            <element signature="e#3790#4500#0" expanded="false" />
-            <element signature="e#4499#4500#0" expanded="false" />
-            <element signature="e#5254#5255#0" expanded="false" />
-            <element signature="e#5289#5290#0" expanded="false" />
-            <element signature="e#6036#6037#0" expanded="false" />
-            <element signature="e#6065#6066#0" expanded="false" />
-            <element signature="e#6101#6102#0" expanded="false" />
-            <element signature="e#6132#6133#0" expanded="false" />
-            <element signature="e#6181#6182#0" expanded="false" />
-            <element signature="e#6221#6222#0" expanded="false" />
+            <element signature="e#3708#3709#0" expanded="true" />
+            <element signature="e#3736#3737#0" expanded="true" />
+            <marker date="1447426416518" expanded="false" signature="3877:3947" placeholder="run() → {" />
+            <marker date="1447426416518" expanded="false" signature="4572:4587" placeholder="}" />
           </folding>
         </state>
       </provider>
@@ -1122,11 +966,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#820#821#0" expanded="false" />
-            <element signature="e#847#848#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1134,16 +974,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding>
-            <element signature="e#244#245#0" expanded="false" />
-            <element signature="e#270#271#0" expanded="false" />
-            <element signature="e#297#298#0" expanded="false" />
-            <element signature="e#323#324#0" expanded="false" />
-            <element signature="e#354#355#0" expanded="false" />
-            <element signature="e#382#383#0" expanded="false" />
-            <element signature="e#423#424#0" expanded="false" />
-            <element signature="e#457#458#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1249,15 +1079,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1302,39 +1123,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/cell.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/game/Cell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-          <folding>
-            <element signature="e#244#245#0" expanded="false" />
-            <element signature="e#270#271#0" expanded="false" />
-            <element signature="e#297#298#0" expanded="false" />
-            <element signature="e#323#324#0" expanded="false" />
-            <element signature="e#354#355#0" expanded="false" />
-            <element signature="e#382#383#0" expanded="false" />
-            <element signature="e#423#424#0" expanded="false" />
-            <element signature="e#457#458#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1342,14 +1134,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding>
-            <element signature="e#105#106#0" expanded="false" />
-            <element signature="e#137#138#0" expanded="false" />
-            <element signature="e#166#167#0" expanded="false" />
-            <element signature="e#193#194#0" expanded="false" />
-            <element signature="e#231#232#0" expanded="false" />
-            <element signature="e#263#264#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1357,14 +1141,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33256352">
           <caret line="154" column="11" selection-start-line="154" selection-start-column="11" selection-end-line="154" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/game/Direction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1390,33 +1166,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="38" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-22/android/os/Handler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="63" column="13" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/game/Snake.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#820#821#0" expanded="false" />
-            <element signature="e#847#848#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1427,39 +1180,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/game/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="11" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1158#1159#0" expanded="false" />
-            <element signature="e#1206#1207#0" expanded="false" />
-            <element signature="e#3550#3551#0" expanded="false" />
-            <element signature="e#3588#3589#0" expanded="false" />
-            <element signature="e#3619#3620#0" expanded="false" />
-            <element signature="e#3647#3648#0" expanded="false" />
-            <element signature="e#3674#3675#0" expanded="false" />
-            <element signature="e#3707#3708#0" expanded="false" />
-            <element signature="e#3790#4500#0" expanded="false" />
-            <element signature="e#4499#4500#0" expanded="false" />
-            <element signature="e#5254#5255#0" expanded="false" />
-            <element signature="e#5289#5290#0" expanded="false" />
-            <element signature="e#6036#6037#0" expanded="false" />
-            <element signature="e#6065#6066#0" expanded="false" />
-            <element signature="e#6101#6102#0" expanded="false" />
-            <element signature="e#6132#6133#0" expanded="false" />
-            <element signature="e#6181#6182#0" expanded="false" />
-            <element signature="e#6221#6222#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/game/State.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1474,166 +1198,114 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="105" column="22" selection-start-line="105" selection-start-column="22" selection-end-line="105" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#20584#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1787#1788#0" expanded="false" />
-            <element signature="e#1815#1816#0" expanded="false" />
-            <element signature="e#2418#2419#0" expanded="false" />
-            <element signature="e#2446#2447#0" expanded="false" />
-            <element signature="e#2499#2500#0" expanded="false" />
-            <element signature="e#2539#2540#0" expanded="false" />
-            <element signature="e#2596#2597#0" expanded="false" />
-            <element signature="e#2639#2640#0" expanded="false" />
-            <element signature="e#2702#2703#0" expanded="false" />
-            <element signature="e#2750#2751#0" expanded="false" />
-            <element signature="e#2815#2816#0" expanded="false" />
-            <element signature="e#2864#2865#0" expanded="false" />
-            <element signature="e#2915#2916#0" expanded="false" />
-            <element signature="e#2959#2960#0" expanded="false" />
-            <element signature="e#3023#3024#0" expanded="false" />
-            <element signature="e#3075#3076#0" expanded="false" />
-            <element signature="e#3132#3133#0" expanded="false" />
-            <element signature="e#3169#3170#0" expanded="false" />
-            <element signature="e#3234#3235#0" expanded="false" />
-            <element signature="e#3278#3279#0" expanded="false" />
-            <element signature="e#3333#3334#0" expanded="false" />
-            <element signature="e#3372#3373#0" expanded="false" />
-            <element signature="e#3429#3430#0" expanded="false" />
-            <element signature="e#3474#3475#0" expanded="false" />
-            <element signature="e#3526#3527#0" expanded="false" />
-            <element signature="e#3571#3572#0" expanded="false" />
-            <element signature="e#3644#3645#0" expanded="false" />
-            <element signature="e#3693#3694#0" expanded="false" />
-            <element signature="e#3764#3765#0" expanded="false" />
-            <element signature="e#3811#3812#0" expanded="false" />
-            <element signature="e#3876#3877#0" expanded="false" />
-            <element signature="e#3925#3926#0" expanded="false" />
-            <element signature="e#3989#3990#0" expanded="false" />
-            <element signature="e#4042#4043#0" expanded="false" />
-            <element signature="e#4098#4099#0" expanded="false" />
-            <element signature="e#4147#4148#0" expanded="false" />
-            <element signature="e#4229#4230#0" expanded="false" />
-            <element signature="e#4282#4283#0" expanded="false" />
-            <element signature="e#4824#4825#0" expanded="false" />
-            <element signature="e#4869#4870#0" expanded="false" />
-            <element signature="e#4933#4934#0" expanded="false" />
-            <element signature="e#4985#4986#0" expanded="false" />
-            <element signature="e#5033#5034#0" expanded="false" />
-            <element signature="e#5072#5073#0" expanded="false" />
-            <element signature="e#5119#5120#0" expanded="false" />
-            <element signature="e#5161#5162#0" expanded="false" />
-            <element signature="e#5216#5217#0" expanded="false" />
-            <element signature="e#5266#5267#0" expanded="false" />
-            <element signature="e#5332#5333#0" expanded="false" />
-            <element signature="e#5386#5387#0" expanded="false" />
-            <element signature="e#5455#5456#0" expanded="false" />
-            <element signature="e#5510#5511#0" expanded="false" />
-            <element signature="e#5555#5556#0" expanded="false" />
-            <element signature="e#5595#5596#0" expanded="false" />
-            <element signature="e#5643#5644#0" expanded="false" />
-            <element signature="e#5684#5685#0" expanded="false" />
-            <element signature="e#5731#5732#0" expanded="false" />
-            <element signature="e#5773#5774#0" expanded="false" />
-            <element signature="e#5824#5825#0" expanded="false" />
-            <element signature="e#5870#5871#0" expanded="false" />
-            <element signature="e#5925#5926#0" expanded="false" />
-            <element signature="e#5975#5976#0" expanded="false" />
-            <element signature="e#6033#6034#0" expanded="false" />
-            <element signature="e#6084#6085#0" expanded="false" />
-            <element signature="e#6142#6143#0" expanded="false" />
-            <element signature="e#6193#6194#0" expanded="false" />
-            <element signature="e#6256#6257#0" expanded="false" />
-            <element signature="e#6303#6304#0" expanded="false" />
-            <element signature="e#6788#6789#0" expanded="false" />
-            <element signature="e#6837#6838#0" expanded="false" />
-            <element signature="e#6899#6900#0" expanded="false" />
-            <element signature="e#6949#6950#0" expanded="false" />
-            <element signature="e#7001#7002#0" expanded="false" />
-            <element signature="e#7044#7045#0" expanded="false" />
-            <element signature="e#7096#7097#0" expanded="false" />
-            <element signature="e#7139#7140#0" expanded="false" />
-            <element signature="e#7192#7193#0" expanded="false" />
-            <element signature="e#7236#7237#0" expanded="false" />
-            <element signature="e#7302#7303#0" expanded="false" />
-            <element signature="e#7364#7365#0" expanded="false" />
-            <element signature="e#7431#7432#0" expanded="false" />
-            <element signature="e#7494#7495#0" expanded="false" />
-            <element signature="e#7908#7909#0" expanded="false" />
-            <element signature="e#7951#7952#0" expanded="false" />
-            <element signature="e#8053#8054#0" expanded="false" />
-            <element signature="e#8108#8109#0" expanded="false" />
-            <element signature="e#8186#8187#0" expanded="false" />
-            <element signature="e#8238#8239#0" expanded="false" />
-            <element signature="e#8487#8488#0" expanded="false" />
-            <element signature="e#8533#8534#0" expanded="false" />
-            <element signature="e#8616#8617#0" expanded="false" />
-            <element signature="e#8671#8672#0" expanded="false" />
-            <element signature="e#9600#9601#0" expanded="false" />
-            <element signature="e#9643#9644#0" expanded="false" />
-            <element signature="e#11086#11087#0" expanded="false" />
-            <element signature="e#11141#11142#0" expanded="false" />
-            <element signature="e#12297#12298#0" expanded="false" />
-            <element signature="e#12346#12347#0" expanded="false" />
-            <element signature="e#12784#12785#0" expanded="false" />
-            <element signature="e#12835#12836#0" expanded="false" />
-            <element signature="e#14398#14399#0" expanded="false" />
-            <element signature="e#14448#14449#0" expanded="false" />
-            <element signature="e#14519#14520#0" expanded="false" />
-            <element signature="e#14569#14570#0" expanded="false" />
-            <element signature="e#14630#14631#0" expanded="false" />
-            <element signature="e#14676#14677#0" expanded="false" />
-            <element signature="e#14950#14951#0" expanded="false" />
-            <element signature="e#15008#15009#0" expanded="false" />
-            <element signature="e#15477#15478#0" expanded="false" />
-            <element signature="e#15518#15519#0" expanded="false" />
-            <element signature="e#15799#15800#0" expanded="false" />
-            <element signature="e#15850#15851#0" expanded="false" />
-            <element signature="e#16277#16278#0" expanded="false" />
-            <element signature="e#16340#16341#0" expanded="false" />
-            <element signature="e#17259#17260#0" expanded="false" />
-            <element signature="e#17316#17317#0" expanded="false" />
-            <element signature="e#19974#19975#0" expanded="false" />
-            <element signature="e#20014#20015#0" expanded="false" />
-            <element signature="e#20266#20267#0" expanded="false" />
-            <element signature="e#20324#20325#0" expanded="false" />
-            <element signature="e#20375#20376#0" expanded="false" />
-            <element signature="e#20418#20419#0" expanded="false" />
-            <element signature="e#20519#20520#0" expanded="false" />
-            <element signature="e#20580#20581#0" expanded="false" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/game/Direction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/ic_action_arrow_bottom.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-mdpi/ic_action_arrow_bottom.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/game/Snake.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/cell.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/dialogs/EndGameDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/MyHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#336#337#0" expanded="false" />
-            <element signature="e#399#400#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/dialogs/EndGameDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#469#470#0" expanded="false" />
-            <element signature="e#523#524#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/MyActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="97" column="51" selection-start-line="97" selection-start-column="51" selection-end-line="97" selection-end-column="51" />
+          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-ldpi/ic_action_playback_play.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/game/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+          <folding>
+            <element signature="e#3708#3709#0" expanded="true" />
+            <element signature="e#3736#3737#0" expanded="true" />
+            <marker date="1447426416518" expanded="false" signature="3877:3947" placeholder="run() → {" />
+            <marker date="1447426416518" expanded="false" signature="4572:4587" placeholder="}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40078586">
+          <caret line="142" column="8" selection-start-line="142" selection-start-column="8" selection-end-line="142" selection-end-column="8" />
+          <folding>
+            <element signature="e#11841#11842#0" expanded="true" />
+            <element signature="e#11914#11915#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

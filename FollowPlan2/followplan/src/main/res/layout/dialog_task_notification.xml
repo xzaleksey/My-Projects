@@ -5,12 +5,12 @@
                 android:padding="@dimen/activity_horizontal_padding">
 
     <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/tv_date_notification_header"
-        style="@style/TextviewSecondaryMedium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/common_margin"
+        android:id="@+id/tv_date_notification_header"
         android:text="@string/notification_date_time"
+        android:layout_marginTop="@dimen/common_margin"
+        style="@style/TextviewSecondaryMedium"
         android:textColor="@color/accent"/>
 
     <TextView
@@ -19,40 +19,39 @@
         android:layout_below="@id/tv_date_notification_header"
         android:background="@color/accent"/>
 
-    <com.mikepenz.iconics.view.IconicsButton
-        android:id="@+id/btn_set_cancel_date"
-        style="@android:style/Widget.Holo.Button.Borderless"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/tv_date_notification_header"
-        android:layout_marginTop="@dimen/common_margin"
-        android:text="@string/faw_calendar_check"
-        android:textColor="@color/accent"
+    <com.mikepenz.iconics.view.IconicsButton xmlns:android="http://schemas.android.com/apk/res/android"
+                                             android:layout_width="wrap_content"
+                                             android:layout_height="wrap_content"
+                                             android:id="@+id/btn_set_cancel_date"
+                                             android:textColor="@color/accent"
+                                             android:text="@string/faw_calendar_check"
+                                             style="@android:style/Widget.Holo.Button.Borderless"
+                                             android:layout_alignParentRight="true"
+                                             android:layout_alignParentEnd="true"
+                                             android:layout_below="@+id/tv_date_notification_header"
+                                             android:layout_marginTop="@dimen/common_margin"
         />
 
     <TextView
-        android:id="@+id/tv_date_notification"
-        style="@android:style/Widget.Material.Light.Spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/btn_set_cancel_date"
-        android:layout_marginTop="@dimen/common_margin"
-        android:layout_toLeftOf="@+id/btn_set_cancel_date"
-        android:layout_toStartOf="@id/btn_set_cancel_date"
+        android:id="@+id/tv_date_start"
         android:text="@string/no_notification"
-        android:textColor="@color/secondary_text"/>
+        android:layout_alignBottom="@id/btn_set_cancel_date"
+        android:textColor="@color/secondary_text"
+        android:layout_marginTop="@dimen/common_margin"
+        style="@android:style/Widget.Material.Light.Spinner"
+        android:layout_toLeftOf="@+id/btn_set_cancel_date"
+        android:layout_toStartOf="@id/btn_set_cancel_date"/>
 
     <TextView
-        android:id="@+id/tv_time_notification"
-        style="@android:style/Widget.Material.Light.Spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tv_date_notification"
+        android:id="@+id/tv_time_notification"
+        android:layout_below="@id/tv_date_start"
+        android:textColor="@color/secondary_text"
         android:layout_marginTop="@dimen/common_margin"
-        android:enabled="false"
-        android:textColor="@color/secondary_text"/>
+        style="@android:style/Widget.Material.Light.Spinner"
+        android:enabled="false"/>
 
 </RelativeLayout>

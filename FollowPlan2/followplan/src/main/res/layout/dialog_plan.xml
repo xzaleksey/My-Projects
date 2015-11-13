@@ -9,14 +9,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <com.mikepenz.iconics.view.IconicsButton android:id="@+id/iv_customize_plans"
-        style="@android:style/Widget.Holo.Button.Borderless"
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <com.mikepenz.iconics.view.IconicsButton xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/plan_listview"
-        android:text="@string/faw_gear"
+        android:id="@+id/iv_customize_plans"
         android:textColor="@color/accent"
+        android:text="@string/faw_gear"
+        style="@android:style/Widget.Holo.Button.Borderless"
+        android:layout_below="@+id/plan_listview"
         android:visibility="gone" />
 
 </RelativeLayout>

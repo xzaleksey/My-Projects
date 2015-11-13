@@ -25,6 +25,11 @@ public class SpinnerPlanArrayAdapter extends ArrayAdapter<Plan> {
         inflater = LayoutInflater.from(this.context);
     }
 
+    public class ViewHolder {
+        TextView planName;
+        IconicsImageView color;
+    }
+
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         Plan plan = getItem(i);
@@ -50,10 +55,5 @@ public class SpinnerPlanArrayAdapter extends ArrayAdapter<Plan> {
 
     public void setDone(boolean done) {
         this.done = done;
-    }
-
-    public class ViewHolder {
-        TextView planName;
-        IconicsImageView color;
     }
 }

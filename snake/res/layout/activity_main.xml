@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rl_main"
+                style="@style/rl_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <TableLayout
+        android:id="@+id/tl_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        >
+    </TableLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tl_field">
+
+        <Button
+            android:id="@+id/btn_up"
+            style="@style/btn_arrow"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_action_arrow_top"
+            />
+
+        <Button
+            android:id="@+id/btn_left"
+            style="@style/btn_arrow"
+            android:layout_below="@+id/btn_up"
+            android:layout_toLeftOf="@+id/btn_up"
+            android:background="@drawable/ic_action_arrow_left"
+
+            />
+
+        <Button
+            android:id="@+id/btn_right"
+            style="@style/btn_arrow"
+            android:layout_below="@+id/btn_up"
+            android:layout_toRightOf="@+id/btn_up"
+            android:background="@drawable/ic_action_arrow_right"
+            />
+
+        <Button
+            android:id="@+id/btn_down"
+            style="@style/btn_arrow"
+            android:layout_below="@id/btn_left"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_action_arrow_bottom"
+            />
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_pause_play"
+        style="@style/btn_arrow"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/ic_action_playback_play"
+        />
+
+    <TextView
+        android:id="@+id/tv_result_label"
+        style="@style/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tl_field"
+        android:text="@string/result_name"
+        />
+
+    <TextView
+        android:id="@+id/tv_result"
+        style="@style/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/zero"/>
+
+</RelativeLayout>
+

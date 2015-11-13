@@ -1,7 +1,9 @@
 package com.valyakinaleksey.followplan.followplan2.followplan.main_classes;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.preference.PreferenceManager;
 import android.provider.BaseColumns;
 import com.valyakinaleksey.followplan.followplan2.followplan.DatabaseHelper;
 import com.valyakinaleksey.followplan.followplan2.followplan.R;
@@ -9,6 +11,8 @@ import org.joda.time.DateTime;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
+
+import static com.valyakinaleksey.followplan.followplan2.followplan.preferences.TimePreference.DEFAULT_NOTIFICATION_VALUE;
 
 public class Period {
     public static final String NAME = "name";
@@ -26,6 +30,7 @@ public class Period {
     private DateTime dateNotification;
     private Plan plan;
     private Map<Long, Task> tasks = new LinkedHashMap<>();
+    private static Period lastPeriod;
 
     public Period(long id, String name, Plan plan, int interval) {
         this.id = id;
@@ -54,6 +59,12 @@ public class Period {
 
     public static void addPeriod(Period period) {
         periods.put(period.getId(), period);
+        lastPeriod = period;
+    }
+
+    public static void removePeriod(Period period) {
+        periods.remove(period.getId());
+        lastPeriod = null;
     }
 
     public static Map<Long, Period> getPeriods() {
@@ -64,12 +75,13 @@ public class Period {
         Cursor cursor = databaseHelper.getAllPeriods();
         while (cursor.moveToNext()) {
             long id = cursor.getLong(cursor.getColumnIndex(BaseColumns._ID));
+            Long dateNotification = cursor.getLong(cursor.getColumnIndex(DATE_NOTIFICATION));
             periods.put(id, new Period(id, cursor.getString(cursor.getColumnIndex(Period.NAME)),
                     Plan.getPlans().get(cursor.getLong(cursor.getColumnIndex(PLAN))),
                     cursor.getInt(cursor.getColumnIndex(INTERVAL)),
                     new DateTime(cursor.getLong(cursor.getColumnIndex(DATE_START))),
                     new DateTime(cursor.getLong(cursor.getColumnIndex(DATE_END))),
-                    new DateTime(cursor.getLong(cursor.getColumnIndex(DATE_NOTIFICATION)))
+                    dateNotification == 0 ? null : new DateTime(dateNotification)
             ));
         }
         cursor.close();
@@ -80,17 +92,22 @@ public class Period {
         DatabaseHelper databaseHelper = new DatabaseHelper(context);
         long planId = plan.getId();
         int[] intervals = context.getResources().getIntArray(R.array.periods_base_int);
-        String[] periodNames = context.getResources().getStringArray(R.array.periods_base);
+        String[] periodNames = context.getResources().getStringArray(R.array.periods_base_names);
         DateTime dateStart = new DateTime();
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
+        String[] timeNotification = sp.getString(context.getString(R.string.time_notification), DEFAULT_NOTIFICATION_VALUE).split(":");
+        final int hour = Integer.parseInt(timeNotification[0]);
+        final int minute = Integer.parseInt(timeNotification[1]);
         long periodId;
         for (int i = 0; i < intervals.length; i++) {
             int interval = intervals[i];
             DateTime dateEnd = dateStart.withMinuteOfHour(0).withHourOfDay(0).plusDays(interval);
-            DateTime dateNotification = dateEnd.minusHours(2);
+            DateTime dateNotification = dateEnd.minusDays(1).withHourOfDay(hour).
+                    withMinuteOfHour(minute);
             periodId = createBasePeriod(databaseHelper, planId, periodNames[i], interval, dateStart, dateEnd, dateNotification);
             Period period = new Period(periodId, periodNames[i], plan, intervals[i], dateStart, dateEnd, dateNotification);
             Period.addPeriod(period);
-            plan.getPlanPeriods().put(periodId, period);
+            plan.getPeriods().put(periodId, period);
         }
         databaseHelper.close();
     }
@@ -104,6 +121,14 @@ public class Period {
             Task task = taskEntry.getValue();
             periods.get(task.getPeriod().getId()).tasks.put(taskEntry.getKey(), task);
         }
+    }
+
+    public static Period getLastPeriod() {
+        return lastPeriod;
+    }
+
+    public static void setLastPeriod(Period lastPeriod) {
+        Period.lastPeriod = lastPeriod;
     }
 
     public String getName() {

@@ -17,16 +17,15 @@ import com.valyakinaleksey.followplan.followplan2.followplan.DatabaseHelper;
 import com.valyakinaleksey.followplan.followplan2.followplan.R;
 import com.valyakinaleksey.followplan.followplan2.followplan.adapters.SpinnerPeriodArrayAdapter;
 import com.valyakinaleksey.followplan.followplan2.followplan.adapters.SpinnerPlanArrayAdapter;
-
 import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Period;
 import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Plan;
 import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Task;
+import com.valyakinaleksey.followplan.followplan2.followplan.preferences.TimePreference;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 import com.wdullaer.materialdatetimepicker.time.RadialPickerLayout;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
-import org.joda.time.format.DateTimeFormatter;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -37,8 +36,9 @@ import static com.valyakinaleksey.followplan.followplan2.followplan.preferences.
 
 public class TaskActivity extends AppCompatActivity implements ISimpleDialogListener, DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
     public static final String TASK_ID = "taskId";
-    public static final String PLAN_ID = "planId";
     public static final String PERIOD_POSITION = "periodPosition";
+
+    public static final String DATE_NOTIFICATION_SET = "dateNotificationSet";
     private static final long EMPTY = 0;
 
     private EditText etTaskName;
@@ -54,42 +54,35 @@ public class TaskActivity extends AppCompatActivity implements ISimpleDialogList
     private Locale locale;
     private Button btnSetCancelDate;
     private boolean dateNotificationSet = false;
-    private String stringDateNotification;
+    private DateTime dateNotification;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task);
-        etTaskName = (EditText) findViewById(R.id.et_task_name);
+        etTaskName = (EditText) findViewById(R.id.et_period_days);
         planSpinner = (AppCompatSpinner) findViewById(R.id.spinner_plan);
         periodSpinner = (Spinner) findViewById(R.id.spinner_period);
         cbDisposable = (CheckBox) findViewById(R.id.cb_disposable);
-        tvDateNotification = (TextView) findViewById(R.id.tv_date_notification);
+        tvDateNotification = (TextView) findViewById(R.id.tv_date_start);
         tvTimeNotification = (TextView) findViewById(R.id.tv_time_notification);
         btnSetCancelDate = (Button) findViewById(R.id.btn_set_cancel_date);
         locale = getResources().getConfiguration().locale;
-        DateTime dateNotification=DateTime.now();
+
 
         Intent intent = getIntent();
-        long taskId = intent.getLongExtra(TASK_ID, EMPTY);
+        long taskId = getTaskId(savedInstanceState, intent);
         long planId;
         final int periodPosition;
-        if (savedInstanceState != null) {
-            taskId = savedInstanceState.getLong(TASK_ID);
-        }
-        if (taskId != EMPTY) {
-            task = Task.getTasks().get(taskId);
+        task = Task.getTasks().get(taskId);
+        initDateTimeNotification(savedInstanceState);
+        if (task != null) {
             etTaskName.setText(task.getName());
             cbDisposable.setChecked(!task.isDisposable());
             period = task.getPeriod();
             plan = task.getPlan();
             periodPosition = plan.getIndexByPeriod(period);
-            if (task.getDateNotification().getMillis() != 0) {
-                dateNotification = task.getDateNotification();
-                tvTimeNotification.setEnabled(true);
-                dateNotificationSet = true;
-                btnSetCancelDate.setText(R.string.faw_close);
-            }
+
         } else {
             planId = intent.getLongExtra(PLAN_ID, EMPTY);
             if (planId != EMPTY) {
@@ -99,27 +92,49 @@ public class TaskActivity extends AppCompatActivity implements ISimpleDialogList
             }
             periodPosition = intent.getIntExtra(PERIOD_POSITION, 0);
         }
-        spinnerPeriodArrayAdapter = new SpinnerPeriodArrayAdapter(getBaseContext(), R.layout.spinner_textview, new ArrayList<>(plan.getPlanPeriods().values()));
+        spinnerPeriodArrayAdapter = new SpinnerPeriodArrayAdapter(getBaseContext(), R.layout.spinner_textview, new ArrayList<>(plan.getPeriods().values()));
         initToolBar();
         initPlanSpinner();
         initPeriodSpinner(periodPosition);
-        initNotificationValues(dateNotification);
         initBtnSetCancelListener();
+        initTvDateNotificationListener();
+        initTvTimeNotificationListener();
     }
 
-    private void initNotificationValues(DateTime dateNotification) {
-        stringDateNotification = dateNotification.toString(DD_MM_YYYY);
-        if (dateNotificationSet) {
-            tvDateNotification.setText(stringDateNotification);
+    private void initDateTimeNotification(Bundle savedInstanceState) {
+        if (savedInstanceState == null) {
+            if (task != null && task.getDateNotification().getMillis() != 0) {
+                dateNotificationSet = true;
+                dateNotification = task.getDateNotification();
+            } else {
+                dateNotification = DateTime.now();
+                SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+                String[] timeNotification = sp.getString(getString(R.string.time_notification), DEFAULT_NOTIFICATION_VALUE).split(":");
+                dateNotification = dateNotification.withHourOfDay(Integer.parseInt(timeNotification[0])).withMinuteOfHour(Integer.parseInt(timeNotification[1]));
+            }
+
+        } else {
+            dateNotification = (DateTime) savedInstanceState.getSerializable(DATE_NOTIFICATION);
+            dateNotificationSet = savedInstanceState.getBoolean(DATE_NOTIFICATION_SET);
         }
-        DateTimeFormatter formatter = DateTimeFormat.forPattern(HH_MM)
-                .withLocale(locale);
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-        DateTime timeNotification = formatter.parseDateTime(sp.getString(getString(R.string.time_notification), DEFAULT_NOTIFICATION_VALUE));
-        tvTimeNotification.setText(timeNotification.toString(formatter));
-        initTvDateNotificationListener(dateNotification);
-        initTvTimeNotificationListener(timeNotification);
+        if (dateNotificationSet) {
+            tvTimeNotification.setEnabled(true);
+            btnSetCancelDate.setText(R.string.faw_close);
+            tvDateNotification.setText(dateNotification.toString(TimePreference.DD_MM_YYYY));
+        }
+        tvTimeNotification.setText(dateNotification.toString(TimePreference.HH_MM));
     }
+
+    private long getTaskId(Bundle savedInstanceState, Intent intent) {
+        long taskId;
+        if (savedInstanceState != null) {
+            taskId = savedInstanceState.getLong(TASK_ID);
+        } else {
+            taskId = intent.getLongExtra(TASK_ID, EMPTY);
+        }
+        return taskId;
+    }
+
 
     private void initBtnSetCancelListener() {
         btnSetCancelDate.setOnClickListener(new View.OnClickListener() {
@@ -129,7 +144,7 @@ public class TaskActivity extends AppCompatActivity implements ISimpleDialogList
                 dateNotificationSet = !dateNotificationSet;
                 if (dateNotificationSet) {
                     id = R.string.faw_close;
-                    tvDateNotification.setText(stringDateNotification);
+                    tvDateNotification.setText(dateNotification.toString(TimePreference.DD_MM_YYYY));
                     tvTimeNotification.setEnabled(true);
                 } else {
                     id = R.string.faw_calendar_check;
@@ -141,24 +156,25 @@ public class TaskActivity extends AppCompatActivity implements ISimpleDialogList
         });
     }
 
-    private void initTvTimeNotificationListener(final DateTime time) {
+    private void initTvTimeNotificationListener() {
         tvTimeNotification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final TimePickerDialog timePickerDialog = TimePickerDialog.newInstance(TaskActivity.this, time.getHourOfDay(), time.getMinuteOfHour(), true);
+                final TimePickerDialog timePickerDialog = TimePickerDialog.newInstance(TaskActivity.this, dateNotification.getHourOfDay(), dateNotification.getMinuteOfHour(), true);
                 timePickerDialog.show(getFragmentManager(), "TimePickerDialog");
             }
         });
     }
 
-    private void initTvDateNotificationListener(final DateTime dateTime) {
+    private void initTvDateNotificationListener() {
         tvDateNotification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 period = (Period) periodSpinner.getSelectedItem();
-                final DatePickerDialog datePickerDialog = DatePickerDialog.newInstance(TaskActivity.this, dateTime.getYear(), dateTime.getMonthOfYear() - 1, dateTime.getDayOfMonth());
-                Calendar startDate = Calendar.getInstance();
-                Calendar endDate = dateTime.plusDays(period.getInterval() - 1).toCalendar(locale);
+                final DatePickerDialog datePickerDialog = DatePickerDialog.newInstance(TaskActivity.this, dateNotification.getYear(), dateNotification.getMonthOfYear() - 1, dateNotification.getDayOfMonth());
+                DateTime dateStart = period.getDateStart();
+                Calendar startDate = dateStart.toCalendar(locale);
+                Calendar endDate = dateStart.plusDays(period.getInterval() - 1).toCalendar(locale);
                 datePickerDialog.setMinDate(startDate);
                 datePickerDialog.setMaxDate(endDate);
                 datePickerDialog.show(getFragmentManager(), "DatePickerDialog");
@@ -174,7 +190,7 @@ public class TaskActivity extends AppCompatActivity implements ISimpleDialogList
             public void onItemSelected(AdapterView<?> parent,
                                        View itemSelected, int selectedItemPosition, long selectedId) {
                 spinnerPeriodArrayAdapter.clear();
-                spinnerPeriodArrayAdapter.addAll(spinnerPlanArrayAdapter.getItem(selectedItemPosition).getPlanPeriods().values());
+                spinnerPeriodArrayAdapter.addAll(spinnerPlanArrayAdapter.getItem(selectedItemPosition).getPeriods().values());
             }
 
             public void onNothingSelected(AdapterView<?> parent) {
@@ -311,6 +327,7 @@ public class TaskActivity extends AppCompatActivity implements ISimpleDialogList
     @Override
     public void onDateSet(DatePickerDialog datePickerDialog, int i, int i1, int i2) {
         tvDateNotification.setText(String.format(locale, "%02d.%02d.%d", i2, i1 + 1, i));
+        dateNotification = dateNotification.withDate(i, i1 + 1, i2);
         if (!dateNotificationSet) {
             dateNotificationSet = true;
             btnSetCancelDate.setText(getString(R.string.faw_close));
@@ -320,6 +337,7 @@ public class TaskActivity extends AppCompatActivity implements ISimpleDialogList
 
     @Override
     public void onTimeSet(RadialPickerLayout radialPickerLayout, int i, int i1) {
+        dateNotification = dateNotification.withHourOfDay(i).withMinuteOfHour(i1);
         tvTimeNotification.setText(String.format(locale, "%d:%02d", i, i1));
     }
 
@@ -328,6 +346,8 @@ public class TaskActivity extends AppCompatActivity implements ISimpleDialogList
         if (task != null) {
             outState.putLong(TASK_ID, task.getId());
         }
+        outState.putSerializable(DATE_NOTIFICATION, dateNotification);
+        outState.putBoolean(DATE_NOTIFICATION_SET, dateNotificationSet);
         super.onSaveInstanceState(outState);
     }
 }

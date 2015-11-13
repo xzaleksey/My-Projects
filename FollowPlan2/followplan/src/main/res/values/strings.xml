@@ -10,7 +10,7 @@
     <string name="every_day">Every day</string>
     <string name="every_week">Every week</string>
     <string name="every_month">Every month</string>
-    <string name="create_period">Create interval</string>
+    <string name="create_period">Create time period</string>
     <string name="customize_plans">Customize plans</string>
     <string name="cancel">Cancel</string>
     <string name="edit_plan">Edit plan</string>
@@ -50,5 +50,10 @@
     <string name="notification_date_time">Notification Date and Time</string>
     <string name="faw_close">{faw-close}</string>
     <string name="faw_calendar_check">{faw-calendar_check_o}</string>
+    <string name="period_days">Plan periodicity in days</string>
+    <string name="period_date_start">Start date</string>
+    <string name="period_number_of_days_not_zero">Number of days must not be 0</string>
+    <string name="input_number_of_days">Input number of days</string>
+    <string name="edit_period">Edit period of time</string>
 
 </resources>

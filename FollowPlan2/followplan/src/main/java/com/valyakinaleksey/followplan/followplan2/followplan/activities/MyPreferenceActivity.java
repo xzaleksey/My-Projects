@@ -142,17 +142,15 @@ public class MyPreferenceActivity extends PreferenceActivity {
     protected boolean isValidFragment(String fragmentName) {
         return fragmentName.equals("com.valyakinaleksey.followplan.followplan2.followplan.activities.MyPreferenceActivity$MyPrefsFragment");
     }
-
-    private void setmToolBarTitle(String title) {
+    private void setmToolBarTitle(String title){
         mToolBarTitle.setText(title);
     }
-
     public static class MyPrefsFragment extends PreferenceFragment implements SharedPreferences.OnSharedPreferenceChangeListener {
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             String category = getArguments().getString(getString(R.string.settings_category));
-            MyPreferenceActivity myPreferenceActivity = (MyPreferenceActivity) getActivity();
+            MyPreferenceActivity myPreferenceActivity= (MyPreferenceActivity) getActivity();
             if (category != null) {
                 if (category.equals(getString(R.string.notifications))) {
                     addPreferencesFromResource(R.xml.notifications);

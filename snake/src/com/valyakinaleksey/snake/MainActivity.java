@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -30,7 +31,7 @@ import java.util.Map;
 import static com.valyakinaleksey.snake.game.Direction.*;
 import static com.valyakinaleksey.snake.game.State.*;
 
-public class MyActivity extends Activity {
+public class MainActivity extends Activity {
 
     public static final int COL_COUNT = 10;
     private static final String ROW_COUNT_STR = "ROW_COUNT";
@@ -48,10 +49,11 @@ public class MyActivity extends Activity {
     private EndGameDialog endGameDialog;
     private Handler handler;
     private Animation btn_animation;
+    private boolean pause = true;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.activity_main);
         initColors();
         initGame();
         initField();
@@ -86,7 +88,7 @@ public class MyActivity extends Activity {
             DisplayMetrics metricsB = new DisplayMetrics();
             getWindowManager().getDefaultDisplay().getMetrics(metricsB);
             cellWidth = metricsB.widthPixels / COL_COUNT;
-            ROW_COUNT = (metricsB.heightPixels - mActionBarSize) / cellWidth - 3;
+            ROW_COUNT = (metricsB.heightPixels - mActionBarSize) / cellWidth - 5;
             saveData();
         }
     }
@@ -117,11 +119,7 @@ public class MyActivity extends Activity {
         setParams((TextView) findViewById(R.id.btn_left));
         setParams((TextView) findViewById(R.id.btn_right));
         setParams((TextView) findViewById(R.id.btn_up));
-        setParams((TextView) findViewById(R.id.tv_result));
-        setParams((TextView) findViewById(R.id.tv_result_label));
         btnPlay.setOnClickListener(new View.OnClickListener() {
-            boolean pause = false;
-
             @Override
             public void onClick(View v) {
                 if (game.isGameLost()) {
@@ -129,16 +127,20 @@ public class MyActivity extends Activity {
                     restartGame();
                 }
                 if (!pause) {
-                    v.setBackground(getResources().getDrawable(R.drawable.ic_action_playback_play));
+                    setBackground(v, R.drawable.ic_action_playback_play);
                     pause = true;
                     game.stop();
                 } else {
-                    v.setBackground(getResources().getDrawable(R.drawable.ic_action_playback_pause));
+                    setBackground(v, R.drawable.ic_action_playback_pause);
                     pause = false;
                     game.start(handler);
                 }
             }
         });
+    }
+
+    private void setBackground(View v, int drawableRes) {
+        v.setBackground(getResources().getDrawable(drawableRes));
     }
 
     private void setParams(TextView textView) {
@@ -163,10 +165,10 @@ public class MyActivity extends Activity {
                 switch (which) {
                     case Dialog.BUTTON_POSITIVE:
                         restartGame();
+                        pause = false;
                         break;
                     case Dialog.BUTTON_NEGATIVE:
-                        btnPlay.setBackground(getResources().getDrawable(R.drawable.ic_action_playback_play));
-                        game.setGameLost(true);
+                        setBackground(btnPlay, R.drawable.ic_action_playback_play);
                         break;
                 }
             }
@@ -177,12 +179,16 @@ public class MyActivity extends Activity {
     protected void onPause() {
         super.onPause();
         game.stop();
+        pause = true;
+        setBackground(btnPlay, R.drawable.ic_action_playback_play);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         game.start(handler);
+        game.stop();
+        Log.d("Tag", "Stopped");
     }
 
 
@@ -198,6 +204,7 @@ public class MyActivity extends Activity {
         prepareField();
         currentResult = 0;
         tv_Result.setText(R.string.zero);
+        setBackground(btnPlay, R.drawable.ic_action_playback_pause);
     }
 
     public void updateField() {
@@ -342,6 +349,8 @@ public class MyActivity extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.restart:
+                game.stop();
+                pause = true;
                 gameRestartDialogShow();
                 break;
             case R.id.about:

@@ -3,6 +3,7 @@ package com.valyakinaleksey.snake.game;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import com.valyakinaleksey.snake.MainActivity;
 
 import java.util.*;
 import java.util.concurrent.TimeUnit;
@@ -12,26 +13,34 @@ import java.util.concurrent.locks.ReentrantLock;
 import static com.valyakinaleksey.snake.game.Direction.LEFT;
 
 public class Game {
+    private static final Lock lock = new ReentrantLock();
     private static Cell[][] cells;
     private static int ROW_COUNT, COL_COUNT;
-    private Snake snake;
-    private Food food;
+    private static int result = 0;
     private final List<Cell> freeCells = new ArrayList<>();
     private final Random random = new Random();
     private final List<Cell> cellToUpdate = new ArrayList<>();
-    private volatile Thread gameThread;
     private final Deque<Direction> directions = new LinkedList<>();
-    private static final Lock lock = new ReentrantLock();
-    private static int result = 0;
+    private Snake snake;
+    private Food food;
+    private volatile Thread gameThread;
     private Direction direction = LEFT;
     private boolean gameLost = false;
 
     public Game(int rowCount) {
         ROW_COUNT = rowCount;
-        COL_COUNT = com.valyakinaleksey.snake.MyActivity.COL_COUNT;
+        COL_COUNT = MainActivity.COL_COUNT;
         initCells();
         initSnake();
         initFood();
+    }
+
+    public static Cell getCell(int row, int col) {
+        return cells[row][col];
+    }
+
+    public static int getResult() {
+        return result;
     }
 
     private void initFood() {
@@ -115,19 +124,13 @@ public class Game {
         cellToUpdate.add(newCell);
     }
 
-    public static Cell getCell(int row, int col) {
-        return cells[row][col];
-    }
-
     public Snake getSnake() {
         return snake;
     }
 
-
     public void stop() {
         gameThread = null;
     }
-
 
     public void start(final Handler handler) {
         gameThread = new Thread(new Runnable() {
@@ -152,15 +155,6 @@ public class Game {
 
     }
 
-    public void setDirection(Direction direction) {
-        lock.lock();
-        if (directions.size() < 3) {
-            directions.addFirst(direction);
-            this.direction = direction;
-        }
-        lock.unlock();
-    }
-
     public Direction checkDirection() {
         try {
             lock.lock();
@@ -178,6 +172,15 @@ public class Game {
         } finally {
             lock.unlock();
         }
+    }
+
+    public void setDirection(Direction direction) {
+        lock.lock();
+        if (directions.size() < 3) {
+            directions.addFirst(direction);
+            this.direction = direction;
+        }
+        lock.unlock();
     }
 
     public List<Cell> getCellsToUpdate() {
@@ -212,11 +215,6 @@ public class Game {
         cellToUpdate.add(food.getCell());
         food.getCell().setState(State.EMPTY);
     }
-
-    public static int getResult() {
-        return result;
-    }
-
 
     public boolean isGameLost() {
         return gameLost;

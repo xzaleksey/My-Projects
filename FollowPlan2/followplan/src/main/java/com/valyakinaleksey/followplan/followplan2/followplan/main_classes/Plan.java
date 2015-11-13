@@ -31,7 +31,7 @@ public class Plan {
     private int totalTasksCount;
     private int totalDoneTasksCount;
 
-    private Map<Long, Period> planPeriods = new LinkedHashMap<>();
+    private Map<Long, Period> periods = new LinkedHashMap<>();
     private Map<Long, Task> tasks = new LinkedHashMap<>();
 
     public Plan(long id, String name) {
@@ -55,12 +55,13 @@ public class Plan {
         databaseHelper.setDb(databaseHelper.getReadableDatabase());
         while (cursor.moveToNext()) {
             long id = DatabaseHelper.getId(cursor);
-            Plan plan = new Plan(id, cursor.getString(cursor.getColumnIndex(Plan.NAME)), cursor.getInt(cursor.getColumnIndex(Plan.ORDER_NUM)), cursor.getInt(cursor.getColumnIndex(Plan.COLOR)));
+            Plan plan = new Plan(id, cursor.getString(cursor.getColumnIndex(Plan.NAME)), cursor.getInt(cursor.getColumnIndex(Plan.ORDER_NUM)),
+                    cursor.getInt(cursor.getColumnIndex(Plan.COLOR)));
             Plan.addPlan(plan);
 //            Cursor periodsCursor = databaseHelper.getPeriodsByPlanId(id);
 //            while (periodsCursor.moveToNext()) {
 //                long periodId = DatabaseHelper.getId(periodsCursor);
-//                plan.planPeriods.put(periodId, Period.getPeriods().get(periodId));
+//                plan.periods.put(periodId, Period.getPeriods().get(periodId));
 //            }
         }
         cursor.close();
@@ -81,14 +82,14 @@ public class Plan {
         databaseHelper.deletePlan(planId);
         databaseHelper.close();
         plans.remove(planId);
-        lastPlan=null;
+        lastPlan = null;
         Task.setLastTask(null);
     }
 
     public static void fillPeriods() {
-        for (Map.Entry<Long, Period> taskEntry : Period.getPeriods().entrySet()) {
-            Period period = taskEntry.getValue();
-            plans.get(period.getPlan().getId()).planPeriods.put(taskEntry.getKey(), period);
+        for (Map.Entry<Long, Period> periodEntry : Period.getPeriods().entrySet()) {
+            Period period = periodEntry.getValue();
+            plans.get(period.getPlan().getId()).periods.put(periodEntry.getKey(), period);
         }
     }
 
@@ -179,8 +180,8 @@ public class Plan {
         return id;
     }
 
-    public Map<Long, Period> getPlanPeriods() {
-        return planPeriods;
+    public Map<Long, Period> getPeriods() {
+        return periods;
     }
 
     public Map<Long, Task> getTasks() {
@@ -188,7 +189,7 @@ public class Plan {
     }
 
     public Period getPeriodByIndex(int index) {
-        return (Period) planPeriods.values().toArray()[index];
+        return (Period) periods.values().toArray()[index];
     }
 
     @Override
@@ -197,7 +198,7 @@ public class Plan {
     }
 
     public int getIndexByPeriod(Period period) {
-        return new ArrayList<>(planPeriods.values()).indexOf(period);
+        return new ArrayList<>(periods.values()).indexOf(period);
     }
 
     public Task removeTask(Task task) {
@@ -207,4 +208,9 @@ public class Plan {
     public void addTask(Task task) {
         tasks.put(task.getId(), task);
     }
+
+    public void addPeriod(Period period) {
+        periods.put(period.getId(), period);
+    }
+
 }

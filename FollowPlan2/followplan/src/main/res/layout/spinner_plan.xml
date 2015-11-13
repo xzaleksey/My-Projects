@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
     android:layout_height="48dp"
-    android:background="@color/background_material_light"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:paddingLeft="@dimen/material_drawer_padding"
-    android:paddingRight="@dimen/material_drawer_padding">
+    android:paddingRight="@dimen/material_drawer_padding"
+    android:background="@color/background_material_light">
 
     <com.mikepenz.iconics.view.IconicsImageView
-        android:id="@+id/iv_color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"/>
+        android:id="@+id/iv_color"
+        android:layout_centerVertical="true" />
 
-    <TextView
-        android:id="@+id/tv_plan_name"
-        style="@style/subHeader"
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginLeft="@dimen/activity_horizontal_padding"
-        android:layout_marginStart="@dimen/activity_horizontal_padding"
-        android:layout_toEndOf="@id/iv_color"
+        android:id="@+id/tv_plan_name"
+        android:gravity="center_vertical"
+        style="@style/subHeader"
         android:layout_toRightOf="@id/iv_color"
-        android:gravity="center_vertical"/>
+        android:layout_toEndOf="@id/iv_color"
+        android:layout_marginLeft="@dimen/activity_horizontal_padding"
+        android:layout_marginStart="@dimen/activity_horizontal_padding"/>
 </RelativeLayout>

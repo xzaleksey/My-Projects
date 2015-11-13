@@ -44,11 +44,12 @@ import net.danlew.android.joda.JodaTimeAndroid;
 
 public class MainActivity extends AppCompatActivity {
     public static final int PLANS_ID = 4;
+    private static final String CURRENT_FRAGMENT_POSITION = "position";
     public static final int SETTINGS_ID = 7;
     public static final int ALL_TASKS_ID = 1;
     public static final int TODAY_ID = 3;
     public static final int FILTERS_ID = 5;
-    private static final String CURRENT_FRAGMENT_POSITION = "position";
+
     private Toolbar mainToolBar;
     private int currentFragmentPosition = 1;
     private FragmentManager fragmentManager;
@@ -180,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 })
                 .build();
-        drawer.setSelection(currentFragmentPosition);
+        drawer.setSelection(currentFragmentPosition,false);
     }
 
     public void createFragment(Fragment fragment, String fragmentName) {

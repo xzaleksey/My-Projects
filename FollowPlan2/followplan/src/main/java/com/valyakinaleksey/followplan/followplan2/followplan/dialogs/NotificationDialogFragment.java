@@ -1,7 +1,9 @@
 package com.valyakinaleksey.followplan.followplan2.followplan.dialogs;
 
 import android.content.ContentValues;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
@@ -19,12 +21,12 @@ import com.valyakinaleksey.followplan.followplan2.followplan.R;
 import com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants;
 import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Period;
 import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Task;
+import com.valyakinaleksey.followplan.followplan2.followplan.preferences.TimePreference;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 import com.wdullaer.materialdatetimepicker.time.RadialPickerLayout;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
-import org.joda.time.format.DateTimeFormatter;
 
 import java.util.Calendar;
 import java.util.Locale;
@@ -33,14 +35,17 @@ import static com.valyakinaleksey.followplan.followplan2.followplan.preferences.
 
 public class NotificationDialogFragment extends SimpleDialogFragment implements TimePickerDialog.OnTimeSetListener, DatePickerDialog.OnDateSetListener {
     private static final String TASK_ID = "taskId";
+    public static final String DATE_NOTIFICATION = "dateNotification";
+    public static final String DATE_NOTIFICATION_SET = "dateNotificationSet";
     public static String TAG = "NotificationDialogFragment";
     private Task task;
     private boolean dateNotificationSet = false;
-    private String stringDateNotification;
     private TextView tvDateNotification;
     private TextView tvTimeNotification;
     private Locale locale;
     private Button btnSetCancelDate;
+    private DateTime dateNotification;
+    private Bundle savedInstanceState;
 
     public static void show(FragmentActivity activity, Fragment fragment, Task task) {
         NotificationDialogFragment notificationDialogFragment = new NotificationDialogFragment();
@@ -52,7 +57,10 @@ public class NotificationDialogFragment extends SimpleDialogFragment implements 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (savedInstanceState != null) {
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
+
+        this.savedInstanceState = savedInstanceState;
+        if (this.savedInstanceState != null) {
             long id = savedInstanceState.getLong(TASK_ID);
             if (id != 0) {
                 task = Task.getTasks().get(id);
@@ -62,30 +70,17 @@ public class NotificationDialogFragment extends SimpleDialogFragment implements 
     }
 
     @Override
-    public void onSaveInstanceState(Bundle outState) {
-        if (task != null) {
-            outState.putLong(TASK_ID, task.getId());
-        }
-        super.onSaveInstanceState(outState);
+    public void onViewStateRestored(Bundle savedInstanceState) {
+        super.onViewStateRestored(savedInstanceState);
     }
 
     @Override
     public BaseDialogFragment.Builder build(final BaseDialogFragment.Builder builder) {
         ViewGroup viewGroup = (ViewGroup) LayoutInflater.from(getActivity()).inflate(R.layout.dialog_task_notification, null);
-        DateTime dateNotification = task.getDateNotification();
-        tvDateNotification = (TextView) viewGroup.findViewById(R.id.tv_date_notification);
+        tvDateNotification = (TextView) viewGroup.findViewById(R.id.tv_date_start);
         tvTimeNotification = (TextView) viewGroup.findViewById(R.id.tv_time_notification);
         btnSetCancelDate = (Button) viewGroup.findViewById(R.id.btn_set_cancel_date);
 
-
-        if (dateNotification.getMillis() != 0) {
-            dateNotificationSet = true;
-            btnSetCancelDate.setText(R.string.faw_close);
-            tvTimeNotification.setEnabled(true);
-        } else {
-            dateNotification = DateTime.now();
-        }
-        initNotificationValues(dateNotification);
         builder.setTitle(task.getName())
                 .setPositiveButton(R.string.set, new View.OnClickListener() {
                     @Override
@@ -114,24 +109,13 @@ public class NotificationDialogFragment extends SimpleDialogFragment implements 
                 dismiss();
             }
         }).setView(viewGroup);
-
+        initDateTimeNotification();
+        initTvDateNotificationListener();
+        initTvTimeNotificationListener();
+        initBtnSetCancelListener();
         return builder;
     }
 
-    private void initNotificationValues(DateTime dateNotification) {
-        stringDateNotification = dateNotification.toString(DD_MM_YYYY);
-        if (dateNotificationSet) {
-            tvDateNotification.setText(stringDateNotification);
-        }
-        DateTimeFormatter formatter = DateTimeFormat.forPattern(HH_MM)
-                .withLocale(locale);
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getContext());
-        DateTime timeNotification = formatter.parseDateTime(sp.getString(getString(R.string.time_notification), DEFAULT_NOTIFICATION_VALUE));
-        tvTimeNotification.setText(timeNotification.toString(formatter));
-        initTvDateNotificationListener(dateNotification);
-        initTvTimeNotificationListener(timeNotification);
-        initBtnSetCancelListener();
-    }
 
     private void initBtnSetCancelListener() {
         btnSetCancelDate.setOnClickListener(new View.OnClickListener() {
@@ -141,7 +125,7 @@ public class NotificationDialogFragment extends SimpleDialogFragment implements 
                 dateNotificationSet = !dateNotificationSet;
                 if (dateNotificationSet) {
                     id = R.string.faw_close;
-                    tvDateNotification.setText(stringDateNotification);
+                    tvDateNotification.setText(dateNotification.toString(TimePreference.DD_MM_YYYY));
                     tvTimeNotification.setEnabled(true);
                 } else {
                     id = R.string.faw_calendar_check;
@@ -153,26 +137,25 @@ public class NotificationDialogFragment extends SimpleDialogFragment implements 
         });
     }
 
-    private void initTvTimeNotificationListener(final DateTime time) {
+    private void initTvTimeNotificationListener() {
         tvTimeNotification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final TimePickerDialog timePickerDialog = TimePickerDialog.newInstance(NotificationDialogFragment.this, time.getHourOfDay(), time.getMinuteOfHour(), true);
+                final TimePickerDialog timePickerDialog = TimePickerDialog.newInstance(NotificationDialogFragment.this, dateNotification.getHourOfDay(), dateNotification.getMinuteOfHour(), true);
                 timePickerDialog.show(getActivity().getFragmentManager(), "TimePickerDialog");
             }
         });
     }
 
-    private void initTvDateNotificationListener(final DateTime dateTime) {
+    private void initTvDateNotificationListener() {
         tvDateNotification.setOnClickListener(new View.OnClickListener() {
-            private Period period;
-
             @Override
             public void onClick(View view) {
-                period = task.getPeriod();
-                final DatePickerDialog datePickerDialog = DatePickerDialog.newInstance(NotificationDialogFragment.this, dateTime.getYear(), dateTime.getMonthOfYear() - 1, dateTime.getDayOfMonth());
-                Calendar startDate = Calendar.getInstance();
-                Calendar endDate = dateTime.plusDays(period.getInterval() - 1).toCalendar(locale);
+                Period period = task.getPeriod();
+                final DatePickerDialog datePickerDialog = DatePickerDialog.newInstance(NotificationDialogFragment.this, dateNotification.getYear(), dateNotification.getMonthOfYear() - 1, dateNotification.getDayOfMonth());
+                DateTime dateStart = period.getDateStart();
+                Calendar startDate = dateStart.toCalendar(locale);
+                Calendar endDate = dateStart.plusDays(period.getInterval() - 1).toCalendar(locale);
                 datePickerDialog.setMinDate(startDate);
                 datePickerDialog.setMaxDate(endDate);
                 datePickerDialog.show(getActivity().getFragmentManager(), "DatePickerDialog");
@@ -180,19 +163,60 @@ public class NotificationDialogFragment extends SimpleDialogFragment implements 
         });
     }
 
-    @Override
-    public void onTimeSet(RadialPickerLayout radialPickerLayout, int i, int i1) {
-        tvTimeNotification.setText(String.format(locale, "%d:%02d", i, i1));
+    private void initDateTimeNotification() {
+        if (savedInstanceState == null) {
+            if (task != null && task.getDateNotification().getMillis() != 0) {
+                dateNotificationSet = true;
+                dateNotification = task.getDateNotification();
+            } else {
+                dateNotification = DateTime.now();
+                SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getContext());
+                String[] timeNotification = sp.getString(getString(R.string.time_notification), DEFAULT_NOTIFICATION_VALUE).split(":");
+                dateNotification = dateNotification.withHourOfDay(Integer.parseInt(timeNotification[0])).withMinuteOfHour(Integer.parseInt(timeNotification[1]));
+            }
 
+        } else {
+            dateNotification = (DateTime) savedInstanceState.getSerializable(DATE_NOTIFICATION);
+            dateNotificationSet = savedInstanceState.getBoolean(DATE_NOTIFICATION_SET);
+        }
+        if (dateNotificationSet) {
+            tvTimeNotification.setEnabled(true);
+            btnSetCancelDate.setText(R.string.faw_close);
+            tvDateNotification.setText(dateNotification.toString(TimePreference.DD_MM_YYYY));
+        }
+        tvTimeNotification.setText(dateNotification.toString(TimePreference.HH_MM));
     }
 
     @Override
     public void onDateSet(DatePickerDialog datePickerDialog, int i, int i1, int i2) {
         tvDateNotification.setText(String.format(locale, "%02d.%02d.%d", i2, i1 + 1, i));
+        dateNotification = dateNotification.withDate(i, i1 + 1, i2);
         if (!dateNotificationSet) {
             dateNotificationSet = true;
             btnSetCancelDate.setText(getString(R.string.faw_close));
             tvTimeNotification.setEnabled(true);
         }
+    }
+
+    @Override
+    public void onTimeSet(RadialPickerLayout radialPickerLayout, int i, int i1) {
+        dateNotification = dateNotification.withHourOfDay(i).withMinuteOfHour(i1);
+        tvTimeNotification.setText(String.format(locale, "%d:%02d", i, i1));
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        if (task != null) {
+            outState.putLong(TASK_ID, task.getId());
+        }
+        outState.putSerializable(DATE_NOTIFICATION, dateNotification);
+        outState.putBoolean(DATE_NOTIFICATION_SET, dateNotificationSet);
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    public void onDismiss(DialogInterface dialog) {
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
+        super.onDismiss(dialog);
     }
 }

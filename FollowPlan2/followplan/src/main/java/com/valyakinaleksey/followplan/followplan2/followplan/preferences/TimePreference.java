@@ -12,19 +12,12 @@ import com.valyakinaleksey.followplan.followplan2.followplan.R;
 
 public class TimePreference extends DialogPreference {
     public static final String DEFAULT_NOTIFICATION_VALUE = "09:00";
-    public static final String DD_MM_YYYY = "dd.MM.yyyy";
-    public static final String HH_MM = "HH:mm";
     private int lastHour = 0;
     private int lastMinute = 0;
     private TimePicker picker = null;
     private String time;
-
-    public TimePreference(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        setPositiveButtonText(context.getString(R.string.set));
-        setNegativeButtonText(context.getString(R.string.cancel));
-    }
-
+    public static final String DD_MM_YYYY = "dd.MM.yyyy";
+    public static final String HH_MM = "HH:mm";
     public static int getHour(String time) {
         String[] pieces = time.split(":");
 
@@ -35,6 +28,12 @@ public class TimePreference extends DialogPreference {
         String[] pieces = time.split(":");
 
         return (Integer.parseInt(pieces[1]));
+    }
+
+    public TimePreference(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        setPositiveButtonText(context.getString(R.string.set));
+        setNegativeButtonText(context.getString(R.string.cancel));
     }
 
     @Override
@@ -127,18 +126,6 @@ public class TimePreference extends DialogPreference {
     }
 
     private static class SavedState extends BaseSavedState {
-        // Standard creator object using an instance of this class
-        public static final Parcelable.Creator<SavedState> CREATOR =
-                new Parcelable.Creator<SavedState>() {
-
-                    public SavedState createFromParcel(Parcel in) {
-                        return new SavedState(in);
-                    }
-
-                    public SavedState[] newArray(int size) {
-                        return new SavedState[size];
-                    }
-                };
         // Member that holds the setting's value
         // Change this data type to match the type saved by your Preference
         String value;
@@ -159,6 +146,19 @@ public class TimePreference extends DialogPreference {
             // Write the preference's value
             dest.writeString(value);  // Change this to write the appropriate data type
         }
+
+        // Standard creator object using an instance of this class
+        public static final Parcelable.Creator<SavedState> CREATOR =
+                new Parcelable.Creator<SavedState>() {
+
+                    public SavedState createFromParcel(Parcel in) {
+                        return new SavedState(in);
+                    }
+
+                    public SavedState[] newArray(int size) {
+                        return new SavedState[size];
+                    }
+                };
     }
 
 }

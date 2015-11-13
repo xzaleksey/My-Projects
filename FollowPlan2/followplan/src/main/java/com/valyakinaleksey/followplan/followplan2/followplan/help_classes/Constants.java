@@ -8,4 +8,6 @@ public class Constants {
     public static final int RESULT_CREATE = 4;
     public static final int RESULT_EDIT = 5;
     public static final int RESULT_DELETE = 6;
+    public static final String PLAN_ID = "planId";
+    public static final String DATE_NOTIFICATION = "dateNotification";
 }

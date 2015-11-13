@@ -18,6 +18,11 @@ public class Task {
     public static final String PERIOD = "period";
     public static final String DONE = "done";
     public static final String DISPOSABLE = "disposable";
+
+    public static void setLastTask(Task lastTask) {
+        Task.lastTask = lastTask;
+    }
+
     private static Task lastTask;
     private static Map<Long, Task> tasks = new LinkedHashMap<>();
     private final long id;
@@ -29,6 +34,7 @@ public class Task {
     private Period period;
     private boolean done;
     private boolean disposable;
+
     public Task(long id, String name, DateTime dateCreated, int order, Plan plan, Period period) {
         this(id, name, dateCreated, null, order, plan, period, false, false);
     }
@@ -74,32 +80,6 @@ public class Task {
 
     public static Task getLastTask() {
         return lastTask;
-    }
-
-    public static void setLastTask(Task lastTask) {
-        Task.lastTask = lastTask;
-    }
-
-    public static Collection<Task> getTasksToday() {
-        Collection<Task> todayTasks = new ArrayList<>();
-        for (Task task : tasks.values()) {
-            if (task.getPeriod().getInterval() == 1) {
-                todayTasks.add(task);
-            }
-        }
-        return todayTasks;
-    }
-
-    public static void deleteTask(DatabaseHelper databaseHelper, Task task) {
-        long taskId = task.getId();
-        Plan plan = task.getPlan();
-        Period period = task.getPeriod();
-        databaseHelper.deleteTask(taskId);
-        Task.getTasks().remove(taskId);
-        plan.getTasks().remove(taskId);
-        period.getTasks().remove(taskId);
-        databaseHelper.close();
-        lastTask = null;
     }
 
     public String getName() {
@@ -168,5 +148,27 @@ public class Task {
 
     public void setDateNotification(DateTime dateNotification) {
         this.dateNotification = dateNotification;
+    }
+
+    public static Collection<Task> getTasksToday() {
+        Collection<Task> todayTasks = new ArrayList<>();
+        for (Task task : tasks.values()) {
+            if (task.getPeriod().getInterval() == 1) {
+                todayTasks.add(task);
+            }
+        }
+        return todayTasks;
+    }
+
+    public static void deleteTask(DatabaseHelper databaseHelper, Task task) {
+        long taskId = task.getId();
+        Plan plan = task.getPlan();
+        Period period = task.getPeriod();
+        databaseHelper.deleteTask(taskId);
+        Task.getTasks().remove(taskId);
+        plan.getTasks().remove(taskId);
+        period.getTasks().remove(taskId);
+        databaseHelper.close();
+        lastTask = null;
     }
 }

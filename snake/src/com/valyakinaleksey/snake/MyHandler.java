@@ -8,9 +8,9 @@ import com.valyakinaleksey.snake.game.Direction;
 import java.lang.ref.WeakReference;
 
 class MyHandler extends Handler {
-    private final WeakReference<MyActivity> mActivity;
+    private final WeakReference<MainActivity> mActivity;
 
-    public MyHandler(MyActivity mActivity) {
+    public MyHandler(MainActivity mActivity) {
         this.mActivity = new WeakReference<>(mActivity);
     }
 
@@ -18,12 +18,13 @@ class MyHandler extends Handler {
         super.handleMessage(msg);
         Bundle bundle = msg.getData();
         Direction direction = (Direction) bundle.getSerializable("Direction");
-        MyActivity myActivity = mActivity.get();
-        if (MyActivity.game.move(direction)) {
-            myActivity.currentDirection = direction;
-            myActivity.updateField();
+        MainActivity mainActivity = mActivity.get();
+        if (MainActivity.game.move(direction)) {
+            mainActivity.currentDirection = direction;
+            mainActivity.updateField();
         } else {
-            myActivity.gameRestartDialogShow();
+            MainActivity.game.setGameLost(true);
+            mainActivity.gameRestartDialogShow();
         }
     }
 }

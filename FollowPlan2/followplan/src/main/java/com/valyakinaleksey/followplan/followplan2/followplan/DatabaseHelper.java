@@ -138,7 +138,9 @@ public class DatabaseHelper extends SQLiteOpenHelper implements BaseColumns {
     public int updatePlan(long rowId, ContentValues contentValues) {
         return updateRow(TABLE_PLANS, rowId, contentValues);
     }
-
+    public int updatePeriod(long rowId, ContentValues contentValues) {
+        return updateRow(TABLE_PERIODS, rowId, contentValues);
+    }
     public int updateTask(long rowId, ContentValues contentValues) {
         return updateRow(TABLE_TASKS, rowId, contentValues);
     }
@@ -260,7 +262,9 @@ public class DatabaseHelper extends SQLiteOpenHelper implements BaseColumns {
         values.put(Period.DATE_START, dateStart.getMillis());
         values.put(Period.INTERVAL, interval);
         values.put(Period.DATE_END, dateEnd.getMillis());
-        values.put(Period.DATE_NOTIFICATION, dateNotification.getMillis());
+        if (dateNotification != null) {
+            values.put(Period.DATE_NOTIFICATION, dateNotification.getMillis());
+        }
         values.put(Period.PLAN, projectId);
         return values;
     }

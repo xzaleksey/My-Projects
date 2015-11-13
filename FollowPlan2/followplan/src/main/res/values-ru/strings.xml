@@ -9,7 +9,7 @@
     <string name="every_day">Каждый день</string>
     <string name="every_week">Каждую неделю</string>
     <string name="every_month">Каждый месяц</string>
-    <string name="create_period">Создать интервал</string>
+    <string name="create_period">Создать период</string>
     <string name="filters">Фильтры</string>
     <string name="settings">Настройки</string>
     <string name="customize_plans">Управлять планами</string>
@@ -41,4 +41,9 @@
     <string name="time_notification">Время напоминаний по умолчанию</string>
     <string name="set">Установить</string>
     <string name="notification_date_time">Дата и время напоминания</string>
+    <string name="period_days">Периодичность плана в днях</string>
+    <string name="period_date_start">Дата начала</string>
+    <string name="period_number_of_days_not_zero">Количество дней должно быть больше 0</string>
+    <string name="input_number_of_days">Введите количество дней</string>
+    <string name="edit_period">Редактировать период</string>
 </resources>
