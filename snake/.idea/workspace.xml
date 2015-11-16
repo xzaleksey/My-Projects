@@ -39,81 +39,6 @@
       <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\Projects\My-Projects\snake\out\production\snake\com\valyakinaleksey\snake\MyActivity$3.class" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\Projects\My-Projects\snake\out\production\snake\com\valyakinaleksey\snake\MyActivity$4.class" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\ruaval\IdeaProjects\Projects\My-Projects\snake\out\production\snake\com\valyakinaleksey\snake\MyActivity.class" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\ruaval\IdeaProjects\Projects\My-Projects\snake\res\layout\main.xml" afterPath="$PROJECT_DIR$/res/layout/activity_main.xml" />
-      <change type="MOVED" beforePath="C:\Users\ruaval\IdeaProjects\Projects\My-Projects\snake\src\com\valyakinaleksey\snake\MyActivity.java" afterPath="$PROJECT_DIR$/src/com/valyakinaleksey/snake/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/game/Game$1.class" afterPath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/game/Game$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/game/Game$2.class" afterPath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/game/Game$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/game/Game.class" afterPath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/game/Game.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../simple2048/out/production/simple2048/com/valyakinaleksey/simple2048/MyActivity$3.class" afterPath="$PROJECT_DIR$/../simple2048/out/production/simple2048/com/valyakinaleksey/simple2048/MyActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../simple2048/out/production/simple2048/com/valyakinaleksey/simple2048/MyActivity$4.class" afterPath="$PROJECT_DIR$/../simple2048/out/production/simple2048/com/valyakinaleksey/simple2048/MyActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../simple2048/out/production/simple2048/com/valyakinaleksey/simple2048/MyActivity$MyGestureListener$1.class" afterPath="$PROJECT_DIR$/../simple2048/out/production/simple2048/com/valyakinaleksey/simple2048/MyActivity$MyGestureListener$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../simple2048/out/production/simple2048/com/valyakinaleksey/simple2048/MyActivity$MyGestureListener.class" afterPath="$PROJECT_DIR$/../simple2048/out/production/simple2048/com/valyakinaleksey/simple2048/MyActivity$MyGestureListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../simple2048/out/production/simple2048/com/valyakinaleksey/simple2048/MyActivity$Updater$1.class" afterPath="$PROJECT_DIR$/../simple2048/out/production/simple2048/com/valyakinaleksey/simple2048/MyActivity$Updater$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../simple2048/out/production/simple2048/com/valyakinaleksey/simple2048/MyActivity$Updater.class" afterPath="$PROJECT_DIR$/../simple2048/out/production/simple2048/com/valyakinaleksey/simple2048/MyActivity$Updater.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../simple2048/out/production/simple2048/com/valyakinaleksey/simple2048/MyActivity.class" afterPath="$PROJECT_DIR$/../simple2048/out/production/simple2048/com/valyakinaleksey/simple2048/MyActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/MyHandler.class" afterPath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/MyHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/R$layout.class" afterPath="$PROJECT_DIR$/out/production/snake/com/valyakinaleksey/snake/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../simple2048/out/production/simple2048/simple2048.apk" afterPath="$PROJECT_DIR$/../simple2048/out/production/simple2048/simple2048.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../simple2048/out/production/simple2048/simple2048.unaligned.apk" afterPath="$PROJECT_DIR$/../simple2048/out/production/simple2048/simple2048.unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/snake.apk" afterPath="$PROJECT_DIR$/out/production/snake/snake.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/snake.unaligned.apk" afterPath="$PROJECT_DIR$/out/production/snake/snake.unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../appcompat/gen/android/support/v7/appcompat/BuildConfig.java" afterPath="$PROJECT_DIR$/../appcompat/gen/android/support/v7/appcompat/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../simple2048/gen/com/valyakinaleksey/simple2048/BuildConfig.java" afterPath="$PROJECT_DIR$/../simple2048/gen/com/valyakinaleksey/simple2048/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/valyakinaleksey/snake/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/com/valyakinaleksey/snake/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/help_classes/Constants.java" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/help_classes/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/DatabaseHelper.java" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/DatabaseHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/FollowPlan2.iml" afterPath="$PROJECT_DIR$/../FollowPlan2/FollowPlan2.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/valyakinaleksey/snake/game/Game.java" afterPath="$PROJECT_DIR$/src/com/valyakinaleksey/snake/game/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/activities/MainActivity.java" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/activities/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/valyakinaleksey/snake/MyHandler.java" afterPath="$PROJECT_DIR$/src/com/valyakinaleksey/snake/MyHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/activities/MyPreferenceActivity.java" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/activities/MyPreferenceActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/dialogs/NotificationDialogFragment.java" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/dialogs/NotificationDialogFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/main_classes/Period.java" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/main_classes/Period.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/main_classes/Plan.java" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/main_classes/Plan.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/fragments/PlanFragment.java" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/fragments/PlanFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/adapters/SpinnerPlanArrayAdapter.java" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/adapters/SpinnerPlanArrayAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/main_classes/Task.java" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/main_classes/Task.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/activities/TaskActivity.java" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/activities/TaskActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/preferences/TimePreference.java" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/java/com/valyakinaleksey/followplan/followplan2/followplan/preferences/TimePreference.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/activity_plan.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/activity_plan.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/activity_prefs.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/activity_prefs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/activity_settings.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/activity_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/activity_task.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/activity_task.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/values/arrays.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/values/arrays.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/.idea/codeStyleSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/.idea/compiler.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/dialog_plan.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/dialog_plan.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/dialog_task_notification.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/dialog_task_notification.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/.idea/encodings.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/followplan.iml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/followplan.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/fragment_plan.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/fragment_plan.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/../FollowPlan2/gradle/wrapper/gradle-wrapper.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/.idea/gradle.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/gradlew" afterPath="$PROJECT_DIR$/../FollowPlan2/gradlew" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/list_item_plan.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/list_item_plan.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/list_item_task.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/list_item_task.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/list_item_task_full.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/list_item_task_full.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/menu/menu_selected_item.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/menu/menu_selected_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/.idea/misc.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/.idea/modules.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/xml/notifications.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/xml/notifications.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/plan_color.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/plan_color.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/spinner_plan.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/spinner_plan.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/spinner_textview.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/spinner_textview.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/values-ru/strings.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/values-ru/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/styles.xml" afterPath="$PROJECT_DIR$/res/values/styles.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/tool_bar_choose_task.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/tool_bar_choose_task.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/tool_bar_create.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/tool_bar_create.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/tool_bar_main.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/followplan/src/main/res/layout/tool_bar_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/.idea/uiDesigner.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FollowPlan2/.idea/vcs.xml" afterPath="$PROJECT_DIR$/../FollowPlan2/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../simple2048/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../simple2048/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="snake.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -139,11 +64,11 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40078586">
-              <caret line="142" column="8" selection-start-line="142" selection-start-column="8" selection-end-line="142" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.13359529">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding>
-                <element signature="e#11841#11842#0" expanded="true" />
-                <element signature="e#11914#11915#0" expanded="true" />
+                <element signature="e#5285#5286#0" expanded="true" />
+                <element signature="e#5357#5358#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -179,7 +104,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#340#341#0" expanded="false" />
+                <element signature="e#403#404#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -454,7 +383,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../simple2048" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FollowPlan2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
@@ -773,7 +702,7 @@
       <workItem from="1443699668499" duration="589000" />
       <workItem from="1447421138171" duration="1685000" />
       <workItem from="1447423813509" duration="2443000" />
-      <workItem from="1447426388825" duration="71000" />
+      <workItem from="1447426388825" duration="223000" />
     </task>
     <task id="LOCAL-00001" summary="check">
       <created>1442739488114</created>
@@ -791,7 +720,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82906000" />
+    <option name="totallyTimeSpent" value="83058000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -804,7 +733,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294271" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -818,7 +747,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30078125" sideWeight="0.4925" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23125" sideWeight="0.49479166" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23125" sideWeight="0.49479166" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1276,7 +1205,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#340#341#0" expanded="false" />
+            <element signature="e#403#404#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1300,11 +1233,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/valyakinaleksey/snake/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40078586">
-          <caret line="142" column="8" selection-start-line="142" selection-start-column="8" selection-end-line="142" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.13359529">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
-            <element signature="e#11841#11842#0" expanded="true" />
-            <element signature="e#11914#11915#0" expanded="true" />
+            <element signature="e#5285#5286#0" expanded="true" />
+            <element signature="e#5357#5358#0" expanded="true" />
           </folding>
         </state>
       </provider>
