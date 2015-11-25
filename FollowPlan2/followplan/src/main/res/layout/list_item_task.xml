@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/activity_horizontal_padding">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_task_name"
+        android:textAppearance="?android:attr/textAppearanceListItem"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_period_name"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_below="@id/tv_task_name"
+        android:layout_marginTop="@dimen/common_margin" />
+
+    <com.mikepenz.iconics.view.IconicsTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/tv_date_notification_header"
+        android:text=""
+        android:padding="@dimen/zero"
+        android:textColor="@color/secondary_text"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBaseline="@+id/tv_period_name"
+        android:focusable="false" />
+</RelativeLayout>

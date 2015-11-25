@@ -1,0 +1,47 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.1.1'
+    }
+}
+apply plugin: 'com.android.application'
+
+repositories {
+    jcenter()
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.valyakinaleksey.followplan.followplan2.followplan"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.android.support:design:22.2.0'
+    compile 'com.melnykov:floatingactionbutton:1.2.0'
+    compile('com.mikepenz:materialdrawer:4.3.0@aar') {
+        transitive = true
+    }
+    compile 'com.mikepenz:iconics-core:1.6.2@aar'
+    compile 'com.mikepenz:fontawesome-typeface:4.4.0.1@aar'
+    compile 'com.avast:android-styled-dialogs:2.2.0'
+    compile 'com.wdullaer:materialdatetimepicker:1.5.4'
+    compile 'net.danlew:android.joda:2.8.2'
+}

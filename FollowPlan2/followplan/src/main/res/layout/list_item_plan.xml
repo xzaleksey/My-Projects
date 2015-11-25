@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_horizontal_padding"
+                android:paddingRight="@dimen/activity_horizontal_padding">
+
+    <com.mikepenz.iconics.view.IconicsImageView
+        android:id="@+id/iv_color"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="18dp"
+        android:layout_height="44dp"
+        android:layout_centerVertical="true"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_plan_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_color"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_toLeftOf="@+id/ib_refresh"
+        android:layout_toStartOf="@id/ib_refresh"
+        android:gravity="center_vertical"
+        android:textAppearance="?android:attr/textAppearanceListItem"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_plan_percent"
+        style="@style/TextviewSecondarySmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_plan_name"
+        android:layout_marginBottom="@dimen/common_margin"
+        android:gravity="center_vertical"
+        />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_tasks_count"
+        style="@style/TextviewSecondarySmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"/>
+
+    <com.mikepenz.iconics.view.IconicsButton
+        android:id="@+id/ib_delete"
+        style="@android:style/Widget.Holo.Button.Borderless"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="@string/faw_trash"
+        android:textColor="@color/accent"
+        android:visibility="gone"/>
+
+    <com.mikepenz.iconics.view.IconicsButton
+        android:id="@+id/ib_edit"
+        style="@android:style/Widget.Holo.Button.Borderless"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/ib_delete"
+        android:layout_toStartOf="@+id/ib_delete"
+        android:text="@string/faw_edit"
+        android:textColor="@color/accent"
+        android:visibility="gone"/>
+
+    <com.mikepenz.iconics.view.IconicsButton
+        android:id="@+id/ib_refresh"
+        style="@android:style/Widget.Holo.Button.Borderless"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/ib_edit"
+        android:layout_toStartOf="@+id/ib_edit"
+        android:text="@string/faw_refresh"
+        android:textColor="@color/accent"
+        android:visibility="gone"/>
+</RelativeLayout>
