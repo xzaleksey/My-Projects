@@ -11,9 +11,19 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.*;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.*;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import com.melnykov.fab.FloatingActionButton;
 import com.mikepenz.fontawesome_typeface_library.FontAwesome;
 import com.mikepenz.iconics.Iconics;
@@ -34,7 +44,9 @@ import com.valyakinaleksey.followplan.followplan2.followplan.dialogs.PlansDialog
 import com.valyakinaleksey.followplan.followplan2.followplan.fragments.PlanFragment;
 import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Plan;
 import com.valyakinaleksey.followplan.followplan2.followplan.update.MainReceiver;
+
 import net.danlew.android.joda.JodaTimeAndroid;
+
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 
@@ -42,7 +54,6 @@ import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes
 
 
 public class MainActivity extends AppCompatActivity {
-    private static final String CURRENT_FRAGMENT_POSITION = "position";
     public static final int ALL_TASKS_ID = 1;
     public static final int TODAY_ID = 3;
     public static final int PLANS_ID = 4;
@@ -50,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
     public static final int REPORT_BUG_ID = 7;
     public static final int SETTINGS_ID = 8;
     public static final int REQUEST_CODE_SEARCH = 10;
+    private static final String CURRENT_FRAGMENT_POSITION = "position";
     private Toolbar mainToolBar;
     private int currentFragmentPosition = 1;
     private FragmentManager fragmentManager;
@@ -258,42 +270,6 @@ public class MainActivity extends AppCompatActivity {
         mainToolbarSpinner.setAdapter(spinnerAdapter);
     }
 
-    private static class SpinnerToolbarAdapter extends ArrayAdapter<String> {
-        private static String title;
-        private LayoutInflater inflater;
-
-        public SpinnerToolbarAdapter(Context context, int resource, int textViewResourceId, String[] objects) {
-            super(context, resource, textViewResourceId, objects);
-            inflater = LayoutInflater.from(getContext());
-        }
-
-        public void setTitle(String title) {
-            SpinnerToolbarAdapter.title = title;
-        }
-
-        private class ViewHolder {
-            TextView tvTitle;
-            TextView tvFilter;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            ViewHolder viewHolder;
-            if (convertView == null) {
-                convertView = inflater.inflate(R.layout.spinner_toolbar_item, null);
-                viewHolder = new ViewHolder();
-                viewHolder.tvTitle = (TextView) convertView.findViewById(R.id.title);
-                viewHolder.tvFilter = (TextView) convertView.findViewById(R.id.tv_filter);
-                convertView.setTag(viewHolder);
-            } else {
-                viewHolder = (ViewHolder) convertView.getTag();
-            }
-            viewHolder.tvTitle.setText(title);
-            viewHolder.tvFilter.setText(getItem(position));
-            return convertView;
-        }
-    }
-
     public void initSpinnerFilter(final TasksArrayAdapter tasksArrayAdapter) {
         mainToolbarSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -326,10 +302,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.action_notifications) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
+        return id == R.id.action_notifications || super.onOptionsItemSelected(item);
     }
 
     public void updateFragment() {
@@ -362,6 +335,43 @@ public class MainActivity extends AppCompatActivity {
                     .detach(currentFragment)
                     .attach(currentFragment)
                     .commitAllowingStateLoss();
+        }
+        Log.d(LOG_TAG, "onActivityResult");
+    }
+
+    private static class SpinnerToolbarAdapter extends ArrayAdapter<String> {
+        private static String title;
+        private LayoutInflater inflater;
+
+        public SpinnerToolbarAdapter(Context context, int resource, int textViewResourceId, String[] objects) {
+            super(context, resource, textViewResourceId, objects);
+            inflater = LayoutInflater.from(getContext());
+        }
+
+        public void setTitle(String title) {
+            SpinnerToolbarAdapter.title = title;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            ViewHolder viewHolder;
+            if (convertView == null) {
+                convertView = inflater.inflate(R.layout.spinner_toolbar_item, null);
+                viewHolder = new ViewHolder();
+                viewHolder.tvTitle = (TextView) convertView.findViewById(R.id.title);
+                viewHolder.tvFilter = (TextView) convertView.findViewById(R.id.tv_filter);
+                convertView.setTag(viewHolder);
+            } else {
+                viewHolder = (ViewHolder) convertView.getTag();
+            }
+            viewHolder.tvTitle.setText(title);
+            viewHolder.tvFilter.setText(getItem(position));
+            return convertView;
+        }
+
+        private class ViewHolder {
+            TextView tvTitle;
+            TextView tvFilter;
         }
     }
 }
