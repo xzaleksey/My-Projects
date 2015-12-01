@@ -23,19 +23,24 @@
         <item name="c10">@color/c10</item>
         <item name="c11">@color/c11</item>
         <item name="c12">@color/c12</item>
+        <item name="c13">@color/c13</item>
+        <item name="c14">@color/c14</item>
     </array>
     <color name="colorDefault">#FAFAFA</color>
     <color name="c1">#9C27B0</color>
     <color name="c2">#3F51B5</color>
     <color name="c3">#2196F3</color>
-    <color name="c4">#03A9F4</color>
+    <color name="c4">#00BCD4</color>
     <color name="c5">#009688</color>
     <color name="c6">#4CAF50</color>
     <color name="c7">#8BC34A</color>
     <color name="c8">#CDDC39</color>
-    <color name="c9">#FFEB3B</color>
-    <color name="c10">#FFC107</color>
-    <color name="c11">#FF9800</color>
-    <color name="c12">#FF5722</color>
+    <color name="c9">#FFC107</color>
+    <color name="c10">#FF9800</color>
+    <color name="c11">#FF5722</color>
+    <color name="c12">#F44336</color>
+    <color name="c13">#E91E63</color>
+    <color name="c14">#795548</color>
+
 
 </resources>

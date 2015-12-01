@@ -23,6 +23,8 @@
         <item>512</item>
         <item>1024</item>
         <item>2048</item>
+        <item>4096</item>
+        <item>8192</item>
     </string-array>
     <string-array name="entry_orientation">
         <item>Portrait</item>
