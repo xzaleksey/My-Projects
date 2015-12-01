@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">2048</string>
+    <string name="action_settings">Settings</string>
+    <string name="refresh">Refresh</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="restart">Restart</string>
+    <string name="game_over">Game is over!</string>
+    <string name="record">"Record:\n %d"</string>
+    <string name="score">"Score:\n %d"</string>
+    <string name="col_row_count">Number of Rows/Columns</string>
+    <string name="settings">Settings</string>
+    <string name="max_count">max_count</string>
+    <string name="default_max_count">4</string>
+    <string name="col_row_count_dialog_message">You have changed the max rows/columns count.\n Do you want to restart the game?</string>
+    <string name="faw_undo">{faw-undo}</string>
+    <string name="faw_refresh">{faw-refresh}</string>
+    <string name="undo">Undo</string>
+    <string name="orientation">Orientation</string>
+    <string name="orientation_header">Orientation</string>
+    <string name="orientation_default">Portrait</string>
+
+</resources>

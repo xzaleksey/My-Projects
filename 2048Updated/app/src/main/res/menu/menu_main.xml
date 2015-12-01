@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.valyakinaleksey.a2048updated.MainActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_refresh"
+        android:title="@string/refresh"
+        app:actionLayout="@layout/action_refresh"
+        app:showAsAction="ifRoom"
+        tools:ignore="AppCompatResource" />
+    <item
+        android:id="@+id/action_undo"
+        android:title="@string/undo"
+        app:actionLayout="@layout/action_undo"
+        app:showAsAction="ifRoom"
+        tools:ignore="AppCompatResource" />
+</menu>

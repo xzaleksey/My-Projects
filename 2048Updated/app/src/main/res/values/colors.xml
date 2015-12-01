@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorBg">#9E9E9E</color>
+    <color name="colorPrimary">#03A9F4</color>
+    <color name="colorPrimaryDark">#0288D1</color>
+    <color name="colorAccent">#607D8B</color>
+    <color name="colorText">#F5F5F5</color>
+    <color name="colorStroke">#607D8B</color>
+    <color name="colorTable">#E0E0E0</color>
+    <color name="colorTableStroke">#607D8B</color>
+
+    <array name="colors">
+        <item name="colorDefault">@color/colorDefault</item>
+        <item name="c1">@color/c1</item>
+        <item name="c2">@color/c2</item>
+        <item name="c3">@color/c3</item>
+        <item name="c4">@color/c4</item>
+        <item name="c5">@color/c5</item>
+        <item name="c6">@color/c6</item>
+        <item name="c7">@color/c7</item>
+        <item name="c8">@color/c8</item>
+        <item name="c9">@color/c9</item>
+        <item name="c10">@color/c10</item>
+        <item name="c11">@color/c11</item>
+        <item name="c12">@color/c12</item>
+    </array>
+    <color name="colorDefault">#FAFAFA</color>
+    <color name="c1">#9C27B0</color>
+    <color name="c2">#3F51B5</color>
+    <color name="c3">#2196F3</color>
+    <color name="c4">#03A9F4</color>
+    <color name="c5">#009688</color>
+    <color name="c6">#4CAF50</color>
+    <color name="c7">#8BC34A</color>
+    <color name="c8">#CDDC39</color>
+    <color name="c9">#FFEB3B</color>
+    <color name="c10">#FFC107</color>
+    <color name="c11">#FF9800</color>
+    <color name="c12">#FF5722</color>
+
+</resources>

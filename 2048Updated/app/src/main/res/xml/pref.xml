@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:defaultValue="@string/default_max_count"
+        android:entries="@array/entry_values"
+        android:entryValues="@array/entry_values"
+        android:key="@string/max_count"
+        android:title="@string/col_row_count" />
+    <ListPreference
+        android:defaultValue="@string/orientation_default"
+        android:entries="@array/entry_orientation"
+        android:entryValues="@array/entry_orientation"
+        android:key="@string/orientation"
+        android:title="@string/orientation_header" />
+</PreferenceScreen>

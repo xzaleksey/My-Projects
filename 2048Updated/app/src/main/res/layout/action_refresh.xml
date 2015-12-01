@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mikepenz.iconics.view.IconicsButton xmlns:android="http://schemas.android.com/apk/res/android"
+    style="?android:attr/borderlessButtonStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/faw_refresh"
+    android:textColor="@android:color/white">
+
+</com.mikepenz.iconics.view.IconicsButton>

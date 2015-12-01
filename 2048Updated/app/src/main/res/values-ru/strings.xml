@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">2048</string>
+    <string name="action_settings">Настройки</string>
+    <string name="cancel">Отмена</string>
+    <string name="col_row_count">Количество строк и столбцов</string>
+    <string name="game_over">Игра окончена!</string>
+    <string name="ok">ОК</string>
+    <string name="record">"Рекорд:\n %d"</string>
+    <string name="refresh">Сброс</string>
+    <string name="restart">Рестарт</string>
+    <string name="score">"Счет:\n %d"</string>
+    <string name="settings">Настройки</string>
+    <string name="col_row_count_dialog_message">Вы изменили максимальное количество строк/столбцов.\n Хотите начать игру заново?</string>
+    <string name="undo">Отменить</string>
+    <string name="orientation_header">Ориентация</string>
+    <string name="orientation_default">Книжная</string>
+</resources>
