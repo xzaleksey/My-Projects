@@ -114,9 +114,9 @@ public class MainActivity extends AppCompatActivity {
             Log.d(LOG_TAG, DateTime.now(aDefault).toString());
             Iconics.init(getApplicationContext());
             Iconics.registerFont(new FontAwesome());
-            if (Plan.getPlans().isEmpty()) {
-                new DatabaseHelper(getBaseContext()).initFromDb();
-            }
+        }
+        if (Plan.getPlans().isEmpty()) {
+            new DatabaseHelper(getBaseContext()).initFromDb();
         }
         initToolBar();
         if (savedInstanceState == null) {
@@ -330,6 +330,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_CODE_SEARCH) {
             fragmentManager.beginTransaction()
                     .detach(currentFragment)

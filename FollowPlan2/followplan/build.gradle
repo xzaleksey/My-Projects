@@ -33,8 +33,8 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:23.0.1'
-    compile 'com.android.support:design:22.2.0'
+    compile 'com.android.support:appcompat-v7:23.1.0'
+    compile 'com.android.support:design:23.1.0'
     compile 'com.melnykov:floatingactionbutton:1.2.0'
     compile('com.mikepenz:materialdrawer:4.3.0@aar') {
         transitive = true
@@ -44,4 +44,5 @@ dependencies {
     compile 'com.avast:android-styled-dialogs:2.2.0'
     compile 'com.wdullaer:materialdatetimepicker:1.5.4'
     compile 'net.danlew:android.joda:2.8.2'
+    compile 'com.jakewharton:butterknife:7.0.1'
 }

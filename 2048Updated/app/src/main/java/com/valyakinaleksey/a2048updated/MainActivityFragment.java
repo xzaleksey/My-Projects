@@ -3,6 +3,7 @@ package com.valyakinaleksey.a2048updated;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
+import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -89,7 +90,7 @@ public class MainActivityFragment extends Fragment implements ISimpleDialogListe
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+                             final Bundle savedInstanceState) {
         ViewGroup viewGroup = (ViewGroup) inflater.inflate(R.layout.fragment_main, null);
         ButterKnife.bind(this, viewGroup);
         initBaseValues();
@@ -98,6 +99,29 @@ public class MainActivityFragment extends Fragment implements ISimpleDialogListe
         fillField();
         initOnTouchListener(viewGroup);
         setHasOptionsMenu(true);
+        //FixMe Ширина все равно при альбомной ориентации не идеальна(
+        int orientation = this.getResources().getConfiguration().orientation;
+        if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            final ViewTreeObserver observer = field.getViewTreeObserver();
+            observer.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+                @Override
+                public void onGlobalLayout() {
+                    int fix = 0;
+                    if (savedInstanceState == null) {
+                        final TypedArray styledAttributes = getContext().getTheme().obtainStyledAttributes(
+                                new int[]{android.R.attr.actionBarSize});
+                        fix = (int) styledAttributes.getDimension(0, 0) + 8;
+                        styledAttributes.recycle();
+                    }
+                    Log.d(LOG_TAG, "fix" + fix);
+                    field.getLayoutParams().width = field.getHeight() - fix;
+                    Log.d(LOG_TAG, "height" + field.getHeight());
+                    Log.d(LOG_TAG, "width" + field.getLayoutParams().width);
+                    field.requestLayout();
+                    field.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+                }
+            });
+        }
         return viewGroup;
     }
 
@@ -178,6 +202,7 @@ public class MainActivityFragment extends Fragment implements ISimpleDialogListe
             for (int i = 0; i < strings.length; i++) {
                 COLORS.put(strings[i], colors[i]);
             }
+            COLORS.put(null, colors[strings.length - 1]);
         }
     }
 
@@ -199,21 +224,7 @@ public class MainActivityFragment extends Fragment implements ISimpleDialogListe
             }
             field.addView(row, rowLp);
         }
-        //FixMe Ширина все равно при альбомной ориентации не идеальна(
-        int orientation = this.getResources().getConfiguration().orientation;
-        if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            final ViewTreeObserver observer = field.getViewTreeObserver();
-            observer.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-                @Override
-                public void onGlobalLayout() {
-                    field.getLayoutParams().width = field.getHeight();
-                    Log.d(LOG_TAG, "height" + field.getHeight());
-                    Log.d(LOG_TAG, "width" + field.getLayoutParams().width);
-                    field.requestLayout();
-                    field.getViewTreeObserver().removeGlobalOnLayoutListener(this);
-                }
-            });
-        }
+
     }
 
     @NonNull
@@ -292,7 +303,11 @@ public class MainActivityFragment extends Fragment implements ISimpleDialogListe
     }
 
     private void setBgColor(TextView textView, CharSequence value) {
-        textView.setBackgroundColor(COLORS.get(value));
+        Integer color = COLORS.get(value);
+        if (color == null) {
+            color = COLORS.get(null);
+        }
+        textView.setBackgroundColor(color);
 //        Drawable background = textView.getBackground().getCurrent();
 //        if (background instanceof ShapeDrawable) {
 //            ((ShapeDrawable) background).getPaint().setColor(COLORS.get(value));

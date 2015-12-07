@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.*;
 import android.view.animation.AnimationUtils;
 import android.widget.*;
+
 import com.avast.android.dialogs.fragment.SimpleDialogFragment;
 import com.avast.android.dialogs.iface.ISimpleDialogListener;
 import com.melnykov.fab.FloatingActionButton;
