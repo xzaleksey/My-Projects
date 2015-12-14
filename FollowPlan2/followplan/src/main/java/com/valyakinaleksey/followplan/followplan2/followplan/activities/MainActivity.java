@@ -16,7 +16,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -66,32 +65,20 @@ public class MainActivity extends AppCompatActivity {
     private int currentFragmentPosition = 1;
     private FragmentManager fragmentManager;
     private Drawer drawer;
-    private InputMethodManager imm;
     private SecondaryDrawerItem drawerItemPlans;
     private Spinner mainToolbarSpinner;
     private FloatingActionButton floatingActionButton;
     private Fragment currentFragment;
-    private ListView listViewMain;
     private SpinnerToolbarAdapter spinnerAdapter;
 
-    public ListView getListViewMain() {
-        return listViewMain;
-    }
-
     public void setListViewMain(ListView listViewMain) {
-        this.listViewMain = listViewMain;
+        ListView listViewMain1 = listViewMain;
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        Map<DateTime,List<Task>> dateTimeListMap = new LinkedHashMap<>();
-//        DateTime now = DateTime.now().withSecondOfMinute(0).withMillisOfSecond(0);
-//        DateTime now2 = DateTime.now().withSecondOfMinute(0).withMillisOfSecond(0);
-//        dateTimeListMap.put(now,new ArrayList<Task>());
-//        dateTimeListMap.containsKey(now2);
-//        dateTimeListMap.get(now2);
         initActivity(savedInstanceState);
         initDrawer();
     }
@@ -104,7 +91,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void initActivity(Bundle savedInstanceState) {
         fragmentManager = getSupportFragmentManager();
-        imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         floatingActionButton = (FloatingActionButton) findViewById(R.id.fab);
         if (savedInstanceState == null) {
             JodaTimeAndroid.init(this);
@@ -243,30 +229,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(new Intent(getBaseContext(), SearchableActivity.class), REQUEST_CODE_SEARCH);
             }
         });
-//        SearchManager searchManager =
-//                (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-//        final SearchView searchView = (SearchView) mainToolBar.findViewById(R.id.sv_search_tasks);
-//        final SearchableInfo searchableInfo = searchManager.getSearchableInfo(getComponentName());
-//        Log.d(LOG_TAG, searchableInfo == null ? "null" : searchableInfo.toString());
-//        searchView.setSearchableInfo(
-//                searchableInfo);
-//        searchView.setOnQueryTextFocusChangeListener(new View.OnFocusChangeListener() {
-//            @Override
-//            public void onFocusChange(View view, boolean b) {
-//                if (b) {
-//                    mainToolBar.findViewById(R.id.title).setVisibility(View.GONE);
-//                } else {
-//                    mainToolBar.findViewById(R.id.title).setVisibility(View.VISIBLE);
-//                    searchView.onActionViewCollapsed();
-//                }
-//            }
-//        });
         mainToolbarSpinner = ((Spinner) mainToolBar.findViewById(R.id.toolbar_spinner));
-        String[] filters = new String[3];
-        filters[0] = getString(R.string.all_tasks);
-        filters[1] = getString(R.string.uncompleted_tasks);
-        filters[2] = getString(R.string.completed_tasks);
-        spinnerAdapter = new SpinnerToolbarAdapter(getBaseContext(), R.layout.spinner_toolbar_item, R.id.title, filters);
+        spinnerAdapter = new SpinnerToolbarAdapter(getBaseContext(), R.layout.spinner_toolbar_item, R.id.title, new String[]{getString(R.string.all_tasks),
+                getString(R.string.uncompleted_tasks, getString(R.string.completed_tasks))});
         mainToolbarSpinner.setAdapter(spinnerAdapter);
     }
 
@@ -332,6 +297,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_CODE_SEARCH) {
+
             fragmentManager.beginTransaction()
                     .detach(currentFragment)
                     .attach(currentFragment)
@@ -341,7 +307,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private static class SpinnerToolbarAdapter extends ArrayAdapter<String> {
-        private static String title;
+        private String title;
         private LayoutInflater inflater;
 
         public SpinnerToolbarAdapter(Context context, int resource, int textViewResourceId, String[] objects) {
@@ -350,7 +316,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         public void setTitle(String title) {
-            SpinnerToolbarAdapter.title = title;
+            this.title = title;
         }
 
         @Override
