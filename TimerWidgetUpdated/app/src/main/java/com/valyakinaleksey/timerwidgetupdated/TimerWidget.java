@@ -39,6 +39,7 @@ public class TimerWidget extends AppWidgetProvider {
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         super.onUpdate(context, appWidgetManager, appWidgetIds);
+        PreferenceManager.getDefaultSharedPreferences(context).edit().clear().apply();
         for (int appWidgetId : appWidgetIds) {
             Log.d(LOG_TAG, "onUpdate AppWidgetId " + appWidgetId);
             timerMap.put(appWidgetId, new Timer(appWidgetId, DEFAULT_TIME));
