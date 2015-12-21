@@ -5,9 +5,11 @@ import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Handler;
 import android.os.Message;
 import android.os.Vibrator;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.util.Log;
 import android.widget.RemoteViews;
@@ -28,14 +30,11 @@ public class TimerWidget extends AppWidgetProvider {
     public static final String FORMAT = "0:%02d";
     public static final long DEFAULT_TIME = 60000;
     public static final String DEFAULT_TEXT = "1:00";
+    public static final String SAVED_TIME = "savedTime";
     private static Map<Integer, Timer> timerMap = new HashMap<>();
     private ExecutorService executorService = Executors.newCachedThreadPool();
     private MyHandler myHandler;
-
-    @Override
-    public void onEnabled(Context context) {
-        super.onEnabled(context);
-    }
+    private SharedPreferences sharedPreferences;
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
@@ -60,25 +59,35 @@ public class TimerWidget extends AppWidgetProvider {
 
     @Override
     public void onDeleted(Context context, int[] appWidgetIds) {
+        if (appWidgetIds.length == 1) {
+            int appWidgetId = appWidgetIds[0];
+            if (timerMap.containsKey(appWidgetId)) {
+                Log.d(LOG_TAG, "" + appWidgetId);
+                timerMap.get(appWidgetId).setThread(null);
+                timerMap.remove(appWidgetId);
+            }
+        }
+        Log.d(LOG_TAG, "onDelete()");
         super.onDeleted(context, appWidgetIds);
 
     }
 
     @Override
-    public void onDisabled(Context context) {
-        super.onDisabled(context);
-    }
-
-    @Override
     public void onReceive(final Context context, Intent intent) {
         super.onReceive(context, intent);
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
         final int appWidgetId = intent.getIntExtra(APP_WIDGET_ID, 0);
-        Log.d(LOG_TAG, "AppWidgetId " + appWidgetId);
         String action = intent.getAction();
+        Log.d(LOG_TAG, "AppWidgetId " + appWidgetId);
+        Log.d(LOG_TAG, action);
         final RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget);
         if (appWidgetId != 0) {
             if (!timerMap.containsKey(appWidgetId)) {
-                timerMap.put(appWidgetId, new Timer(appWidgetId, DEFAULT_TIME));
+                Timer timer = new Timer(appWidgetId, DEFAULT_TIME);
+                if (sharedPreferences.contains(SAVED_TIME + appWidgetId)) {
+                    timer.setElapsedTime(sharedPreferences.getLong(SAVED_TIME + appWidgetId, 0));
+                }
+                timerMap.put(appWidgetId, timer);
             }
             final Timer timer = timerMap.get(appWidgetId);
             if (action.equals(ACTION_UPDATE)) {
@@ -91,57 +100,68 @@ public class TimerWidget extends AppWidgetProvider {
 
     private void actionUpdate(final Context context, final int appWidgetId, final RemoteViews views, final Timer timer) {
         if (timer.isStarted()) {
-            timer.setElapsedTime(timer.getElapsedTime() + System.currentTimeMillis() - timer.getStartTime());
-            Log.d(LOG_TAG, "Stopped");
-            views.setInt(R.id.play_pause, "setImageResource", R.drawable.ic_play_circle_fill);
-            timer.setThread(null);
-            timer.setStarted(false);
+            stopTimer(appWidgetId, views, timer);
         } else {
-            final Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-            Log.d(LOG_TAG, "Started");
-            if (myHandler == null) {
-                myHandler = new MyHandler(context);
-            }
-            views.setInt(R.id.play_pause, "setImageResource", R.drawable.ic_pause_circle_fill);
-            timer.setStarted(true);
-            if (timer.getElapsedTime() >= timer.getEndTime()) {
-                timer.setElapsedTime(0);
-            }
-            executorService.execute(new Runnable() {
-                @Override
-                public void run() {
-                    Thread thread = Thread.currentThread();
-                    timer.setThread(thread);
-                    timer.setStartTime(System.currentTimeMillis());
-                    long endTime = timer.getEndTime();
-                    long elapsedTime = timer.getElapsedTime();
-                    while (elapsedTime <= endTime) {
-                        long waitTime = 1000 - elapsedTime % 1000;
-                        try {
-                            TimeUnit.MILLISECONDS.sleep(waitTime);
-                            if (thread.equals(timer.getThread())) {
-                                elapsedTime += waitTime;
-                                views.setTextViewText(R.id.tv_timer, String.format(FORMAT, (endTime - elapsedTime) / 1000));
-                                updateWidget(context, appWidgetId, views);
-                            } else {
-                                return;
-                            }
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                    resetTimer(context, views, appWidgetId);
-                    vibrator.vibrate(200);
-                    myHandler.sendEmptyMessage(0);
-                }
-            });
+            startTimer(context, appWidgetId, views, timer);
         }
         updateWidget(context, appWidgetId, views);
     }
 
+    private void startTimer(final Context context, final int appWidgetId, final RemoteViews views, final Timer timer) {
+        final Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+        if (myHandler == null) {
+            myHandler = new MyHandler(context);
+        }
+        views.setInt(R.id.play_pause, "setImageResource", R.drawable.ic_pause_circle_fill);
+        timer.setStarted(true);
+        if (timer.getElapsedTime() >= timer.getEndTime()) {
+            timer.setElapsedTime(0);
+        }
+        executorService.execute(new Runnable() {
+            @Override
+            public void run() {
+                Thread thread = Thread.currentThread();
+                timer.setThread(thread);
+                timer.setStartTime(System.currentTimeMillis());
+                long endTime = timer.getEndTime();
+                long elapsedTime = timer.getElapsedTime();
+                while (elapsedTime <= endTime) {
+                    long waitTime = 1000 - elapsedTime % 1000;
+                    try {
+                        TimeUnit.MILLISECONDS.sleep(waitTime);
+                        if (thread.equals(timer.getThread())) {
+                            elapsedTime += waitTime;
+                            views.setTextViewText(R.id.tv_timer, String.format(FORMAT, (endTime - elapsedTime) / 1000));
+                            updateWidget(context, appWidgetId, views);
+                        } else {
+                            return;
+                        }
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                resetTimer(context, views, appWidgetId);
+                vibrator.vibrate(200);
+                myHandler.sendEmptyMessage(0);
+            }
+        });
+        Log.d(LOG_TAG, "Started");
+    }
+
+    private void stopTimer(int appWidgetId, RemoteViews views, Timer timer) {
+        long elapsedTime = timer.getElapsedTime() + System.currentTimeMillis() - timer.getStartTime();
+        timer.setElapsedTime(elapsedTime);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putLong(SAVED_TIME + appWidgetId, elapsedTime);
+        editor.apply();
+        views.setInt(R.id.play_pause, "setImageResource", R.drawable.ic_play_circle_fill);
+        timer.setThread(null);
+        timer.setStarted(false);
+        Log.d(LOG_TAG, "Stopped");
+    }
+
 
     private void resetTimer(Context context, RemoteViews views, int appWidgetId) {
-        Log.d(LOG_TAG, "Reset timer");
         views.setTextViewText(R.id.tv_timer, DEFAULT_TEXT);
         views.setInt(R.id.play_pause, "setImageResource", R.drawable.ic_play_circle_fill);
         Timer timer = timerMap.get(appWidgetId);
@@ -151,6 +171,7 @@ public class TimerWidget extends AppWidgetProvider {
             timer.setThread(null);
         }
         updateWidget(context, appWidgetId, views);
+        Log.d(LOG_TAG, "Reset timer");
     }
 
     private void updateWidget(Context context, int appWidgetId, RemoteViews views) {
