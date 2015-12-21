@@ -1,5 +1,7 @@
 package com.valyakinaleksey.followplan.followplan2.followplan.activities;
 
+import android.accounts.Account;
+import android.accounts.AccountManager;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
@@ -18,7 +20,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -42,12 +43,15 @@ import com.valyakinaleksey.followplan.followplan2.followplan.adapters.TasksArray
 import com.valyakinaleksey.followplan.followplan2.followplan.dialogs.PlansDialogFragment;
 import com.valyakinaleksey.followplan.followplan2.followplan.fragments.PlanFragment;
 import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Plan;
-import com.valyakinaleksey.followplan.followplan2.followplan.update.MainReceiver;
+import com.valyakinaleksey.followplan.followplan2.followplan.receivers.MainReceiver;
 
 import net.danlew.android.joda.JodaTimeAndroid;
 
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
+
+import java.util.LinkedList;
+import java.util.List;
 
 import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.LOG_TAG;
 
@@ -70,10 +74,6 @@ public class MainActivity extends AppCompatActivity {
     private FloatingActionButton floatingActionButton;
     private Fragment currentFragment;
     private SpinnerToolbarAdapter spinnerAdapter;
-
-    public void setListViewMain(ListView listViewMain) {
-        ListView listViewMain1 = listViewMain;
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,13 +112,35 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private Account getAccount() {
+        AccountManager manager = AccountManager.get(this);
+        Account[] accounts = manager.getAccountsByType("com.google");
+        List<String> possibleEmails = new LinkedList<>();
+
+        for (Account account : accounts) {
+            // TODO: Check possibleEmail against an email regex or treat
+            // account.name as an email address only for certain account.type
+            // values.
+            possibleEmails.add(account.name);
+        }
+        if (!possibleEmails.isEmpty() && possibleEmails.get(0) != null) {
+            String email = possibleEmails.get(0);
+            String[] parts = email.split("@");
+            if (parts.length > 0 && parts[0] != null)
+                return accounts[0];
+            else
+                return null;
+        } else
+            return null;
+    }
 
     private void initDrawer() {
+        Account account = getAccount();
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(this)
                 .withHeaderBackground(R.drawable.header)
                 .addProfiles(
-                        new ProfileDrawerItem().withName("Aleksey Valyakin").withEmail("xzaleksey@gmail.com").withIcon(FontAwesome.Icon.faw_user)
+                        new ProfileDrawerItem().withEmail(account == null ? "User" : account.name).withIcon(FontAwesome.Icon.faw_user)
                 )
                 .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
                     @Override
@@ -160,12 +182,12 @@ public class MainActivity extends AppCompatActivity {
                             case FILTERS_ID:
                                 break;
                             case REPORT_BUG_ID:
-                                Intent emailIntent = new Intent(Intent.ACTION_SENDTO); // it's not ACTION_SEND
+                                Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
                                 emailIntent.setType("text/plain");
                                 emailIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.error_title));
                                 emailIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.hello) + "\n");
-                                emailIntent.setData(Uri.parse("mailto:xzaleksey@gmail.com")); // or just "mailto:" for blank
-                                emailIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // this will make such that when user returns to your app, your app is displayed, instead of the email app.
+                                emailIntent.setData(Uri.parse("mailto:xzaleksey@gmail.com"));
+                                emailIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                 try {
                                     startActivity(emailIntent);
                                 } catch (ActivityNotFoundException ex) {
@@ -189,7 +211,6 @@ public class MainActivity extends AppCompatActivity {
     public void createFragment(Fragment fragment, String fragmentName) {
         FragmentTransaction ft = fragmentManager.beginTransaction();
         ft.replace(R.id.fragment_container, fragment, fragmentName);
-//        ft.addToBackStack(null);
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         ft.commit();
         currentFragment = fragment;
@@ -315,7 +336,7 @@ public class MainActivity extends AppCompatActivity {
             inflater = LayoutInflater.from(getContext());
         }
 
-        public void setTitle(String title) {
+        void setTitle(String title) {
             this.title = title;
         }
 

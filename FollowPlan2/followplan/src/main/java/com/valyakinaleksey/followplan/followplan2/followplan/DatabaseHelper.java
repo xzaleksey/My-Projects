@@ -8,11 +8,13 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.BaseColumns;
 import android.util.Log;
+
 import com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants;
 import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Period;
 import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Plan;
 import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Task;
 import com.valyakinaleksey.followplan.followplan2.followplan.notifications.Notifications;
+
 import org.joda.time.DateTime;
 
 public class DatabaseHelper extends SQLiteOpenHelper implements BaseColumns {
@@ -22,6 +24,8 @@ public class DatabaseHelper extends SQLiteOpenHelper implements BaseColumns {
     public static final String TABLE_NOTIFICATIONS = "notifications";
     public static final String NAME = "name";
     public static final String SELECT_MAX = "SELECT MAX";
+    public static final String NOTIFICATIONS_CREATE_SCRIPT = "create table " + TABLE_NOTIFICATIONS + " (" + _ID + " integer primary key autoincrement, "
+            + Notifications.DATETIME + " integer DEFAULT 0);";
     private static final String DATABASE_NAME = "mydatabase.db";
     private static final int DATABASE_VERSION = 2;
     private static final String PLANS_CREATE_SCRIPT = "create table "
@@ -40,15 +44,11 @@ public class DatabaseHelper extends SQLiteOpenHelper implements BaseColumns {
             + " integer primary key autoincrement, " + NAME
             + " text not null, " + Task.DATE_CREATED + " integer, " + Task.DATE_NOTIFICATION + " integer, " + Task.ORDER_NUM
             + " integer, " + Task.PLAN + " integer, " + Task.PERIOD + " integer, " + Task.DONE + " integer DEFAULT 0, "
-            + Task.DISPOSABLE + " integer DEFAULT 0);";
-    public static final String NOTIFICATIONS_CREATE_SCRIPT = "create table " + TABLE_NOTIFICATIONS + " (" + _ID + " integer primary key autoincrement, "
-            + Notifications.DATETIME + " integer DEFAULT 0);";
-    private Context c;
+            + Task.DISPOSABLE + " integer DEFAULT 0, " + Task.PRIORITY + " integer);";
     private SQLiteDatabase db;
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
-        c = context;
     }
 
     public DatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory,
@@ -63,10 +63,6 @@ public class DatabaseHelper extends SQLiteOpenHelper implements BaseColumns {
 
     public static long getId(Cursor cursor) {
         return cursor.getLong(cursor.getColumnIndex(BaseColumns._ID));
-    }
-
-    public void setDb(SQLiteDatabase db) {
-        this.db = db;
     }
 
     @Override
@@ -97,8 +93,8 @@ public class DatabaseHelper extends SQLiteOpenHelper implements BaseColumns {
         return createRow(TABLE_PERIODS, initialValues);
     }
 
-    public long createTask(String name, DateTime dateCreated, DateTime dateNotification, int order, long planId, long periodId, int disposable) {
-        ContentValues initialValues = createTaskContentValues(name, dateCreated, dateNotification, order, planId, periodId, disposable);
+    public long createTask(String name, DateTime dateCreated, DateTime dateNotification, int order, long planId, long periodId, int disposable, int priority) {
+        ContentValues initialValues = createTaskContentValues(name, dateCreated, dateNotification, order, planId, periodId, disposable, priority);
         Plan.getPlans().get(planId).increaseTasksCount(this);
         return createRow(TABLE_TASKS, initialValues);
     }
@@ -125,7 +121,7 @@ public class DatabaseHelper extends SQLiteOpenHelper implements BaseColumns {
         Log.d("MyTag", plan.getCurrentDoneTasksCount() + " " + plan.getTotalDoneTasksCount());
     }
 
-    private ContentValues createTaskContentValues(String name, DateTime dateCreated, DateTime dateNotification, int order, long planId, long periodId, int disposable) {
+    private ContentValues createTaskContentValues(String name, DateTime dateCreated, DateTime dateNotification, int order, long planId, long periodId, int disposable, int priority) {
         ContentValues contentValues = new ContentValues();
         contentValues.put(Task.NAME, name);
         contentValues.put(Task.DATE_CREATED, dateCreated.getMillis());
@@ -139,6 +135,7 @@ public class DatabaseHelper extends SQLiteOpenHelper implements BaseColumns {
         contentValues.put(Task.PERIOD, periodId);
         contentValues.put(Task.DISPOSABLE, disposable);
         contentValues.put(Task.DONE, 0);
+        contentValues.put(Task.PRIORITY, priority);
         return contentValues;
     }
 

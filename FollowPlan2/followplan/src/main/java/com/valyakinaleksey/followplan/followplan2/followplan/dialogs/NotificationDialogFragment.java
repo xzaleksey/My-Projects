@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+
 import com.avast.android.dialogs.core.BaseDialogFragment;
 import com.avast.android.dialogs.fragment.SimpleDialogFragment;
 import com.avast.android.dialogs.iface.IPositiveButtonDialogListener;
@@ -27,18 +28,21 @@ import com.valyakinaleksey.followplan.followplan2.followplan.preferences.TimePre
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 import com.wdullaer.materialdatetimepicker.time.RadialPickerLayout;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
+
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 
 import java.util.Calendar;
 import java.util.Locale;
 
-import static com.valyakinaleksey.followplan.followplan2.followplan.preferences.TimePreference.*;
+import static com.valyakinaleksey.followplan.followplan2.followplan.preferences.TimePreference.DD_MM_YYYY;
+import static com.valyakinaleksey.followplan.followplan2.followplan.preferences.TimePreference.DEFAULT_NOTIFICATION_VALUE;
+import static com.valyakinaleksey.followplan.followplan2.followplan.preferences.TimePreference.HH_MM;
 
 public class NotificationDialogFragment extends SimpleDialogFragment implements TimePickerDialog.OnTimeSetListener, DatePickerDialog.OnDateSetListener {
-    private static final String TASK_ID = "taskId";
     public static final String DATE_NOTIFICATION = "dateNotification";
     public static final String DATE_NOTIFICATION_SET = "dateNotificationSet";
+    private static final String TASK_ID = "taskId";
     public static String TAG = "NotificationDialogFragment";
     private Task task;
     private boolean dateNotificationSet = false;
@@ -120,9 +124,12 @@ public class NotificationDialogFragment extends SimpleDialogFragment implements 
     }
 
     private void checkNotification(long dateTime) {
-        if (dateTime != 0 && DateUtils.isToday(dateTime) &&
-                new DateTime(dateTime).isAfter(DateTime.now())) {
-            MyService.scheduleNotificationCheck(getContext(), dateTime);
+        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
+        if (prefs.getBoolean(getString(R.string.notifications_on), true)) {
+            if (dateTime != 0 && DateUtils.isToday(dateTime) &&
+                    new DateTime(dateTime).isAfter(DateTime.now())) {
+                MyService.scheduleNotificationCheck(getContext(), dateTime);
+            }
         }
     }
 

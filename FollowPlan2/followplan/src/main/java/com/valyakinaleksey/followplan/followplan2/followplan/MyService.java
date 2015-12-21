@@ -1,68 +1,100 @@
 package com.valyakinaleksey.followplan.followplan2.followplan;
 
-import android.app.*;
+import android.app.AlarmManager;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
-import android.os.Handler;
 import android.os.IBinder;
+import android.preference.PreferenceManager;
 import android.text.format.DateUtils;
 import android.util.Log;
+
 import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Period;
 import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Plan;
 import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Task;
 import com.valyakinaleksey.followplan.followplan2.followplan.notifications.Notifications;
-import com.valyakinaleksey.followplan.followplan2.followplan.update.BootReceiver;
-import com.valyakinaleksey.followplan.followplan2.followplan.update.MainReceiver;
+import com.valyakinaleksey.followplan.followplan2.followplan.receivers.MainReceiver;
+
 import org.joda.time.DateTime;
 import org.joda.time.Days;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.LOG_TAG;
-import static com.valyakinaleksey.followplan.followplan2.followplan.update.MainReceiver.*;
+import static com.valyakinaleksey.followplan.followplan2.followplan.receivers.BootReceiver.ACTION_BOOT;
+import static com.valyakinaleksey.followplan.followplan2.followplan.receivers.MainReceiver.ACTION_NOTIFICATION;
+import static com.valyakinaleksey.followplan.followplan2.followplan.receivers.MainReceiver.ACTION_UPDATE;
 
 public class MyService extends Service {
     public static final String NOTIFICATION_TIME = "time";
-    private NotificationManager nm;
+    public static final int ACTION_CANCEL_NOTIFICATIONS = 5;
+    public static final String TYPE = "type";
+    private NotificationManager notificationManager;
     private AlarmManager alarmManager;
+
+    public static void scheduleNotificationCheck(Context context, long millis) {
+        AlarmManager alarmManager = (AlarmManager) context.getSystemService(
+                Context.ALARM_SERVICE);
+        Intent intent = new Intent(context, MainReceiver.class);
+        intent.putExtra(TYPE, ACTION_NOTIFICATION);
+        intent.putExtra(NOTIFICATION_TIME, millis);
+        intent.setAction(MainReceiver.BROADCAST_ACTION);
+        Log.d(LOG_TAG, "" + (int) millis);
+        PendingIntent pIntent = PendingIntent.getBroadcast(context, (int) millis, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        alarmManager.set(AlarmManager.RTC_WAKEUP, millis, pIntent);
+        Log.d(LOG_TAG, "" + new DateTime(System.currentTimeMillis()));
+    }
 
     @Override
 
     public void onCreate() {
         super.onCreate();
-        nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         alarmManager = (AlarmManager) getSystemService(
                 Context.ALARM_SERVICE);
     }
 
     public int onStartCommand(Intent intent, int flags, int startId) {
-        int type = intent.getIntExtra(TYPE, ID_ACTION_UPDATE);
+        int type = intent.getIntExtra(TYPE, ACTION_UPDATE);
         Log.d(LOG_TAG, "MyService onStart");
         DatabaseHelper databaseHelper = new DatabaseHelper(getBaseContext());
         switch (type) {
-            case ID_ACTION_UPDATE:
+            case ACTION_UPDATE:
                 Log.d(LOG_TAG, "action_update");
                 databaseHelper.deleteAllNotifications();
                 update(databaseHelper);
                 break;
-            case ID_ACTION_NOTIFICATION:
+            case ACTION_NOTIFICATION:
                 Log.d(LOG_TAG, "action_notify");
                 long notificationTime = intent.getLongExtra(NOTIFICATION_TIME, 0);
                 startNotification(notificationTime);
                 break;
-            case BootReceiver.ID_ACTION_BOOT:
+            case ACTION_BOOT:
                 Log.d(LOG_TAG, "action_boot");
                 update(databaseHelper);
-                reScheduleNotifications();
+                scheduleTodayNotificationTimes(getNotificationTimes());
+                break;
+            case ACTION_CANCEL_NOTIFICATIONS:
+                databaseHelper.initFromDb();
+                Log.d(LOG_TAG, "action_cancel");
+                cancelNotifications(getNotificationTimes());
                 break;
         }
         databaseHelper.close();
-        stopSelf();
+//        stopSelf();
         return super.onStartCommand(intent, flags, startId);
     }
 
-    private void reScheduleNotifications() {
+    private Set<DateTime> getNotificationTimes() {
         Set<DateTime> timesOfNotifications = new HashSet<>();
         for (Task task : Task.getTasks().values()) {
             final long millis = task.getDateNotification().getMillis();
@@ -70,18 +102,8 @@ public class MyService extends Service {
                 timesOfNotifications.add(task.getDateNotification());
             }
         }
-        scheduleTodayNotificationTimes(timesOfNotifications);
+        return timesOfNotifications;
     }
-//
-//    private void resetTodayNotifications() {
-//        Log.d(LOG_TAG, "resetTodayNotifications");
-//        List<Long> times = Notifications.getDateNotifications(getBaseContext());
-//        Set<DateTime> dateTimes = new HashSet<>();
-//        for (Long time : times) {
-//            dateTimes.add(new DateTime(time));
-//        }
-//        scheduleTodayNotificationTimes(dateTimes);
-//    }
 
     private void update(DatabaseHelper databaseHelper) {
         scheduleUpdate();
@@ -111,7 +133,10 @@ public class MyService extends Service {
         for (Plan plan : plans) {
             plan.updatePlanTasksCount(databaseHelper);
         }
-        scheduleTodayNotificationTimes(timesOfNotifications); //Запланировать на сегодня Notification Check
+        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        if (prefs.getBoolean(getString(R.string.notifications_on), true)) {
+            scheduleTodayNotificationTimes(timesOfNotifications); //Запланировать на сегодня Notification Check
+        }
         updateApp();
     }
 
@@ -125,7 +150,7 @@ public class MyService extends Service {
 
     private void updateApp() {
         Intent intent = new Intent(getBaseContext(), MainReceiver.class);
-        intent.putExtra(MainReceiver.TYPE, MainReceiver.ID_ACTION_INIT_DB);
+        intent.putExtra(TYPE, MainReceiver.ACTION_INIT_DB);
         sendBroadcast(intent);
     }
 
@@ -156,7 +181,6 @@ public class MyService extends Service {
     }
 
     private void scheduleTodayNotificationTimes(Set<DateTime> times) {
-        DatabaseHelper databaseHelper = new DatabaseHelper(getBaseContext());
         List<Long> dateTimes = Notifications.getDateNotifications(getBaseContext());
         for (DateTime time : times) {
             final long millis = time.getMillis();
@@ -165,7 +189,20 @@ public class MyService extends Service {
                 scheduleNotificationCheck(millis);
             }
         }
-        databaseHelper.close();
+    }
+
+    private void cancelNotifications(Set<DateTime> notificationTimes) {
+        for (DateTime time : notificationTimes) {
+            final long millis = time.getMillis();
+            Intent intent = new Intent(getBaseContext(), MainReceiver.class);
+//            intent.putExtra(TYPE, ACTION_NOTIFICATION);
+//            intent.putExtra(NOTIFICATION_TIME, millis);
+            intent.setAction(MainReceiver.BROADCAST_ACTION);
+            Log.d(LOG_TAG, "" + (int) millis);
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(getBaseContext(), (int) millis, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+            pendingIntent.cancel();
+            alarmManager.cancel(pendingIntent);
+        }
     }
 
     private void startNotification(long notificationTime) {
@@ -187,7 +224,7 @@ public class MyService extends Service {
             Log.d(LOG_TAG, "Notifying");
             int id = (int) System.currentTimeMillis();
             Notification notification = Notifications.getNotification(getBaseContext(), id, TaskShort.getTitle(tasks, getBaseContext()), TaskShort.getContent(tasks));
-            nm.notify(id, notification);
+            notificationManager.notify(id, notification);
         }
         databaseHelper.createNotification(notificationTime);
         databaseHelper.close();
@@ -212,33 +249,17 @@ public class MyService extends Service {
 
     private void scheduleNotificationCheck(long millis) {
         Intent intent = new Intent(getBaseContext(), MainReceiver.class);
-        intent.putExtra(TYPE, ID_ACTION_NOTIFICATION);
+        intent.putExtra(TYPE, ACTION_NOTIFICATION);
         intent.putExtra(NOTIFICATION_TIME, millis);
-        setAlarm(millis, intent, (int) System.currentTimeMillis());
+        setAlarm(millis, intent, (int) millis);
         Log.d(LOG_TAG, "Notification scheduled" + new DateTime(millis));
-    }
-
-    public static void scheduleNotificationCheck(Context context, long millis) {
-        Intent intent = new Intent(context, MainReceiver.class);
-        AlarmManager alarmManager = (AlarmManager) context.getSystemService(
-                Context.ALARM_SERVICE);
-        intent.putExtra(TYPE, ID_ACTION_NOTIFICATION);
-//        new DateTime(millis).minusHours(1).getMillis()
-        intent.putExtra(NOTIFICATION_TIME, millis);
-        intent.setAction(MainReceiver.BROADCAST_ACTION);
-        PendingIntent pIntent = PendingIntent.getBroadcast(context, (int) System.currentTimeMillis(), intent, PendingIntent.FLAG_UPDATE_CURRENT);
-        alarmManager.set(AlarmManager.RTC_WAKEUP, millis, pIntent);
-//        alarmManager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), pIntent);
-//        Log.d(LOG_TAG, "Notification scheduled" + new DateTime(millis).minusHours(1));
-        Log.d(LOG_TAG, "" + new DateTime(System.currentTimeMillis()));
-
     }
 
     private void scheduleUpdate() {
         final long millis = DateTime.now().plusDays(1).withHourOfDay(0).withMinuteOfHour(1).getMillis();
         Log.d(LOG_TAG, new DateTime(millis).toString());
         Intent intent = new Intent(getBaseContext(), MainReceiver.class);
-        setAlarm(millis, intent, ID_ACTION_UPDATE);
+        setAlarm(millis, intent, ACTION_UPDATE);
         Log.d(LOG_TAG, "MainReceiver scheduled");
     }
 

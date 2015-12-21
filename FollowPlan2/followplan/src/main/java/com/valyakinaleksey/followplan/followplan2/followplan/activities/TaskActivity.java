@@ -12,7 +12,14 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.*;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import com.avast.android.dialogs.fragment.SimpleDialogFragment;
 import com.avast.android.dialogs.iface.ISimpleDialogListener;
 import com.valyakinaleksey.followplan.followplan2.followplan.DatabaseHelper;
@@ -28,6 +35,7 @@ import com.valyakinaleksey.followplan.followplan2.followplan.preferences.TimePre
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 import com.wdullaer.materialdatetimepicker.time.RadialPickerLayout;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
+
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 
@@ -35,8 +43,14 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Locale;
 
-import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.*;
-import static com.valyakinaleksey.followplan.followplan2.followplan.preferences.TimePreference.*;
+import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.DATE_NOTIFICATION;
+import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.PLAN_ID;
+import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.RESULT_CREATE;
+import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.RESULT_DELETE;
+import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.RESULT_EDIT;
+import static com.valyakinaleksey.followplan.followplan2.followplan.preferences.TimePreference.DD_MM_YYYY;
+import static com.valyakinaleksey.followplan.followplan2.followplan.preferences.TimePreference.DEFAULT_NOTIFICATION_VALUE;
+import static com.valyakinaleksey.followplan.followplan2.followplan.preferences.TimePreference.HH_MM;
 
 public class TaskActivity extends AppCompatActivity implements ISimpleDialogListener, DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
     public static final String TASK_ID = "taskId";
@@ -284,8 +298,9 @@ public class TaskActivity extends AppCompatActivity implements ISimpleDialogList
             private void createTask(DatabaseHelper databaseHelper, String taskName, boolean disposable, DateTime dateTimeNotification) {
                 int orderNum = databaseHelper.getTaskMaxOrder() + 1;
                 DateTime dateCreated = DateTime.now();
-                long id = databaseHelper.createTask(taskName, dateCreated, dateTimeNotification, orderNum, plan.getId(), period.getId(), disposable ? 1 : 0);
-                Task task = new Task(id, taskName, dateCreated, dateTimeNotification, orderNum, plan, period, false, disposable);
+                long id = databaseHelper.createTask(taskName, dateCreated, dateTimeNotification, orderNum, plan.getId(), period.getId(), disposable ? 1 : 0, 4);
+
+                Task task = new Task(id, taskName, dateCreated, dateTimeNotification, orderNum, plan, period, false, disposable, 4);
                 databaseHelper.close();
                 Task.addTask(task);
                 plan.addTask(task);
@@ -295,9 +310,12 @@ public class TaskActivity extends AppCompatActivity implements ISimpleDialogList
             }
 
             private void checkNotification(long dateTime) {
-                if (dateTime != 0 && DateUtils.isToday(dateTime) &&
-                        new DateTime(dateTime).isAfter(DateTime.now())) {
-                    MyService.scheduleNotificationCheck(getBaseContext(), dateTime);
+                final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                if (prefs.getBoolean(getString(R.string.notifications_on), true)) {
+                    if (dateTime != 0 && DateUtils.isToday(dateTime) &&
+                            new DateTime(dateTime).isAfter(DateTime.now())) {
+                        MyService.scheduleNotificationCheck(getApplicationContext(), dateTime);
+                    }
                 }
             }
         });

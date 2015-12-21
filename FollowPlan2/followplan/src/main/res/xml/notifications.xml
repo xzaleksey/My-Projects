@@ -3,10 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     >
     <SwitchPreference
-        android:key="notification_switch"
+        android:defaultValue="true"
+        android:key="@string/notifications_on"
         android:summaryOff="@string/off"
         android:summaryOn="@string/on"
-        android:defaultValue="true"
         />
 
     <!--<EditTextPreference-->
@@ -16,9 +16,9 @@
         <!--android:dependency="notification_switch"-->
         <!--/>-->
     <com.valyakinaleksey.followplan.followplan2.followplan.preferences.TimePreference
-        android:key="@string/time_notification"
-        android:title="@string/time_notification"
         android:defaultValue="09:00"
         android:dependency="notification_switch"
+        android:key="@string/time_notification"
+        android:title="@string/time_notification"
         />
 </PreferenceScreen>

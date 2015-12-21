@@ -4,9 +4,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.support.v7.widget.Toolbar;
-import android.view.*;
+import android.view.KeyEvent;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
-import android.widget.*;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.avast.android.dialogs.fragment.SimpleDialogFragment;
 import com.avast.android.dialogs.iface.ISimpleDialogListener;
@@ -28,7 +39,13 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.*;
+import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.PLAN_ID;
+import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.REQUEST_CODE_EDIT_DELETE;
+import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.REQUEST_CODE_SET_NOTIFICATION;
+import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.RESULT_CANCELED;
+import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.RESULT_CREATE;
+import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.RESULT_DELETE;
+import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.RESULT_EDIT;
 
 public class PlanFragment extends ListFragment implements ISimpleDialogListener {
 
@@ -238,7 +255,6 @@ public class PlanFragment extends ListFragment implements ISimpleDialogListener 
         MainActivity activity = null;
         if (mainActivity) {
             activity = (MainActivity) getActivity();
-            activity.setListViewMain(listView);
             fab.attachToListView(listView);
             fab.show();
         } else {

@@ -5,22 +5,23 @@
               android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
-                                       style="@style/ActionBar"
-                                       android:id="@+id/tool_bar">
+        android:id="@+id/tool_bar"
+        style="@style/ActionBar">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
+                android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/title"
-                android:layout_centerVertical="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:freezesText="true"
                 android:textAppearance="@android:style/TextAppearance.Medium"
-                android:freezesText="true"/>
+                android:textColor="@android:color/white" />
         </RelativeLayout>
     </android.support.v7.widget.Toolbar>
 </LinearLayout>

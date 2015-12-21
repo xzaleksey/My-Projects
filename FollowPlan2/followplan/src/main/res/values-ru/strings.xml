@@ -63,4 +63,5 @@
     <string name="no_email_clients">Нет почтовых клиентов.</string>
     <string name="refresh">Сбросить</string>
     <string name="refresh_plan_question">Сбросить статистику плана?</string>
+    <string name="importance">Важность</string>
 </resources>

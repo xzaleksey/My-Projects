@@ -73,5 +73,7 @@
     <string name="faw_refresh">{faw-refresh}</string>
     <string name="refresh">Reset</string>
     <string name="refresh_plan_question">Reset plan statistics?</string>
+    <string name="notifications_on">notification_switch</string>
+    <string name="importance">Importance</string>
 
 </resources>

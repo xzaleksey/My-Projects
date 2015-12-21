@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    package="com.valyakinaleksey.followplan.followplan2.followplan"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.valyakinaleksey.followplan.followplan2.followplan">
 
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -77,7 +77,7 @@
             android:process=":myservice"/>
 
         <receiver
-            android:name=".update.BootReceiver"
+            android:name=".receivers.BootReceiver"
             android:enabled="true"
             android:exported="false"
             android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
@@ -88,7 +88,7 @@
         </receiver>
 
         <receiver
-            android:name=".update.MainReceiver"
+            android:name=".receivers.MainReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.valyakinaleksey.followplan.followplan2.followplan"/>
