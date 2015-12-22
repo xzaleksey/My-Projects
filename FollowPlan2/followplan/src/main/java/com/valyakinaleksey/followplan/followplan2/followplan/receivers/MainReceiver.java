@@ -42,7 +42,7 @@ public class MainReceiver extends BroadcastReceiver {
         int type = intent.getIntExtra(TYPE, ACTION_UPDATE);
         if (type == ACTION_INIT_DB) {
             Log.d(LOG_TAG, "MainReceiver Init from DB");
-            new DatabaseHelper(context).initFromDb();
+            DatabaseHelper.getInstance(context).initFromDb();
         } else {
             final Intent serviceIntent = new Intent(context, MyService.class);
             serviceIntent.putExtra(TYPE, type);

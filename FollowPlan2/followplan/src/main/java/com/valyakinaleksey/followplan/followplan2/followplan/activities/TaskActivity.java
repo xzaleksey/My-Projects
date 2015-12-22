@@ -241,7 +241,7 @@ public class TaskActivity extends AppCompatActivity implements ISimpleDialogList
         findViewById(R.id.tool_bar_iv_send).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DatabaseHelper databaseHelper = new DatabaseHelper(getBaseContext());
+                DatabaseHelper databaseHelper = DatabaseHelper.getInstance(getBaseContext());
                 String taskName = etTaskName.getText().toString();
                 boolean disposable = !((CheckBox) findViewById(R.id.cb_disposable)).isChecked();
                 plan = (Plan) planSpinner.getSelectedItem();

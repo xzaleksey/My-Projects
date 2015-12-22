@@ -420,7 +420,7 @@ public class PlanFragment extends ListFragment implements ISimpleDialogListener 
     }
 
     private void deleteTask(Task lastTask) {
-        Task.deleteTask(new DatabaseHelper(getContext()), lastTask);
+        Task.deleteTask(DatabaseHelper.getInstance(getContext()), lastTask);
         tasksArrayAdapter.remove(lastTask);
     }
 

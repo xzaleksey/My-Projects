@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.support.v4.app.NotificationCompat;
+
 import com.valyakinaleksey.followplan.followplan2.followplan.DatabaseHelper;
 import com.valyakinaleksey.followplan.followplan2.followplan.R;
 import com.valyakinaleksey.followplan.followplan2.followplan.activities.MainActivity;
@@ -44,7 +45,7 @@ public class Notifications {
     }
 
     public static List<Long> getDateNotifications(Context context) {
-        DatabaseHelper databaseHelper = new DatabaseHelper(context);
+        DatabaseHelper databaseHelper = DatabaseHelper.getInstance(context);
         List<Long> times = new ArrayList<>();
         Cursor cursor = databaseHelper.getAllNotifications();
         while (cursor.moveToNext()) {

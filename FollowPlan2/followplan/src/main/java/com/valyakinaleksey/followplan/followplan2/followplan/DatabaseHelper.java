@@ -3,7 +3,6 @@ package com.valyakinaleksey.followplan.followplan2.followplan;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.BaseColumns;
@@ -45,20 +44,20 @@ public class DatabaseHelper extends SQLiteOpenHelper implements BaseColumns {
             + " text not null, " + Task.DATE_CREATED + " integer, " + Task.DATE_NOTIFICATION + " integer, " + Task.ORDER_NUM
             + " integer, " + Task.PLAN + " integer, " + Task.PERIOD + " integer, " + Task.DONE + " integer DEFAULT 0, "
             + Task.DISPOSABLE + " integer DEFAULT 0, " + Task.PRIORITY + " integer);";
+    private static DatabaseHelper singleton = null;
     private SQLiteDatabase db;
+    private Context ctxt;
 
-    public DatabaseHelper(Context context) {
-        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+    private DatabaseHelper(Context ctxt) {
+        super(ctxt, DATABASE_NAME, null, DATABASE_VERSION);
+        this.ctxt = ctxt;
     }
 
-    public DatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory,
-                          int version, DatabaseErrorHandler errorHandler) {
-        super(context, name, factory, version, errorHandler);
-    }
-
-    public DatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory,
-                          int version) {
-        super(context, name, factory, version);
+    public synchronized static DatabaseHelper getInstance(Context ctxt) {
+        if (singleton == null) {
+            singleton = new DatabaseHelper(ctxt.getApplicationContext());
+        }
+        return singleton;
     }
 
     public static long getId(Cursor cursor) {
@@ -67,10 +66,15 @@ public class DatabaseHelper extends SQLiteOpenHelper implements BaseColumns {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(PLANS_CREATE_SCRIPT);
-        db.execSQL(PERIODS_CREATE_SCRIPT);
-        db.execSQL(TASKS_CREATE_SCRIPT);
-        db.execSQL(NOTIFICATIONS_CREATE_SCRIPT);
+        try {
+            db.beginTransaction();
+            db.execSQL(PLANS_CREATE_SCRIPT);
+            db.execSQL(PERIODS_CREATE_SCRIPT);
+            db.execSQL(TASKS_CREATE_SCRIPT);
+            db.execSQL(NOTIFICATIONS_CREATE_SCRIPT);
+        } finally {
+            db.setTransactionSuccessful();
+        }
     }
 
     @Override

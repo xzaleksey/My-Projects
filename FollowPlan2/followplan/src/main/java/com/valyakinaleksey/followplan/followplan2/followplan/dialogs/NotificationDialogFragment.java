@@ -91,7 +91,7 @@ public class NotificationDialogFragment extends SimpleDialogFragment implements 
                 .setPositiveButton(R.string.set, new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        DatabaseHelper databaseHelper = new DatabaseHelper(getContext());
+                        DatabaseHelper databaseHelper = DatabaseHelper.getInstance(getContext());
                         ContentValues contentValues = new ContentValues();
                         DateTime dateTimeNotification;
                         if (dateNotificationSet) {

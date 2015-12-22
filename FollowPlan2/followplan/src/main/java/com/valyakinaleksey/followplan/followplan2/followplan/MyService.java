@@ -66,7 +66,7 @@ public class MyService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         int type = intent.getIntExtra(TYPE, ACTION_UPDATE);
         Log.d(LOG_TAG, "MyService onStart");
-        DatabaseHelper databaseHelper = new DatabaseHelper(getBaseContext());
+        DatabaseHelper databaseHelper = DatabaseHelper.getInstance(getBaseContext());
         switch (type) {
             case ACTION_UPDATE:
                 Log.d(LOG_TAG, "action_update");
@@ -207,7 +207,7 @@ public class MyService extends Service {
 
     private void startNotification(long notificationTime) {
         Log.d(LOG_TAG, "startNotification");
-        DatabaseHelper databaseHelper = new DatabaseHelper(getBaseContext());
+        DatabaseHelper databaseHelper = DatabaseHelper.getInstance(getBaseContext());
         if (databaseHelper.checkExistingNotifications(notificationTime)) {
             return;
         }

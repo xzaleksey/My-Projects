@@ -6,8 +6,10 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.preference.PreferenceManager;
 import android.provider.BaseColumns;
+
 import com.valyakinaleksey.followplan.followplan2.followplan.DatabaseHelper;
 import com.valyakinaleksey.followplan.followplan2.followplan.R;
+
 import org.joda.time.DateTime;
 
 import java.util.LinkedHashMap;
@@ -23,6 +25,7 @@ public class Period {
     public static final String PLAN = "plan";
     public static final String INTERVAL = "interval";
     private static Map<Long, Period> periods = new LinkedHashMap<>();
+    private static Period lastPeriod;
     private final long id;
     private String name;
     private DateTime dateStart;
@@ -31,7 +34,6 @@ public class Period {
     private DateTime dateNotification;
     private Plan plan;
     private Map<Long, Task> tasks = new LinkedHashMap<>();
-    private static Period lastPeriod;
 
     public Period(long id, String name, Plan plan, int interval) {
         this.id = id;
@@ -91,7 +93,7 @@ public class Period {
     }
 
     public static void createBasePeriods(Context context, Plan plan) {
-        DatabaseHelper databaseHelper = new DatabaseHelper(context);
+        DatabaseHelper databaseHelper = DatabaseHelper.getInstance(context);
         long planId = plan.getId();
         int[] intervals = context.getResources().getIntArray(R.array.periods_base_int);
         String[] periodNames = context.getResources().getStringArray(R.array.periods_base_names);

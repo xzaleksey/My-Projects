@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.avast.android.dialogs.fragment.SimpleDialogFragment;
 import com.avast.android.dialogs.iface.ISimpleDialogListener;
 import com.valyakinaleksey.followplan.followplan2.followplan.DatabaseHelper;
@@ -20,7 +21,9 @@ import com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Colors
 import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Period;
 import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Plan;
 
-import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.*;
+import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.RESULT_CREATE;
+import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.RESULT_DELETE;
+import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.RESULT_EDIT;
 
 public class PlanActivity extends AppCompatActivity implements ISimpleDialogListener {
     public static final int CREATE_PLAN = -1;
@@ -80,7 +83,7 @@ public class PlanActivity extends AppCompatActivity implements ISimpleDialogList
                 color = intColors[colorPicker.getSelectedItemPosition()];
 
                 if (!planName.equals("")) {
-                    DatabaseHelper databaseHelper = new DatabaseHelper(getApplicationContext());
+                    DatabaseHelper databaseHelper = DatabaseHelper.getInstance(getApplicationContext());
                     if (currentPlan == null) {
                         int orderNum = databaseHelper.getPlanMaxOrder() + 1;
                         long id = databaseHelper.createPlan(planName, orderNum, color);

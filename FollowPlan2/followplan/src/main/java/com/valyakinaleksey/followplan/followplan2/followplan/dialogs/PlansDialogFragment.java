@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
+
 import com.avast.android.dialogs.core.BaseDialogFragment;
 import com.avast.android.dialogs.fragment.SimpleDialogFragment;
 import com.avast.android.dialogs.iface.ISimpleDialogListener;
@@ -24,7 +25,11 @@ import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Plan;
 
 import java.util.ArrayList;
 
-import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.*;
+import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.REQUEST_CODE_CREATE;
+import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.REQUEST_CODE_EDIT_DELETE;
+import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.RESULT_CANCELED;
+import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.RESULT_CREATE;
+import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.RESULT_DELETE;
 
 public class PlansDialogFragment extends SimpleDialogFragment implements ISimpleDialogListener {
 
@@ -134,7 +139,7 @@ public class PlansDialogFragment extends SimpleDialogFragment implements ISimple
                 if (resultCode == RESULT_DELETE) {
                     if (currentPlan != null) {
                         planArrayAdapter.remove(Plan.getLastPlan());
-                        Plan.deletePlan(currentPlan.getId(), new DatabaseHelper(getContext()));
+                        Plan.deletePlan(currentPlan.getId(), DatabaseHelper.getInstance(getContext()));
                         Toast.makeText(getContext(), getResources().getString(R.string.plan_delete_success), Toast.LENGTH_SHORT).show();
                         if (planArrayAdapter.getCount() == 0) {
                             customizePlansVisible = false;
@@ -159,7 +164,7 @@ public class PlansDialogFragment extends SimpleDialogFragment implements ISimple
                 ContentValues contentValues = new ContentValues();
                 contentValues.put(Plan.TOTAL_TASKS_COUNT, currentPlan.getTotalTasksCount());
                 contentValues.put(Plan.TOTAL_DONE_TASKS_COUNT, currentPlan.getTotalDoneTasksCount());
-                DatabaseHelper databaseHelper = new DatabaseHelper(getContext());
+                DatabaseHelper databaseHelper = DatabaseHelper.getInstance(getContext());
                 databaseHelper.updatePlan(currentPlan.getId(), contentValues);
                 notifyListViewAdapter();
             }

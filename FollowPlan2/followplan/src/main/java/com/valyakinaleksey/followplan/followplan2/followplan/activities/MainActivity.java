@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
             Iconics.registerFont(new FontAwesome());
         }
         if (Plan.getPlans().isEmpty()) {
-            new DatabaseHelper(getBaseContext()).initFromDb();
+            DatabaseHelper.getInstance(getBaseContext()).initFromDb();
         }
         initToolBar();
         if (savedInstanceState == null) {

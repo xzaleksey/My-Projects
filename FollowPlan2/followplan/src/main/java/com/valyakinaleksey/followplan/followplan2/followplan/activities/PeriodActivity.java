@@ -8,18 +8,23 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.valyakinaleksey.followplan.followplan2.followplan.DatabaseHelper;
 import com.valyakinaleksey.followplan.followplan2.followplan.R;
 import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Period;
 import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Plan;
 import com.valyakinaleksey.followplan.followplan2.followplan.preferences.TimePreference;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
+
 import org.joda.time.DateTime;
 
 import java.util.Calendar;
 import java.util.Locale;
 
-import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.*;
+import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.DATE_NOTIFICATION;
+import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.PLAN_ID;
+import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.RESULT_CREATE;
+import static com.valyakinaleksey.followplan.followplan2.followplan.help_classes.Constants.RESULT_EDIT;
 
 public class PeriodActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
     public static final String PERIOD_ID = "periodId";
@@ -67,7 +72,7 @@ public class PeriodActivity extends AppCompatActivity implements DatePickerDialo
             @Override
             public void onClick(View view) {
                 if (checkInput(etPeriodDays.getText().toString())) {
-                    DatabaseHelper databaseHelper = new DatabaseHelper(getBaseContext());
+                    DatabaseHelper databaseHelper = DatabaseHelper.getInstance(getBaseContext());
                     DateTime dateEnd = dateStart.plusDays(interval).withHourOfDay(0).withMinuteOfHour(0);
                     final String name = "Every " + interval + " days";
                     if (period == null) {

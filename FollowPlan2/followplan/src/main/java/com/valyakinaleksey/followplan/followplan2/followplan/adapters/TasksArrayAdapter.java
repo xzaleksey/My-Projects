@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
+
 import com.mikepenz.fontawesome_typeface_library.FontAwesome;
 import com.mikepenz.iconics.IconicsDrawable;
 import com.mikepenz.iconics.view.IconicsImageView;
@@ -18,6 +19,7 @@ import com.valyakinaleksey.followplan.followplan2.followplan.DatabaseHelper;
 import com.valyakinaleksey.followplan.followplan2.followplan.R;
 import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Plan;
 import com.valyakinaleksey.followplan.followplan2.followplan.main_classes.Task;
+
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 
@@ -33,6 +35,7 @@ public class TasksArrayAdapter extends ArrayAdapter<Task> implements Filterable 
     public static final String COMPLETED_TASKS = "completed_tasks";
     public static final float ALPHA_DONE = 0.5f;
     public static final int ALPHA_UNDONE = 1;
+    private static String currentFilter = "";
     private final LayoutInflater inflater;
     private List<Task> tasks;
     private List<Task> originalList = new ArrayList<>();
@@ -42,7 +45,6 @@ public class TasksArrayAdapter extends ArrayAdapter<Task> implements Filterable 
     private MyFilter myFilter;
     private boolean taskFull = false;
     private boolean searchFilter = false;
-    private static String currentFilter = "";
 
     public TasksArrayAdapter(Context context, List<Task> objects) {
         super(context, R.layout.list_item_task, objects);
@@ -87,7 +89,7 @@ public class TasksArrayAdapter extends ArrayAdapter<Task> implements Filterable 
     public boolean toggleTaskDone(int selectedPosition) {
         Task task = getItem(selectedPosition);
         final boolean done = task.isDone();
-        DatabaseHelper databaseHelper = new DatabaseHelper(context);
+        DatabaseHelper databaseHelper = DatabaseHelper.getInstance(context);
         databaseHelper.setTaskDone(task.getId(), !done);
         if (done) {
             setTaskUnDone(task);
@@ -104,7 +106,7 @@ public class TasksArrayAdapter extends ArrayAdapter<Task> implements Filterable 
         }
         task.setDone(true);
         toggleDone(selectedItem, (ViewHolder) selectedItem.getTag(), true);
-        task.getPlan().increaseTasksDoneCount(new DatabaseHelper(context));
+        task.getPlan().increaseTasksDoneCount(DatabaseHelper.getInstance(context));
     }
 
     public void setTaskUnDone(Task task) {
@@ -114,7 +116,7 @@ public class TasksArrayAdapter extends ArrayAdapter<Task> implements Filterable 
 
         task.setDone(false);
         toggleDone(selectedItem, (ViewHolder) selectedItem.getTag(), false);
-        task.getPlan().decreaseTasksDoneCount(new DatabaseHelper(context));
+        task.getPlan().decreaseTasksDoneCount(DatabaseHelper.getInstance(context));
     }
 
     public void setSelectedPosition(int selectedPosition) {
@@ -201,17 +203,6 @@ public class TasksArrayAdapter extends ArrayAdapter<Task> implements Filterable 
         this.searchFilter = searchFilter;
     }
 
-    private class ViewHolder {
-        TextView taskName;
-        TextView periodName;
-        TextView dateNotification;
-    }
-
-    public class ViewHolderFull extends ViewHolder {
-        TextView planName;
-        IconicsImageView planColor;
-    }
-
     public void setOriginalList(Collection<? extends Task> collection) {
         originalList = new ArrayList<>(collection);
         clear();
@@ -244,6 +235,23 @@ public class TasksArrayAdapter extends ArrayAdapter<Task> implements Filterable 
         originalList.add(object);
     }
 
+    public Filter getFilter() {
+        if (myFilter == null) {
+            myFilter = new MyFilter();
+        }
+        return myFilter;
+    }
+
+    private class ViewHolder {
+        TextView taskName;
+        TextView periodName;
+        TextView dateNotification;
+    }
+
+    public class ViewHolderFull extends ViewHolder {
+        TextView planName;
+        IconicsImageView planColor;
+    }
 
     private class MyFilter extends Filter {
 
@@ -293,12 +301,5 @@ public class TasksArrayAdapter extends ArrayAdapter<Task> implements Filterable 
             addAll(tasks);
             notifyDataSetChanged();
         }
-    }
-
-    public Filter getFilter() {
-        if (myFilter == null) {
-            myFilter = new MyFilter();
-        }
-        return myFilter;
     }
 }
