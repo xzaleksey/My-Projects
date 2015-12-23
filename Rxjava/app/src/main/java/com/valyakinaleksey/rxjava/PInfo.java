@@ -3,7 +3,7 @@ package com.valyakinaleksey.rxjava;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
 
-import static com.valyakinaleksey.rxjava.Consts.LOG_TAG;
+import static com.valyakinaleksey.rxjava.Constants.LOG_TAG;
 
 public class PInfo {
     public String appname = "";

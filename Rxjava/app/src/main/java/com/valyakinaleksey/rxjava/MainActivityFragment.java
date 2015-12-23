@@ -10,18 +10,26 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.gms.common.AccountPicker;
+
 import java.util.List;
 
 import rx.Observable;
 import rx.functions.Action1;
 
-import static com.valyakinaleksey.rxjava.Consts.LOG_TAG;
+import static com.valyakinaleksey.rxjava.Constants.LOG_TAG;
 
 /**
  * A placeholder fragment containing a simple view.
  */
 public class MainActivityFragment extends Fragment {
-
+    private final static String G_PLUS_SCOPE =
+            "oauth2:https://www.googleapis.com/auth/plus.me";
+    private final static String USERINFO_SCOPE =
+            "https://www.googleapis.com/auth/userinfo.profile";
+    private final static String EMAIL_SCOPE =
+            "https://www.googleapis.com/auth/userinfo.email";
+    private final static String SCOPES = G_PLUS_SCOPE + " " + USERINFO_SCOPE + " " + EMAIL_SCOPE;
 
     public MainActivityFragment() {
     }
@@ -29,17 +37,22 @@ public class MainActivityFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_main, container, false);
+        View view = inflater.inflate(R.layout.fragment_main, container, false);
+        View btn = view.findViewById(R.id.sign_in_button);
+        btn.setOnClickListener(view1 -> {
+            Intent intent = AccountPicker.newChooseAccountIntent(null, null, new String[]{"com.google"},
+                    false, null, null, null, null);
+            startActivityForResult(intent, 123);
+
+        });
+        return view;
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 //        checkRx();
-        byte b = 2;
-        byte c = 3;
-        byte d = (byte) (b * c);
-        Log.d(LOG_TAG, "" + d);
+
 //        startApp();
     }
 
