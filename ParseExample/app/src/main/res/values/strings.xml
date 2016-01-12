@@ -3,4 +3,6 @@
     <string name="action_settings">Settings</string>
     <string name="message_hint">Your message</string>
     <string name="send">send</string>
+    <string name="profile_other">Other profile pic</string>
+    <string name="profile_me">My profile pic</string>
 </resources>
