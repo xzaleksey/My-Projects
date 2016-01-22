@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RoundButton">
+        <attr name="titleText" format="string" localization="suggested" />
+        <attr name="valueColor" format="color" />
+        <attr name="radius" format="integer" />
+    </declare-styleable>
+
+</resources>
