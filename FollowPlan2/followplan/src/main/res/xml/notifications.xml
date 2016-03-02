@@ -15,7 +15,7 @@
         <!--android:title="@string/time_notification"-->
         <!--android:dependency="notification_switch"-->
         <!--/>-->
-    <com.valyakinaleksey.followplan.followplan2.followplan.preferences.TimePreference
+    <com.valyakinaleksey.followplan.followplan2.followplan.presentation.dialogs.TimePreference
         android:defaultValue="09:00"
         android:dependency="notification_switch"
         android:key="@string/time_notification"
